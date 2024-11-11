@@ -1,0 +1,25 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (config) values;
+in {
+  imports = [./hardware.nix];
+
+  networking.hostName = "${values.workstationName}";
+
+  zramSwap.enable = true;
+
+  # force audio to pulseaudio
+  services.pipewire.enable = lib.mkForce false;
+  hardware.pulseaudio.enable = true;
+
+  home-manager.users.${values.mainUser} = {
+    programs.mpv.config.ao = "pulse";
+    programs.jerry.config.player_arguments = lib.mkForce "";
+  };
+
+  system.stateVersion = "24.05";
+}
