@@ -80,5 +80,5 @@
 
   mapListToAttrs = func: list: builtins.listToAttrs(map func list);
 in{
-  inherit mkNixosSystem wrapProgram overrideError shifLeft mapListToAttrs;
+  inherit mkNixosSystem wrapProgram overrideError shiftLeft mapListToAttrs;
 }
