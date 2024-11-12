@@ -1,3 +1,4 @@
+#this flake config is heavilly based off: https://github.dev/diniamo/niqs
 {
   description = "My universal NixOS configuration";
   outputs = inputs: let
