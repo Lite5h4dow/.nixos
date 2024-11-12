@@ -20,10 +20,11 @@ in {
     bluetooth.enable = true;
     tailscale.enable = true;
     networking = {
-      wireless.enable = true;
       hostname = "glacier-flake";
       useDHCP = true;
+      wireless.enable = true;
     };
+
     # gaming ={ 
     #   enable = true;
     #   xr.enable = true;
