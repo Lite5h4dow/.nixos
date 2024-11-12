@@ -9,7 +9,7 @@ in {
     ./hyprland
     ./starship
     ./fish
-    ./mpv
+    # ./mpv
     ./style
     
     ./alacritty.nix
