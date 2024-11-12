@@ -7,7 +7,7 @@
   imports = [inputs.hyprland.nixosModules.default];
 
   # Needed for XDPH
-  environment.systemPakages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     grim
     slurp
   ];

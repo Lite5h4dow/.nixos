@@ -7,20 +7,20 @@
 }: let
   cfg = config.custom.networking;
   inherit (config) mainUser;
-  inherit (lib) types;
+  inherit (lib) mkOption types;
 in {
   options = {
     custom.networking = {
-      useDHCP = lib.mkOption {
+      useDHCP = mkOption {
         description = "Enable DHCP usage";
         default = true;
         type = types.boolean;
       };
 
-      hostname = lib.mkOption {
+      hostname = mkOption {
         description = "Set device hostname";
         default = "${mainUser}-machine";
-        types = types.string;
+        type = types.string;
       };
     };
   };

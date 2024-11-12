@@ -22,11 +22,12 @@ in {
     networking = {
       wireless.enable = true;
       hostname = "glacier-flake";
+      useDHCP = true;
     };
-    gaming ={ 
-      enable = true;
-      # xr.enable = true;
-    };
+    # gaming ={ 
+    #   enable = true;
+    #   xr.enable = true;
+    # };
   };
 
   home-manager.users.${values.mainUser} = {
