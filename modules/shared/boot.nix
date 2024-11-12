@@ -9,10 +9,6 @@
 
   cfg = config.custom.boot;
 in {
-  options = {
-    
-  }
-
   config = {
     boot = {
       loader = {
