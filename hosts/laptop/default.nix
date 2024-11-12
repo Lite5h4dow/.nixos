@@ -20,7 +20,7 @@ in {
     bluetooth.enable = true;
     tailscale.enable = true;
     networking = {
-      hostname = "glacier-flake";
+      hostName = "glacier-flake";
       useDHCP = true;
       wireless.enable = true;
     };

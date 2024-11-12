@@ -17,9 +17,9 @@ in {
         type = types.boolean;
       };
 
-      hostname = mkOption {
+      hostName = mkOption {
         description = "Set device hostname";
-        type = types.string;
+        type = types.str;
       };
     };
   };
@@ -27,7 +27,7 @@ in {
   config = {
     networking = {
       useDHCP = cfg.useDHCP;
-      hostname = cfg.hostname;
+      hostname = cfg.hostName;
       networkmanager = {
         enable = true;
       };
