@@ -51,7 +51,7 @@
       else pkgs.makeWrapper;
 
     file =
-      if executable != nill
+      if executable != null
       then executable
       else package'.meta.mainProgram;
   in
