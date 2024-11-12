@@ -7,6 +7,7 @@
 }: let
   cfg = config.custom.networking;
   inherit (config) mainUser;
+  inherit (lib) types;
 in {
   options = {
     custom.networking = {

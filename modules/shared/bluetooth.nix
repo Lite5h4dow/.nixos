@@ -6,6 +6,7 @@
   ...
 }: let
   cfg = config.custom.bluetooth;
+  inherit (lib) types;
 in {
   options = {
     custom.bluetooth.enable = lib.mkEnableOption {

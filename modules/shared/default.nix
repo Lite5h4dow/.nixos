@@ -11,6 +11,6 @@
     ./bluetooth.nix
     ./tailscale.nix
     ./docker.nix
-    ./mobile
+    ./mobile.nix
   ];
 }

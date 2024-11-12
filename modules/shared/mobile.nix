@@ -4,7 +4,7 @@
   config,
   ...
 }: let
-  inherit (lib) mkEnableOption mkForce mkIf;
+  inherit (lib) mkEnableOption mkForce mkIf types;
 in {
   options.custom.mobile.enable = mkEnableOption {
     description = "config for mobile devices";

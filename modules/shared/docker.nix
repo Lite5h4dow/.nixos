@@ -7,6 +7,7 @@
 }: let
   inherit (config.values) mainUser;
   inherit (config.custom) nvidia;
+  inherit (lib) types;
   cfg = config.custom.docker;
 in {
   options = {
