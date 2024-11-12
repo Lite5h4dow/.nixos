@@ -72,7 +72,7 @@
   pow = base: exponent:
     if exponent == 0
     then 1
-    elseif exponent == 1
+    else if exponent == 1
     then base
     else base * (pow base (exponent - 1));
 
