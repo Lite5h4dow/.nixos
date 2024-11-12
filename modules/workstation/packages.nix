@@ -20,9 +20,8 @@ in {
     systemPackages = with pkgs; [
       wl-clipboard
       exa
-      pavucontrol
-      pulsemixer
       obsidian
+      blender
     ];
   };
 }

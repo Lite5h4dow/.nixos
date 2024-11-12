@@ -1,16 +1,15 @@
 {
   imports = [
     ./style
-    ./rofi
-    ./helix
 
+    ./audio.nix
     ./values.nix
-    ./packages.nix
-    ./home-manager.nix
     ./gaming.nix
     ./nvidia.nix
     ./system.nix
+    ./packages.nix
     ./services.nix
     ./hyprland.nix
+    ./home-manager.nix
   ];
 }

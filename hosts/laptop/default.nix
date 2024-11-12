@@ -8,17 +8,11 @@
 in {
   imports = [./hardware.nix];
 
-  networking.hostName = "${values.workstationName}";
-
   zramSwap.enable = true;
 
-  # force audio to pulseaudio
-  services.pipewire.enable = lib.mkForce false;
-  hardware.pulseaudio.enable = true;
-
   custom = {
-    nvidia.enable = true;
     mobile.enable = true;
+    nvidia.enable = true;
     docker = {
       enable = true;
       nvidia = true;
@@ -31,7 +25,7 @@ in {
     };
     gaming ={ 
       enable = true;
-      xr.enable = true;
+      # xr.enable = true;
     };
   };
 
