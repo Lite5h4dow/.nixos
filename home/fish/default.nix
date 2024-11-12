@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./abbreviations.nix
-    ./aliases.nix
+    # ./aliases.nix
   ];
 
   programs.fish = {
