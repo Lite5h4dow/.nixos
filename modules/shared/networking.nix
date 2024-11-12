@@ -27,7 +27,7 @@ in {
   config = {
     networking = {
       useDHCP = cfg.useDHCP;
-      hostname = cfg.hostName;
+      hostName = cfg.hostName;
       networkmanager = {
         enable = true;
       };
