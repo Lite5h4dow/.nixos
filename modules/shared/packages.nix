@@ -8,6 +8,7 @@
     binsh = lib.getExe pkgs.dash;
 
     systemPackages = with pkgs; [
+      dash
       htop
       man-pages
       man-pages-posix

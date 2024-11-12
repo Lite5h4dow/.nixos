@@ -20,6 +20,7 @@ in {
     xr.enable = true;
     nvidia.enable = true;
     mobile.enable = true;
+    docker.enable = true;
     tailscale.enable = true;
   };
 

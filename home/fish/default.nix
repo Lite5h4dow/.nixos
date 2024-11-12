@@ -8,14 +8,9 @@
     enable = true;
 
     plugins = with pkgs.fishPlugins; [
-      (pkgs.applyPatches {
-        inherit (tide) src;
-        patches = [
-        ];
-      })
-
       autopair.src
       sponge.src
+      done.src
     ];
   };
 }
