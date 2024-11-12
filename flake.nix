@@ -23,6 +23,23 @@
       };
     };
 
+    wrapper-manager = {
+      url = "github:viperML/wrapper-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
+    };
+
+    flake-compat.url = "github:edolstra/flake-compat";
+
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
     };
@@ -38,6 +55,33 @@
       url = "github:justchokingaround/jerry";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+        flake-compat.follows = "flake-compat";
+        flake-utils.follows = "flake-utils";
+      };
+    };
+
+    schizofox = {
+      url = "github:schizofox/schizofox";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+        home-manager.follows = "home-manager";
+        flake-compat.follows = "flake-compat";
+        flake-parts.follows = "flake-parts";
+
+        searx-randomizer.inputs = {
+          crane.follows = "crane";
+          flake-parts.follows = "flake-parts";
+          nixpkgs.follows = "nixpkgs";
+        };
       };
     };
   };
