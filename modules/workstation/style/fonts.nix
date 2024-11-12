@@ -5,13 +5,15 @@
 }: let
   inherit (config.stylix) fonts;
 in {
-  stylix.fonts = {
+  # stylix.fonts = {
+  fonts = {
     sansSerif = {
       package = pkgs.fira-code;
       name = "FiraCode";
     };
 
-    serif = stylix.fonts.sansSerif;
+    # serif = stylix.fonts.sansSerif;
+    serif = fonts.sansSerif;
 
     emoji = {
       package = pkgs.noto-fonts-emoji;

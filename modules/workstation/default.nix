@@ -4,8 +4,7 @@
 
     ./audio.nix
     ./values.nix
-    ./gaming.nix
-    ./nvidia.nix
+    # ./gaming.nix
     ./system.nix
     ./packages.nix
     ./services.nix

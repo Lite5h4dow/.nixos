@@ -6,18 +6,18 @@
   imports = [
     inputs.stylix.nixosModules.stylix
 
-    ./options
+    # ./options
 
     # ./qt.nix
-    # ./cursor.nix
+    ./cursor.nix
     ./fonts.nix
-    # ./icons.nix
+    ./icons.nix
   ];
 
   config = {
     stylix = {
       enable = true;
-      base16Scheme = pkgs.base16-schemes + /share/themes/silk-dark.yaml;
+      base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-mocha.yaml;
       polarity = "dark";
     };
   };

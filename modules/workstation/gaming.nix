@@ -8,6 +8,7 @@
 }: let
   inherit (pkgs.writers) writeDash;
   inherit (inputs.nix-gaming.nixosModules) pipewireLowLatency platformOptomizations;
+  inherit (lib) types;
   cfg = config.custom.gaming;
 
   hyprctl = "${lib.getExe' flakePkgs.hyprland.default "hyprctl"} -i 0";
