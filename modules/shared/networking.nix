@@ -19,7 +19,6 @@ in {
 
       hostname = mkOption {
         description = "Set device hostname";
-        default = "${mainUser}-machine";
         type = types.string;
       };
     };

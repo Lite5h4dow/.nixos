@@ -7,9 +7,16 @@
 }: let
   cfg = config.custom.networking.wireless;
   mobile = config.custom.mobile;
+  inherit (lib) types mkEnableOption;
 in {
   options = {
-    custom.networking.wireless.enable = lib.mkEnableOption "Enable Wireless module";
+    custom.networking.wireless = {
+      enable = mkEnableOption {
+        description = "Enable Wireless module";
+        type = types.boolean;
+        default = false;
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
