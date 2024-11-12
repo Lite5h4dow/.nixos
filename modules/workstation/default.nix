@@ -1,6 +1,8 @@
 {
   imports = [
     ./style
+    ./rofi
+    ./helix
 
     ./values.nix
     ./packages.nix

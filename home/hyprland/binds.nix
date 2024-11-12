@@ -21,9 +21,20 @@ in {
     bind = [
       # core
       "${mod}, Return, exec, ${terminal.command}"
-      "${mod}, Space, exec, rofi --show drun"
       "${mod}, q, killactive"
+
+      # menus
+      "${mod}, Space, exec, rofi -show drun"
+      "${mod} ${shift}, semicolon, exec, rofi -modi emoji -show emoji"
+      ", XF86PowerOff, exec, rofi -show p -modi p:'rofi-power-menu'"
+
+      # utils
+      "${mod} ${shift}, p, pin"
       "${mod}, f, togglefloating"
+      "${mod}, p, psuedo"
+      "${mod}, s, togglesplit"
+      
+      
 
       # audio
       ", XF86AudioPrev, exec, playerctl previous"

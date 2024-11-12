@@ -16,12 +16,13 @@ in {
     input = {
       kb_layout = "us";
       kb_options = "caps:swapescape";
+      follow_mouse = "1";
 
       accel_profile = "flat";
       scroll_method = "on_button_down";
 
       touchpad = {
-        natural_scroll = true;
+        natural_scroll = false;
       };
     };
 

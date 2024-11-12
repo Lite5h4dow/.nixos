@@ -11,6 +11,12 @@
     grim
     slurp
   ];
+
+  services.logind.extraConfig = ''
+    # Disable powerbutton short press so hyprland can handle it
+    # don’t shutdown when power button is short-pressed
+    HandlePowerKey=ignore
+  '';
   
   programs.hyprland.enable = true;
   xdg.portal.config.common = {
