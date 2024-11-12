@@ -72,5 +72,4 @@ in {
       "special:file_manager_tui, on-created-empty:${terminal.command} ${terminal.separator} yazi"
     ];
   };
-  
 }
