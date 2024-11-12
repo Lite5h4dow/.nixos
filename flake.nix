@@ -1,5 +1,5 @@
 {
-  description = "My universal NixOS configuration"
+  description = "My universal NixOS configuration";
   outputs = inputs: let
     lib' = import ./lib {
       inherit inputs lib';
