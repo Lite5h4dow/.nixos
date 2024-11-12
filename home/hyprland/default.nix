@@ -7,6 +7,7 @@
     ./config.nix
     ./binds.nix
     ./exec.nix
+    ./xdph.nix
   ];
 
   home.packages = with pkgs; [

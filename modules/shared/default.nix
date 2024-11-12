@@ -5,5 +5,10 @@
     ./packages.nix
     ./scripts.nix
     ./nix.nix
+    ./wireless.nix
+    ./nvidia.nix
+    ./network.nix
+    ./bluetooth.nix
+    ./tailscale.nix
   ];
 }

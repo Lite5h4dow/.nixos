@@ -21,6 +21,8 @@ in {
     nvidia.enable = true;
     mobile.enable = true;
     docker.enable = true;
+    wireless.enable = true;
+    bluetooth.enable = true;
     tailscale.enable = true;
   };
 
