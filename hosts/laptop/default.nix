@@ -20,15 +20,23 @@ in {
     xr.enable = true;
     nvidia.enable = true;
     mobile.enable = true;
-    docker.enable = true;
-    wireless.enable = true;
+    docker = {
+      enable = true;
+      nvidia = true;
+    };
     bluetooth.enable = true;
     tailscale.enable = true;
+    networking = {
+      wireless.enable = true;
+      hostname = "glacier-flake";
+    }
   };
 
   home-manager.users.${values.mainUser} = {
-    programs.mpv.config.ao = "pulse";
-    programs.jerry.config.player_arguments = lib.mkForce "";
+    programs = {
+      mpv.config.ao = "pulse";
+      jerry.config.player_arguments = lib.mkForce "";
+    };
   };
 
   system.stateVersion = "24.05";

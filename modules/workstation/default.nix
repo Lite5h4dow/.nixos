@@ -12,6 +12,5 @@
     ./system.nix
     ./services.nix
     ./hyprland.nix
-    ./mobile.nix
   ];
 }

@@ -8,7 +8,11 @@
   cfg = config.custom.bluetooth;
 in {
   options = {
-    custom.bluetooth.enable = lib.mkEnableOption "Enable Bluetooth Module";
+    custom.bluetooth.enable = lib.mkEnableOption {
+      description = "Enable Bluetooth module";
+      type = types.boolean;
+      default = false;
+    };
   };
 
   config = lib.mkIf cfg.enable {

@@ -5,10 +5,11 @@
   lib',
   ...
 }: let
-  cfg = config.custom.wireless;
+  cfg = config.custom.networking.wireless;
+  mobile = config.custom.mobile;
 in {
   options = {
-    custom.wireless.enable = lib.mkEnableOption "Enable Wireless module";
+    custom.networking.wireless.enable = lib.mkEnableOption "Enable Wireless module";
   };
 
   config = lib.mkIf cfg.enable {
@@ -22,7 +23,10 @@ in {
           };
         };
       };
-      networkmanager.wifi.backend = "iwd";
+      networkmanager.wifi = {
+        backend = "iwd";
+        powersave = mobile.enable;
+      };
     };
   };
 }

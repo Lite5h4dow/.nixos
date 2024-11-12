@@ -6,7 +6,11 @@
 }: let
   inherit (lib) mkEnableOption mkForce mkIf;
 in {
-  options.custom.mobile.enable = mkEnableOption "config for mobile devices";
+  options.custom.mobile.enable = mkEnableOption {
+    description = "config for mobile devices";
+    type = types.boolean;
+    default = false;
+  };
 
   config = mkIf config.custom.mobile.enable {
     environment.systemPackages = [

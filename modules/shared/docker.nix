@@ -10,7 +10,19 @@
   cfg = config.custom.docker;
 in {
   options = {
-    custom.docker.enable = lib.mkEnableOption "Enable the Docker Module";
+    custom.docker = {
+      enable = lib.mkEnableOption {
+       description = "Enable the Docker Module";
+       type = types.boolean;
+       default = true;
+      };
+
+      nvidia = lib.mkOption {
+        description = "Enable Nvidia container toolkit for docker";
+        type = types.boolean;
+        default = true;
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -23,6 +35,6 @@ in {
     };
     users.users.${mainUser}.extraGroups = ["docker"];
 
-    hardware.nvidia-container-toolkit.enable = nvidia.enable;
+    hardware.nvidia-container-toolkit.enable = cfg.nvidia;
   };
 }
