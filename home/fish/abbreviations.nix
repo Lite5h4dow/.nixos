@@ -1,4 +1,4 @@
-{osConfig, ...} let
+{osConfig, ...}: let
   cursor = expansion: {
     setCursor = true;
     inherit expansion;
