@@ -1,4 +1,4 @@
-theme = catppuccin_mocha
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
@@ -23,5 +23,3 @@ render = true
 left = ["spinner", "mode"]
 center = ["read-only-indicator", "file-name", "file-modification-indicator"]
 right = ["diagnostics", "selections", "register", "position", "file-encoding"]
-
-
