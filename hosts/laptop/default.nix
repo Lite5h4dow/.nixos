@@ -17,7 +17,6 @@ in {
   hardware.pulseaudio.enable = true;
 
   custom = {
-    xr.enable = true;
     nvidia.enable = true;
     mobile.enable = true;
     docker = {
@@ -29,7 +28,11 @@ in {
     networking = {
       wireless.enable = true;
       hostname = "glacier-flake";
-    }
+    };
+    gaming ={ 
+      enable = true;
+      xr.enable = true;
+    };
   };
 
   home-manager.users.${values.mainUser} = {

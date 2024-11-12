@@ -67,30 +67,20 @@ in{
     };
 
     programs = {
+      gamescope = {
+        enable = true;
+        capSysNice = true;
+      };
+
       steam = {
         enable = true;
+        gamescopeSession.enable = true;
 
         extraPackages = [pkgs.openssl_1_1];
         extraCompatPackages = [pkgs.proton-ge-bin];
 
         platformOptimizations.enable = true;
         protontricks.enable = true;
-      };
-
-      gamemode = {
-        enable = true;
-        enableRenice = true;
-        settings = {
-          general = {
-            renice = 15;
-            softrealtime = "auto";
-          };
-
-          custom = {
-            start = startScript.outPath;
-            end = endScript.outPath;
-          };
-        };
       };
     };
   };
