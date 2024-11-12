@@ -14,13 +14,13 @@ in {
     custom.docker = {
       enable = lib.mkEnableOption {
        description = "Enable the Docker Module";
-       type = types.boolean;
+       type = types.bool;
        default = true;
       };
 
       nvidia = lib.mkOption {
         description = "Enable Nvidia container toolkit for docker";
-        type = types.boolean;
+        type = types.bool;
         default = true;
       };
     };

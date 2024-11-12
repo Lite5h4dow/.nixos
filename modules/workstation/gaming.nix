@@ -42,7 +42,7 @@ in{
     custom.gaming ={
       enable = lib.mkEnableOption {
         description = "Enable Gaming module";
-        type = types.boolean;
+        type = types.bool;
         default = false;
       };
     };

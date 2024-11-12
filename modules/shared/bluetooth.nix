@@ -11,7 +11,7 @@ in {
   options = {
     custom.bluetooth.enable = lib.mkEnableOption {
       description = "Enable Bluetooth module";
-      type = types.boolean;
+      type = types.bool;
       default = false;
     };
   };

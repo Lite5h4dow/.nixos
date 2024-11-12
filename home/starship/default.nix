@@ -1,6 +1,6 @@
 {
   imports = [./symbols.nix];
-  programs.startship = {
+  programs.starship = {
     enable = true;
     enableFishIntegration = false;
 

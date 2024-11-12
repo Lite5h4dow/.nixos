@@ -23,7 +23,7 @@ in {
       };
 
       tmp.useTmpfs = mkDefault true;
-      kernelPackages = mkDefault pkgs.linuxPackagaes_latest;
+      kernelPackages = mkDefault pkgs.linuxPackages_latest;
       kernelParams = ["quiet"];
     };
   };

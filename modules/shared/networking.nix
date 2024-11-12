@@ -6,15 +6,15 @@
   ...
 }: let
   cfg = config.custom.networking;
-  inherit (config) mainUser;
-  inherit (lib) mkOption types;
+  inherit (config.values) mainUser;
+  inherit (lib) mkForce mkOption types;
 in {
   options = {
     custom.networking = {
       useDHCP = mkOption {
         description = "Enable DHCP usage";
         default = true;
-        type = types.boolean;
+        type = types.bool;
       };
 
       hostName = mkOption {
@@ -26,7 +26,7 @@ in {
 
   config = {
     networking = {
-      useDHCP = cfg.useDHCP;
+      useDHCP = mkForce cfg.useDHCP;
       hostName = cfg.hostName;
       networkmanager = {
         enable = true;

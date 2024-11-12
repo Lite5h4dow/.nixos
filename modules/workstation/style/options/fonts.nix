@@ -7,12 +7,12 @@
   };
 in {
   options = {
-    stylix.fonts = {
-      sansSerif.path = fontPathOption;
-      serif.path = fontPathOption;
-      emoji.path = fontPathOption;
-      monospace.path = fontPathOption;
-    };
+    # stylix.fonts = {
+    #   sansSerif.path = fontPathOption;
+    #   serif.path = fontPathOption;
+    #   emoji.path = fontPathOption;
+    #   monospace.path = fontPathOption;
+    # };
   };
 }
 

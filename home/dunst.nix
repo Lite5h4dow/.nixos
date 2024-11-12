@@ -22,7 +22,7 @@ in {
         mouse_right_click = "context";
 
         icon_path = mkForce "";
-        icon_theme = config.stylix.icons.name;
+        # icon_theme = config.stylix.icons.name;
         enable_recursive_icon_lookup = true;
       };
 

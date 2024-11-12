@@ -11,7 +11,7 @@ in {
     custom.gaming.xr = {
       enable = lib.mkEnableOption {
         description = "Enable XR module";
-        type = types.boolean;
+        type = types.bool;
         default = false;
       };
     };

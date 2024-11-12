@@ -13,7 +13,7 @@ in {
     custom.networking.wireless = {
       enable = mkEnableOption {
         description = "Enable Wireless module";
-        type = types.boolean;
+        type = types.bool;
         default = false;
       };
     };

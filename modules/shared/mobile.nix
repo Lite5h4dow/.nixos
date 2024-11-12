@@ -8,7 +8,7 @@
 in {
   options.custom.mobile.enable = mkEnableOption {
     description = "config for mobile devices";
-    type = types.boolean;
+    type = types.bool;
     default = false;
   };
 

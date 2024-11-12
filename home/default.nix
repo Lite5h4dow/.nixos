@@ -16,7 +16,7 @@ in {
     ./jerry.nix
     ./dunst.nix
     ./hypridle.nix
-    ./hyprpaper.nix
+    # ./hyprpaper.nix
   ];
 
   home = {

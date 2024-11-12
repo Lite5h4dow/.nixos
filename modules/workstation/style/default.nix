@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.stylix.nixosModules.stylix
+    # inputs.stylix.nixosModules.stylix
 
     # ./options
 
@@ -15,10 +15,10 @@
   ];
 
   config = {
-    stylix = {
-      enable = true;
-      base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-mocha.yaml;
-      polarity = "dark";
-    };
+    # stylix = {
+    #   enable = true;
+    #   base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-mocha.yaml;
+    #   polarity = "dark";
+    # };
   };
 }

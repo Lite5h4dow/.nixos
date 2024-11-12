@@ -17,12 +17,12 @@ in {
     style = "kvantum";
   };
 
-  stylix.targets.qt = {
-    colors = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Macchiato.conf";
-    kdeglobals = "${kdePackage}/share/color-schemes/CatppuccinMacchiatoBlue.colors";
-    kvantum = {
-      config = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.kvconfig";
-      svg = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.svg";
-    };
-  };
+  # stylix.targets.qt = {
+  #   colors = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Macchiato.conf";
+  #   kdeglobals = "${kdePackage}/share/color-schemes/CatppuccinMacchiatoBlue.colors";
+  #   kvantum = {
+  #     config = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.kvconfig";
+  #     svg = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.svg";
+  #   };
+  # };
 }
