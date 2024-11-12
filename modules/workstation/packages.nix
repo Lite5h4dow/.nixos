@@ -19,7 +19,7 @@ in {
 
     systemPackages = with pkgs; [
       wl-clipboard
-      exa
+      eza
       obsidian
       blender
     ];

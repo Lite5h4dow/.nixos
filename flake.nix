@@ -49,6 +49,11 @@
       url = "github:hyprwm/Hyprland";
     };
 
+    hyprwm-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ags = {
       url = "github:Aylur/ags";
       inputs = {

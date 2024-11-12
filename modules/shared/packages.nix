@@ -4,7 +4,7 @@
   ...
 }: {
   environment = {
-    defaultPackages = lib.mkforce [];
+    defaultPackages = lib.mkForce [];
     binsh = lib.getExe pkgs.dash;
 
     systemPackages = with pkgs; [

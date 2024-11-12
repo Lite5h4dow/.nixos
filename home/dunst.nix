@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkForce;
 
-  colors = config.lib.stylix.colors.withHashtag;
+  # colors = config.lib.stylix.colors.withHashtag;
 in {
   services.dunst = {
     enable = true;
@@ -26,8 +26,8 @@ in {
         enable_recursive_icon_lookup = true;
       };
 
-      urgency_low.frame_color = mkForce colors.base0C;
-      urgency_normal.frame_color = mkForce colors.base0D;
+      # urgency_low.frame_color = mkForce colors.base0C;
+      # urgency_normal.frame_color = mkForce colors.base0D;
     };
   };
 }

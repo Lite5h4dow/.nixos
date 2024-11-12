@@ -18,7 +18,7 @@ in {
       builders-use-substitutes = true;
 
       experimental-features = ["nix-command" "flakes"];
-      default-flake = nixpkgs;
+      # default-flake = nixpkgs;
       log-lines = 30;
       http-connections = 50;
     };

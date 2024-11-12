@@ -6,9 +6,22 @@
   ...  
 }: let
   cfg = config.custom.tailscale;
+  inherit (lib) types mkOption mkEnableOption;
 in{
   options = {
-    custom.tailscale.enable = lib.mkEnableOption "Enable Tailscale Module";
+    custom.tailscale = {
+      enable = mkEnableOption {
+        description = "Enable Tailscale Module";
+        type = types.bool;
+        default = false;
+      };
+
+      useRoutingFeatures = mkOption {
+        description = "default tailscale routing options to use";
+        type = types.enum ["none" "client" "server" "both"];
+        default = "none";
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
