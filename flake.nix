@@ -51,6 +51,11 @@
       };
     };
 
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+
     jerry = {
       url = "github:justchokingaround/jerry";
       inputs = {
