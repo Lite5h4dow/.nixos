@@ -20,10 +20,10 @@ in {
       powerManagement.enable = true;
     };
 
-    services.xserver.videoDrivers = ["nvidia"]
+    services.xserver.videoDrivers = ["nvidia"];
 
     # Optimizations taken from https://github.com/ventureoo/nvidia-tweaks
-    services.udev.extraRules = ''
+    services.udev.extraRules = '';
       ACTION=="bind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="auto"
       ACTION=="unbind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="on"
     '';
