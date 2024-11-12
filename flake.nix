@@ -24,6 +24,10 @@
       };
     };
 
+    systems = {
+      url = "github:nix-systems/x86_64-linux";
+    };
+
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -83,11 +87,11 @@
         flake-compat.follows = "flake-compat";
         flake-parts.follows = "flake-parts";
 
-        searx-randomizer.inputs = {
-          crane.follows = "crane";
-          flake-parts.follows = "flake-parts";
-          nixpkgs.follows = "nixpkgs";
-        };
+        # searx-randomizer.inputs = {
+        #   crane.follows = "crane";
+        #   flake-parts.follows = "flake-parts";
+        #   nixpkgs.follows = "nixpkgs";
+        # };
       };
     };
   };
