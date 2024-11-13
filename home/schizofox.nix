@@ -5,7 +5,7 @@
     enable = true;
 
     extensions = {
-      simplefox.enable = true;
+      # simplefox.enable = true;
       darkreader.enable = true;
       bitwarden.enable = true;
     };
