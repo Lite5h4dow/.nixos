@@ -11,9 +11,6 @@ in {
 
 
   custom = {
-    monitors = [
-      "eDP-1, 1920x1080, 0x0, 1"
-    ];
     mobile.enable = true;
     graphics = {
       intel.enable = true;
