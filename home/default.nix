@@ -6,6 +6,7 @@
   username = osConfig.values.mainUser;
 in {
   imports = [
+    ./rofi
     ./helix
     ./hyprland
     ./starship

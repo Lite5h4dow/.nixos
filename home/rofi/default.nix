@@ -1,10 +1,9 @@
 {
+  pkgs,
   config,
   ...
-}: let 
-  inherit (config.values) mainUser;
-in {
-  environment.systemPackages = with pkgs; [
+}:{
+  home.packages = with pkgs; [
     rofi-wayland-unwrapped  
 
     # extensions
@@ -15,11 +14,9 @@ in {
     bitwarden-menu
   ];
 
-  home-manager.users.${mainUser} = {
-    home.files = {
-      ".config/rofi" = {
-        source = config.lib.file.mkOutOfStoreSymlink ./config;
-      };
+  home.files = {
+    ".config/rofi" = {
+      source = config.lib.file.mkOutOfStoreSymlink ./config;
     };
   };
 }
