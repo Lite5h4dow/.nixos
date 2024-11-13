@@ -6,9 +6,11 @@
   username = osConfig.values.mainUser;
 in {
   imports = [
+    ./helix
     ./hyprland
     ./starship
     ./fish
+    ./ags
     # ./mpv
     ./style
     

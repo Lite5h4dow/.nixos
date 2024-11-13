@@ -18,7 +18,7 @@ in {
       nvidia = true;
     };
     bluetooth.enable = true;
-    tailscale.enable = true;
+    tailscale.enable = false;
     networking = {
       hostName = "glacier-flake";
       useDHCP = true;

@@ -63,7 +63,7 @@ in {
     };
 
     binds = {
-      allow_workspaace_cycles = true;
+      allow_workspace_cycles = true;
     };
 
     workspace = [

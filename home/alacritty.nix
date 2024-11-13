@@ -2,8 +2,10 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      ipc_socket = osConfig.values.terminal.firstInstance != null;
-      live_config_reload = true;
+      general = {
+        ipc_socket = osConfig.values.terminal.firstInstance != null;
+        live_config_reload = true;
+      };
 
       window = {
         padding = {

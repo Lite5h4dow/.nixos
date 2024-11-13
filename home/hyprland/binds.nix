@@ -31,7 +31,7 @@ in {
       # utils
       "${mod} ${shift}, p, pin"
       "${mod}, f, togglefloating"
-      "${mod}, p, psuedo"
+      "${mod}, p, pseudo"
       "${mod}, s, togglesplit"
       
       
