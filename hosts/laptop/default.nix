@@ -13,7 +13,7 @@ in {
     mobile.enable = true;
     graphics = {
       nvidia.enable = true;
-      intel.enable = true;
+      # intel.enable = true;
     };
     docker = {
       enable = true;

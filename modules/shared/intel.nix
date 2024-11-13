@@ -1,6 +1,6 @@
 {lib, config, pkgs, ...}: let
-  inherit (lib) mkIf mkEnableOption types;
   cfg = config.custom.graphics.intel;
+  inherit (lib) mkIf mkEnableOption types;
 in {
   options = {
     custom.graphics.intel = {

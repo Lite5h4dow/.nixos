@@ -3,10 +3,12 @@
   inherit (lib) mkEnableOption mkIf types;
 in {
   options = {
-    custom.graphics.nvidia.enable = mkEnableOption {
-      description = "Enable the NVidia module";
-      type = types.bool;
-      default = false;
+    custom.graphics.nvidia = {
+      enable = mkEnableOption {
+        description = "Enable the NVidia module";
+        type = types.bool;
+        default = false;
+      };
     };
   };
 
