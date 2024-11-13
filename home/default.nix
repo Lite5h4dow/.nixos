@@ -23,6 +23,7 @@ in {
     ./yazi.nix
     ./swayimg.nix
     # ./hyprpaper.nix
+    ./nixcord.nix
   ];
 
   home = {

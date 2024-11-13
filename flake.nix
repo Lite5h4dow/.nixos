@@ -104,5 +104,9 @@
         # };
       };
     };
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 }
