@@ -1,17 +1,16 @@
-{
-  config,
-  lib,
-  pkgs,
-  lib',
-  ...
-}: let
-  cfg = config.custom.nvidia;
+{ config, lib, pkgs, lib', ...}: let
+  cfg = config.custom.graphics.nvidia;
+  inherit (lib) mkEnableOption mkIf types;
 in {
   options = {
-    custom.nvidia.enable = lib.mkEnableOption "Enable the NVidia module";
+    custom.graphics.nvidia.enable = mkEnableOption {
+      description = "Enable the NVidia module";
+      type = types.bool;
+      default = false;
+    };
   };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     hardware.nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.beta;
       open = false;

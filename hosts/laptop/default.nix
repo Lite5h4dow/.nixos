@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
   inherit (config) values;
@@ -12,7 +11,10 @@ in {
 
   custom = {
     mobile.enable = true;
-    nvidia.enable = true;
+    graphics = {
+      nvidia.enable = true;
+      intel.enable = true;
+    };
     docker = {
       enable = true;
       nvidia = true;
