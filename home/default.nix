@@ -21,6 +21,7 @@ in {
     ./hypridle.nix
     ./schizofox.nix
     ./yazi.nix
+    ./swayimg.nix
     # ./hyprpaper.nix
   ];
 
