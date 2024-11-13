@@ -2,7 +2,7 @@
   osConfig, ...
 }: let
   inherit (osConfig.values) terminal;
-  noDecorations = "gapsin:0, gapsOut:0, border:false, shadow:false, rounding:false, decorate:false";
+  # noDecorations = "gapsin:0, gapsOut:0, border:false, shadow:false, rounding:false, decorate:false";
 in {
   wayland.windowManager.hyprland.settings = {
     env = [
@@ -24,6 +24,20 @@ in {
       touchpad = {
         natural_scroll = false;
       };
+    };
+
+    decoration = {
+      rounding = 10;
+      blur = {
+        enabled = true;
+        size = true;
+        passes = 1;
+      };
+    };
+
+    dwindle = {
+      pseudotile = "yes";
+      preserve_split = "yes";
     };
 
     xwayland = {
