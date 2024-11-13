@@ -27,7 +27,7 @@ in {
       "${mod}, Space, exec, rofi -show drun"
       "${mod} ${shift}, semicolon, exec, rofimoji"
       ", XF86PowerOff, exec, rofi -show p -modi p:'rofi-power-menu'"
-      "${mod}${secondary}, b, rofi-bluetooth"
+      "${mod}${secondary}, b, exec, rofi-bluetooth"
 
       # utils
       "${mod} ${shift}, p, pin"
