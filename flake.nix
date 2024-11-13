@@ -33,6 +33,11 @@
       url = "git+https://git.litelot.us/litelotus/.wallpapers";
     };
 
+    ags-config = {
+      flake = false;
+      url = "git+https://git.litelot.us/litelotus/ags-config.git";
+    };
+
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
       inputs.nixpkgs.follows = "nixpkgs";
