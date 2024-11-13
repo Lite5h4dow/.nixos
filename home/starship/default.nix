@@ -2,7 +2,7 @@
   imports = [./symbols.nix];
   programs.starship = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
 
     settings = {
       nix_shell.unknown_msg="shell";

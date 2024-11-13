@@ -7,6 +7,7 @@
         live_config_reload = true;
       };
 
+      font.size = 8;
       window = {
         padding = {
           x = 5;
