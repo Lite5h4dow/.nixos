@@ -6,8 +6,8 @@
 
     extensions = {
       # simplefox.enable = true;
-      darkreader.enable = true;
-      bitwarden.enable = true;
+      # darkreader.enable = true;
+      # bitwarden.enable = true;
     };
   };
 }
