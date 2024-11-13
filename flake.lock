@@ -21,6 +21,22 @@
         "type": "github"
       }
     },
+    "ags-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731541643,
+        "narHash": "sha256-1+zwwZU8/h035f725DdTMohJnRtySXj/uH59PhGUfc0=",
+        "ref": "refs/heads/main",
+        "rev": "2a8ce3ece286bdfbb0d2e1fe9f3c3b3f4b542f2c",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/ags-config.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/ags-config.git"
+      }
+    },
     "aquamarine": {
       "inputs": {
         "hyprutils": [
@@ -762,6 +778,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "ags-config": "ags-config",
         "flake-compat": "flake-compat",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
