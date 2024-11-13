@@ -7,7 +7,8 @@
     rofi-wayland-unwrapped  
 
     # extensions
-    rofi-emoji
+    # rofi-emoji
+    rofimoji
     rofi-bluetooth
     rofi-power-menu
     rofi-systemd
