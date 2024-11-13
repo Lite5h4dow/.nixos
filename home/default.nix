@@ -20,6 +20,7 @@ in {
     ./dunst.nix
     ./hypridle.nix
     ./schizofox.nix
+    ./yazi.nix
     # ./hyprpaper.nix
   ];
 

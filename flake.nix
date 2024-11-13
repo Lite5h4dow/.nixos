@@ -28,6 +28,11 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
+    wallpapers = {
+      flake = false;
+      url = "git+https://git.litelot.us/litelotus/.wallpapers";
+    };
+
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -21,6 +21,7 @@
       ripgrep # https://github.com/BurntSushi/ripgrep
       nix-tree
       nix-inspect
+      yazi
     ];
   };
 }

@@ -725,6 +725,7 @@
         "schizofox": "schizofox",
         "stylix": "stylix",
         "systems": "systems_5",
+        "wallpapers": "wallpapers",
         "wrapper-manager": "wrapper-manager"
       }
     },
@@ -971,6 +972,22 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731518501,
+        "narHash": "sha256-VAVOQq6GhtZhgKibLCiampkn7NLmQjzRLWZ1CuCaLvo=",
+        "ref": "refs/heads/main",
+        "rev": "33d97e0ca553b9f5c2be7d3e15715d0544ab760a",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
       }
     },
     "wrapper-manager": {
