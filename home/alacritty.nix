@@ -8,6 +8,7 @@
       };
 
       font.size = 8;
+      
       window = {
         padding = {
           x = 5;
