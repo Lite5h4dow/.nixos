@@ -9,7 +9,7 @@ in{
         live_config_reload = true;
       };
 
-      font.size = mkForce 8;
+      font.size = mkForce 10;
       window = {
         padding = {
           x = 5;
