@@ -1,10 +1,20 @@
 {
-  osConfig, ...
+  osConfig, lib, ...
 }: let
   inherit (osConfig.values) terminal;
   # noDecorations = "gapsin:0, gapsOut:0, border:false, shadow:false, rounding:false, decorate:false";
+  inherit (lib) mkOption;
+  monitors = osConfig.custom.monitors;
 in {
+  options = {
+    custom.monitors = mkOption {
+      description = "monitor configs for this machine";
+      default = [", preferred, auto, 1"];
+    };
+  };
+
   wayland.windowManager.hyprland.settings = {
+    monitor = monitors;
     env = [
       "XDG_SESSION_DESKTOP, Hyprland"
 
