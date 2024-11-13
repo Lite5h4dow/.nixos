@@ -19,6 +19,7 @@ in {
     ./jerry.nix
     ./dunst.nix
     ./hypridle.nix
+    ./schizofox.nix
     # ./hyprpaper.nix
   ];
 

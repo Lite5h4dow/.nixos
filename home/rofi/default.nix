@@ -1,6 +1,6 @@
 {
   pkgs,
-  lib,
+  config,
   ...
 }:{
   home.packages = with pkgs; [
@@ -14,9 +14,9 @@
     bitwarden-menu
   ];
 
-  home.files = {
+  home.file = {
     ".config/rofi" = {
-      source = lib.file.mkOutOfStoreSymlink ./config;
+      source = config.lib.file.mkOutOfStoreSymlink ./config;
     };
   };
 }
