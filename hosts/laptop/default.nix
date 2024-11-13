@@ -12,8 +12,8 @@ in {
   custom = {
     mobile.enable = true;
     graphics = {
+      intel.enable = true;
       nvidia.enable = true;
-      # intel.enable = true;
     };
     docker = {
       enable = true;

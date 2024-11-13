@@ -8,6 +8,7 @@
     ./networking.nix
     ./wireless.nix
     ./nvidia.nix
+    ./intel.nix
     ./bluetooth.nix
     ./tailscale.nix
     ./docker.nix
