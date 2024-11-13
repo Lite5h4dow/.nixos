@@ -25,7 +25,7 @@ in {
 
       # menus
       "${mod}, Space, exec, rofi -show drun"
-      "${mod} ${shift}, semicolon, exec, rofi -modi emoji -show emoji"
+      "${mod} ${shift}, semicolon, exec, rofi -modi \"emoji:rofimoji\" -show emoji"
       ", XF86PowerOff, exec, rofi -show p -modi p:'rofi-power-menu'"
 
       # utils
