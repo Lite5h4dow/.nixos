@@ -1,6 +1,6 @@
 {
   pkgs,
-  config,
+  lib,
   ...
 }:{
   home.packages = with pkgs; [
@@ -16,7 +16,7 @@
 
   home.files = {
     ".config/rofi" = {
-      source = config.lib.file.mkOutOfStoreSymlink ./config;
+      source = lib.file.mkOutOfStoreSymlink ./config;
     };
   };
 }
