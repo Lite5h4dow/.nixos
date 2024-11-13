@@ -1,6 +1,4 @@
-{osConfig, lib, ...}:let
-  inherit (lib) mkForce;
-in{
+{osConfig, ...}:{
   programs.alacritty = {
     enable = true;
     settings = {
@@ -9,7 +7,6 @@ in{
         live_config_reload = true;
       };
 
-      font.size = mkForce 10;
       window = {
         padding = {
           x = 5;
