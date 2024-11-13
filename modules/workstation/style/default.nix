@@ -8,7 +8,7 @@
 
     ./options
 
-    # ./qt.nix
+    ./qt.nix
     ./cursor.nix
     ./fonts.nix
     ./icons.nix
