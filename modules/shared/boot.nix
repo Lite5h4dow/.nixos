@@ -1,5 +1,5 @@
 { config, lib, pkgs, inputs, ... }: let
-  inherit (lib) mkEnableOption mkDefault types;
+  inherit (lib) mkIf mkEnableOption mkDefault types;
 
   cfg = config.custom.boot;
 in {
