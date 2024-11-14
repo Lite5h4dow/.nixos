@@ -10,6 +10,7 @@ in {
   zramSwap.enable = true;
 
   custom = {
+    boot.enable = true;
     mobile.enable = true;
     graphics = {
       intel.enable = true;
