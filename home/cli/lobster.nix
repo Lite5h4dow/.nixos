@@ -1,16 +1,7 @@
-{inputs, flakePkgs, config, ...}:{
-  imports = [inputs.jerry.homeManagerModules.default];
+{inputs, ...}:{
+  imports = [inputs.lobster.packages."x86_64-linux".lobster];
 
   programs.lobster ={
     enable = true;
-    package = flakePkgs.lobster.default.override {
-      mpv = config.programs.mpv.package;
-      imagePreviewSupport = true;
-      infoSupport = true;
-    };
-
-    config = {
-      image_preview = "true";
-    };
   };
 }

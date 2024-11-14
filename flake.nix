@@ -87,7 +87,6 @@
       url = "github:justchokingaround/lobster";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
       };
     };
 

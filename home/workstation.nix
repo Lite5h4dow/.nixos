@@ -4,7 +4,8 @@
     ./cli
     ./dev
     ./style
-  ];
 
-  home = ./user.nix;
+    # user home config
+    ./home.nix
+  ];
 }

@@ -3,7 +3,8 @@
     ./cli
     ./dev
     ./style
-  ];
 
-  home = ./user.nix;
+    # user home folder
+    ./home.nix
+  ];
 }
