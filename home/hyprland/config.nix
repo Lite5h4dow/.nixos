@@ -61,13 +61,13 @@ in {
 
       animation = [
         "windows, 1, 5, myBezier, slidevert 10%"
-        "windowsOut, 1, 5, default, popin 80%"
-        "windowsMove, 1, 5, default, popin 80%"
+        "windowsOut, 1, 5, default, slidevert 10%"
+        "windowsMove, 1, 5, default, slidevert 10%"
         "fade, 1, 5, default"
         "border, 1, 5, default"
         "borderangle, 0, 8, default"
         "workspaces, 1, 5, myBezier"
-        "specialWorkspace, 1, 5, myBezier, slidevert"
+        "specialWorkspace, 1, 5, myBezier, slidevert 10%"
         "workspaces, 0"
         "specialWorkspace, 0"
       ];
