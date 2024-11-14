@@ -9,6 +9,7 @@
   # Needed for XDPH
   environment.systemPackages = with pkgs; [
     grim
+    grimblast
     slurp
   ];
 
