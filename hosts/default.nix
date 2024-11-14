@@ -7,6 +7,7 @@
   workstation = modulePath + /workstation;
   server = modulePath + /server;
   wsl = modulePath + /wsl;
+  nix-on-droid = modulePath + /nix-on-droid;
 
 in {
   desktop = mkNixosSystem {
@@ -32,6 +33,15 @@ in {
     modules = [
       ./wsl
       wsl
+      shared
+    ];
+  };
+
+  nix-on-droid = mkNixosSystem {
+    system = "aarch64-linux";
+    modules = [
+      ./nix-on-droid
+      nix-on-droid
       shared
     ];
   };
