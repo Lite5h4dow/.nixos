@@ -25,6 +25,7 @@ in {
     # ./hyprpaper.nix
     ./nixcord.nix
     ./ytermusic.nix
+    ./woodpecker-ci.nix
   ];
 
   home = {
