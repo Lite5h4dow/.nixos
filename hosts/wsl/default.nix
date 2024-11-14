@@ -2,6 +2,7 @@
   inherit (config) values;
 in {
   custom = {
+    boot.enable = false;
     mobile.enable = false;
     graphics = {
       intel.enable = false;

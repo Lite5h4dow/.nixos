@@ -1,15 +1,17 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}: let
-  inherit (lib) mkEnableOption mkDefault;
+{ config, lib, pkgs, inputs, ... }: let
+  inherit (lib) mkEnableOption mkDefault types;
 
   cfg = config.custom.boot;
 in {
-  config = {
+  options = {
+    options.custom.boot.enable = mkEnableOption {
+      description = "Enable Boot module";
+      type = types.bool;
+      default = true
+    };
+  };
+
+  config = mkIf cfg.enable  {
     boot = {
       loader = {
         timeout = 0;

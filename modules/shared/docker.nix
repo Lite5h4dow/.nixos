@@ -15,7 +15,7 @@ in {
       enable = lib.mkEnableOption {
        description = "Enable the Docker Module";
        type = types.bool;
-       default = true;
+       default = false;
       };
 
       nvidia = lib.mkOption {
