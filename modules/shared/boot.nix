@@ -7,7 +7,7 @@ in {
     options.custom.boot.enable = mkEnableOption {
       description = "Enable Boot module";
       type = types.bool;
-      default = true
+      default = true;
     };
   };
 
