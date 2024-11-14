@@ -26,6 +26,8 @@ in {
     ./nixcord.nix
     ./ytermusic.nix
     ./woodpecker-ci.nix
+    ./git.nix
+    ./kubectl.nix
   ];
 
   home = {
