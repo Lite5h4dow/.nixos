@@ -19,7 +19,7 @@
 
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
-    }
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
