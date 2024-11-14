@@ -28,9 +28,9 @@ in{
     services.tailscale = {
       enable = true;
       useRoutingFeatures = cfg.useRoutingFeatures;
-      extraSetFlags = [
-        "--login-server=https://ts.litelot.us"
-      ];
+      # extraSetFlags = [
+        # "--login-server=https://ts.litelot.us"
+      # ];
     };
     networking.nftables.enable = true;
   };
