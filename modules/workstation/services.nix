@@ -20,6 +20,9 @@
   };
 
   services = {
+    gnome3 = {
+      gnome-keyring.enable = true;
+    };
     ananicy = {
       enable = true;
       package = pkgs.ananicy-cpp;
