@@ -2,7 +2,7 @@
   imports = [
     ./fish
     ./helix
-    ./sharship
+    ./starship
 
     ./yazi.nix
     ./jerry.nix
