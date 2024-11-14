@@ -18,7 +18,7 @@ in {
     size = 22;
   };
 
-  environment.systemPackages = [flakePkgs.nixpkgs.bibata-hyprcursor];
+  # environment.systemPackages = [flakePkgs.nixpkgs.bibata-hyprcursor];
   environment.variables = {
     HYPRCURSOR_THEME = "Bibata-modern";
     HYPRCURSOR_SIZE = cursor.size;
