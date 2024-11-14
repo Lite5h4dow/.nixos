@@ -6,7 +6,7 @@
     ./hyprland
 
     ./dunst.nix
-    ./fracta.nix
+    ./fractal.nix
     ./nixcord.nix
     ./swayimg.nix
     ./hypridle.nix
