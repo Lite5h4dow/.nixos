@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ui
     ./cli
     ./dev
     ./style
