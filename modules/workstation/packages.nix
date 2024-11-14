@@ -23,6 +23,7 @@ in {
       obsidian
       blender
       opentofu
+      google-cloud-sdk
     ];
   };
 }
