@@ -25,4 +25,12 @@ in {
       workstation
     ];
   };
+
+  wsl = mkNixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ./wsl
+      shared
+    ];
+  };
 }

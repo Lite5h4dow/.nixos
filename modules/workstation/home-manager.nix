@@ -21,7 +21,7 @@ in {
         inherit inputs system flakePkgs customPkgs lib';
       };
 
-      users.${username} = ../../home;
+      users.${username} = ../../home/workstation.nix;
     };
   };
 }

@@ -1,13 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  lib',
-  ...
-}: let
+{ config, lib, pkgs, lib', ...}: let
   cfg = config.custom.networking.wireless;
   mobile = config.custom.mobile;
-  inherit (lib) types mkEnableOption;
+  inherit (lib) types mkIf mkEnableOption;
 in {
   options = {
     custom.networking.wireless = {
@@ -19,7 +13,7 @@ in {
     };
   };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     networking = {
       wireless = {
         iwd = {
