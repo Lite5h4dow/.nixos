@@ -24,6 +24,7 @@ in {
     ./swayimg.nix
     # ./hyprpaper.nix
     ./nixcord.nix
+    ./ytermusic.nix
   ];
 
   home = {

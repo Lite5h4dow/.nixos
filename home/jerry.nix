@@ -20,6 +20,7 @@
       manga_opener = "swayimg";
       score_on_completion = "true";
       image_preview = "true";
+      # rofi_prompt_config = "~/.config/jerry.rasi";
     };
   };
 }
