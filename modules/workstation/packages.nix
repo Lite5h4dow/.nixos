@@ -22,7 +22,7 @@ in {
       eza
       obsidian
       blender
-      tofu
+      opentofu
     ];
   };
 }
