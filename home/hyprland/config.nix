@@ -67,7 +67,7 @@ in {
         "border, 1, 5, default"
         "borderangle, 0, 8, default"
         "workspaces, 1, 5, myBezier"
-        "specialWorkspace, 1, 5, myBezier, slidevert 10%"
+        "specialWorkspace, 1, 5, myBezier, slidevert"
         "workspaces, 0"
         "specialWorkspace, 0"
       ];
