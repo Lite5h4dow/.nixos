@@ -4,7 +4,7 @@
   cfg = config.custom.boot;
 in {
   options = {
-    options.custom.boot.enable = mkEnableOption {
+    custom.boot.enable = mkEnableOption {
       description = "Enable Boot module";
       type = types.bool;
       default = true;
