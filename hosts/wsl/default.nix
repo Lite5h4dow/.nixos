@@ -1,8 +1,6 @@
 {config, lib, ...}: let
   inherit (config) values;
 in {
-  imports = [./hardware.nix];
-
   custom = {
     mobile.enable = false;
     graphics = {
