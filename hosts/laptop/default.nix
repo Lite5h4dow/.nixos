@@ -9,7 +9,6 @@ in {
 
   zramSwap.enable = true;
 
-
   custom = {
     mobile.enable = true;
     graphics = {
