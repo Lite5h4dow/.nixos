@@ -6,6 +6,6 @@
     ./style
 
     # user home config
-    ./home.nix
+    ./user.nix
   ];
 }

@@ -4,6 +4,6 @@
     ./dev
 
     # user home config
-    ./home.nix
+    ./user.nix
   ];
 }
