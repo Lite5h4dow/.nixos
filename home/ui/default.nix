@@ -2,7 +2,7 @@
   imports = [
     ./ags
     ./rofi
-    ./anyrun
+    # ./anyrun
     ./hyprland
 
     ./dunst.nix
