@@ -1,12 +1,4 @@
-{
-  inputs,
-  system,
-  lib',
-  config,
-  flakePkgs,
-  customPkgs,
-  ...
-}: let
+{ inputs, system, lib', config, flakePkgs, customPkgs, ... }: let
   username = config.values.mainUser;
 in {
   imports = [inputs.home-manager.nixosModules.home-manager];

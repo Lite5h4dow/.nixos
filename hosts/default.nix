@@ -6,6 +6,7 @@
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
   server = modulePath + /server;
+  wsl = modulePath + /wsl;
 
 in {
   desktop = mkNixosSystem {
@@ -30,6 +31,7 @@ in {
     system = "x86_64-linux";
     modules = [
       ./wsl
+      wsl
       shared
     ];
   };

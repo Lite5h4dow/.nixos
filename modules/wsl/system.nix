@@ -1,4 +1,4 @@
-{ config, ... }: let
+{ config, inputs, ... }: let
   inherit (config.values) mainUser;
 in {
   imports = [inputs.nixos-wsl.nixosModules.default];
