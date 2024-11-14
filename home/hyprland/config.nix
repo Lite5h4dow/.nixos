@@ -85,7 +85,7 @@ in {
     workspace = [
       "special:terminal_zen, on-created-empty:${terminal.command}"
       "special:file_manager_gui, on-created-empty:thunar"
-      "special:file_manager_tui, on-created-empty:${terminal.command} ${terminal.separator} yazi"
+      "special:file_manager_tui, on-created-empty:yazi"
     ];
   };
 }
