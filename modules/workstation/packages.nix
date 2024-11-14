@@ -22,6 +22,7 @@ in {
       eza
       obsidian
       blender
+      tofu
     ];
   };
 }
