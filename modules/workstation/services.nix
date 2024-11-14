@@ -20,7 +20,7 @@
   };
 
   services = {
-    gnome3 = {
+    gnome = {
       gnome-keyring.enable = true;
     };
     ananicy = {
