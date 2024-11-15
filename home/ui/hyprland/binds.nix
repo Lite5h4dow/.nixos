@@ -24,11 +24,11 @@ in {
       "${mod}, q, killactive"
 
       # menus
-      "${mod}, Space, exec, ~/.config/ags/shared/scripts/sidebar.sh toggle-applauncher"
-      "${mod} ${secondary}, Space, exec, rofi -show drun"
-      "${mod} ${shift}, semicolon, exec, rofimoji"
+      "${mod}, Space, exec, rofi -show drun"
+      "${mod}${shift}, semicolon, exec, rofimoji"
       ", XF86PowerOff, exec, rofi -show p -modi p:'rofi-power-menu'"
       "${mod}${secondary}, b, exec, rofi-bluetooth"
+      "${mod}${secondary}, Space, exec, ~/.config/ags/shared/scripts/sidebar.sh toggle-applauncher"
 
       # utils
       "${mod} ${shift}, p, pin"
