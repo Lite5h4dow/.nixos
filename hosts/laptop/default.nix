@@ -1,8 +1,4 @@
-{
-  config,
-  lib,
-  ...
-}: let
+{ config, lib, pkgs, ... }: let
   inherit (config) values;
 in {
   imports = [./hardware.nix];
@@ -33,6 +29,10 @@ in {
     #   xr.enable = true;
     # };
   };
+
+  environment.systemPackages = with pkgs; [
+    razergenie
+  ];
 
   home-manager.users.${values.mainUser} = {
     programs = {
