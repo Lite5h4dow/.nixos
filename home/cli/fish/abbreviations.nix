@@ -32,13 +32,16 @@ in {
     run = "nix run";
     build = "nix build";
     flake = "nix flake";
-    update = "nix flake update";
+    nfu = "nix flake update";
     repl = "nix repl --expr 'import <nixpkgs> {}'";
     bloat = "nix path-info -Sh /run/current-system";
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#";
+    "nr#desktop" = "sudo nixos-rebuild switch --flake ~/.nixos#desktop";
+    "nr#laptop" = "sudo nixos-rebuild switch --flake ~/.nixos#laptop";
+    "nr#wsl" = "sudo nixos-rebuild switch --flake ~/.nixos#wsl";
+    "nr#droid" = "sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
 
     # git
     g = "git";
