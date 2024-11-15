@@ -4,5 +4,10 @@
     typescript
     bun
     deno
+    pnpm
+
+    sass
+    scss-lint
+    nodePackages_latest.nodemon
   ];
 }
