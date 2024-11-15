@@ -4,6 +4,7 @@
     ./helix
     ./starship
 
+    ./bash.nix
     ./yazi.nix
     ./jerry.nix
     # ./lobster.nix
