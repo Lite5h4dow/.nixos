@@ -60,6 +60,6 @@ in {
     gf = "git fetch";
 
     # configs
-    ags-config = "hx ~/Projects/ags-config"
+    ags-config = "hx ~/Projects/ags-config";
   };
 }
