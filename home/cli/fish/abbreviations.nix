@@ -25,17 +25,20 @@ in {
 
     # nix
     n = "nix";
+    ne = "cd ~/.nixos";
     clean = "nh clean all --keep ${toString osConfig.boot.loader.systemd-boot.configurationLimit}";
     shell = "nix shell";
     dev = "nix develop --command fish";
     run = "nix run";
     build = "nix build";
     flake = "nix flake";
+    update = "nix flake update";
     repl = "nix repl --expr 'import <nixpkgs> {}'";
     bloat = "nix path-info -Sh /run/current-system";
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
+    rebuild = "nixos-rebuild switch --flake ~/.nixos#";
 
     # git
     g = "git";
@@ -55,5 +58,8 @@ in {
     gsc = "git switch --create";
     ga = "git add";
     gf = "git fetch";
+
+    # configs
+    ags-config = "hx ~/Projects/ags-config"
   };
 }
