@@ -57,11 +57,10 @@ in {
     gs = "git switch";
     gsc = "git switch --create";
     ga = "git add";
-    "ga." = "git add .";
     gf = "git fetch";
     gu = "git commit && git push";
 
     # configs
-    ags-config = "hx ~/Projects/ags-config";
+    ags-config = "cd ~/Projects/ags-config";
   };
 }
