@@ -59,6 +59,7 @@ in {
     ga = "git add";
     "ga." = "git add .";
     gf = "git fetch";
+    gu = "git commit && git push";
 
     # configs
     ags-config = "hx ~/Projects/ags-config";
