@@ -41,5 +41,10 @@ in {
     };
   };
 
+  hardware.openrazer = {
+    enable = true;
+    users = [ values.mainUser ];
+  };
+
   system.stateVersion = "24.05";
 }
