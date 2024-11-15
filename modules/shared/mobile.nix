@@ -30,7 +30,7 @@ in {
         settings.PermitRootLogin = "yes";
       };
 
-      power-profiles-daemon.enable = mkForce false;
+      power-profiles-daemon.enable = mkForce true;
       auto-cpufreq.enable = true;
       thermald.enable = true;
     };
