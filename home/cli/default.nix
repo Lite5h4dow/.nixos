@@ -7,7 +7,7 @@
     ./yazi.nix
     ./jerry.nix
     # ./lobster.nix
-    # ./ytermusic.nix
-    ./ytui-music.nix
+    ./ytermusic.nix
+    # ./ytui-music.nix
   ];
 }
