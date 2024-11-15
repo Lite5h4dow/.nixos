@@ -31,7 +31,7 @@ in {
       };
 
       power-profiles-daemon.enable = mkForce true;
-      auto-cpufreq.enable = true;
+      auto-cpufreq.enable = mkForce false;
       thermald.enable = true;
     };
   };
