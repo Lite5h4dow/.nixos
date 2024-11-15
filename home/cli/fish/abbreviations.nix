@@ -38,7 +38,7 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    rebuild = "nixos-rebuild switch --flake ~/.nixos#";
+    rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#";
 
     # git
     g = "git";
@@ -57,6 +57,7 @@ in {
     gs = "git switch";
     gsc = "git switch --create";
     ga = "git add";
+    "ga." = "git add .";
     gf = "git fetch";
 
     # configs
