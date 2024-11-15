@@ -22,6 +22,7 @@
       nix-tree
       nix-inspect
       yazi
+      jq
     ];
   };
 }
