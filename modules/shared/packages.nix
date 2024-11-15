@@ -9,6 +9,7 @@
 
     systemPackages = with pkgs; [
       dash
+      bash
       htop
       man-pages
       man-pages-posix
