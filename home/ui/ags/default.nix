@@ -1,14 +1,20 @@
 {
   inputs, 
-  pkgs, 
+  pkgs,
+  lib,
   ...
-}:{  
+}:let
+  inherit (lib) attrValues;
+in{  
   imports = [inputs.ags.homeManagerModules.default];
 
   programs.ags = {
     enable = true;
     configDir = inputs.ags-config;
     extraPackages = with pkgs; [
+      attrValues (
+        removeAttrs inputs.ags.inputs.astal.packages.${pkgs.system} ["docs" "gjs"]
+      )
       gtksourceview
       webkitgtk
       accountsservice
