@@ -3,7 +3,7 @@ inherit (config.lib.stylix) colors;
 in {
   home.file = {
     "./.config/shared/theme.test" = {
-      text = colors.withHashtag;
+      text = builtins.toJSON(colors.withHashtag);
       executable = false;
     };
   };
