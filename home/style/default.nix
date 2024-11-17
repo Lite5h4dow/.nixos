@@ -1,5 +1,6 @@
 {osConfig, ...}: {
   imports = [
+    ./shared.nix
     ./gtk.nix
     ./qt.nix
   ];
