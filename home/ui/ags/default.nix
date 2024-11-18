@@ -18,7 +18,7 @@ in{
       accountsservice
     ]
     ++attrValues (
-      removeAttrs inputs.ags.inputs.astal.packages.${pkgs.system} ["docs" "gjs"]
+      removeAttrs inputs.ags.inputs.astal.packages.${pkgs.system} ["docs" "gjs" "cava"]
     );
   };
 }
