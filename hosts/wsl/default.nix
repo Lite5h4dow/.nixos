@@ -19,5 +19,7 @@ in {
     # };
   };
 
+  users.groups.docker = {};
+
   system.stateVersion = "24.11";
 }
