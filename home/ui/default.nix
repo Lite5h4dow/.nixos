@@ -13,5 +13,6 @@
     ./hypridle.nix
     ./alacritty.nix
     ./schizofox.nix
+    ./thunderbird.nix
   ];
 }
