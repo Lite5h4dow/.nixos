@@ -1,9 +1,9 @@
-{pkgs, config, lib, ...}:let
-  cfg = config.custom.tailscale;
+{pkgs, osConfig, lib, ...}:let
+  cfg = osConfig.custom.tailscale;
   inherit (lib) mkIf;
 in {
   config = mkIf cfg.enable {
-    home.package = with pkgs; [
+    home.packages = with pkgs; [
       trayscale
     ];
   };
