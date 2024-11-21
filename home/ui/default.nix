@@ -10,6 +10,7 @@
     ./fractal.nix
     ./nixcord.nix
     ./swayimg.nix
+    ./remmina.nix
     ./hypridle.nix
     ./alacritty.nix
     ./schizofox.nix
