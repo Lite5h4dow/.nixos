@@ -51,6 +51,9 @@
           nixpkgs = {
             inherit system;
             config.allowUnfree = true;
+            overlays = [
+              inputs.nix-on-droid.overlays.default
+            ];
           };
         }
       ]
