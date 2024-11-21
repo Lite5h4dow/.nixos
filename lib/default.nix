@@ -2,7 +2,8 @@
   inputs, 
   lib',
 }: let
-  inherit (inputs.nixpkgs) lib;
+  nix-lib = inputs.nixpkgs.lib;
+  nod-lib = inputs.nix-on-droid.lib;
 
   getPkgs = input: system:
     if (input.legacyPackages.${system} or {}) == {}
@@ -11,7 +12,30 @@
 
   # Builders 🤷‍♂️
   mkNixosSystem = args @ {system, ...}:
-    lib.nixosSystem {
+    nix-lib.nixosSystem {
+      system = null;
+      specialArgs = {
+        inherit inputs;
+      };
+
+      modules = [
+        {
+          _module.args = {
+            inherit system lib';
+            flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
+          };
+
+          nixpkgs = {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        }
+      ]
+      ++ args.modules or [];
+    };
+
+  mkNixOnDroidSystem = args @ {system, ...}:
+    nod-lib.nixOnDroidConfiguration {
       system = null;
       specialArgs = {
         inherit inputs;
@@ -60,12 +84,12 @@
       paths = [package'];
 
       nativeBuildInputs = [wrapper];
-      postBuild = "wrapProgram $out/bin/${file} ${lib.escapeShellArgs wrapperArgs}";
+      postBuild = "wrapProgram $out/bin/${file} ${nix-lib.escapeShellArgs wrapperArgs}";
     };
 
   #Helpers
   overrideError = pkg: version: value: 
-    lib.throwIf(lib.versionOlder version pkg.version) 
+    nix-lib.throwIf(nix-lib.versionOlder version pkg.version) 
     "A new version of ${pkg.pname} has been released, remove its overlay/override 🤞" 
     value;
 
@@ -80,5 +104,5 @@
 
   mapListToAttrs = func: list: builtins.listToAttrs(map func list);
 in{
-  inherit mkNixosSystem wrapProgram overrideError shiftLeft mapListToAttrs;
+  inherit mkNixosSystem mkNixOnDroidSystem wrapProgram overrideError shiftLeft mapListToAttrs;
 }
