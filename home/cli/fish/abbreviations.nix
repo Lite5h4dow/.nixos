@@ -41,7 +41,7 @@ in {
     "nr#desktop" = "sudo nixos-rebuild switch --flake ~/.nixos#desktop";
     "nr#laptop" = "sudo nixos-rebuild switch --flake ~/.nixos#laptop";
     "nr#wsl" = "sudo nixos-rebuild switch --flake ~/.nixos#wsl";
-    "nr#droid" = "sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
+    "nr#nod" = "sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
 
     # git
     g = "git";
