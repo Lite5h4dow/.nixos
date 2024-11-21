@@ -1,9 +1,9 @@
 {inputs, ...}:{
   imports = [inputs.nixcord.homeManagerModules.nixcord];
   programs.nixcord = {
-    enable = true;
-    # config = {
-    #   frameless = true;
-    # };
+    enable = false;
+    config = {
+      frameless = true;
+    };
   };
 }
