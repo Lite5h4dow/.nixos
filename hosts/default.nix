@@ -1,4 +1,4 @@
-{lib'}: let
+{lib', inputs, nixpkgs}: let
   inherit (lib') mkNixosSystem;
 
   modulePath = ../modules;
@@ -10,6 +10,8 @@
   nix-on-droid = modulePath + /nix-on-droid;
 
 in {
+  imports = [inputs.nix-on-droid.nixosModules.default];
+  
   desktop = mkNixosSystem {
     system = "x86_64-linux";
     modules = [
@@ -37,7 +39,8 @@ in {
     ];
   };
 
-  nix-on-droid = mkNixosSystem {
+  nix-on-droid = nix-on-droid.lib.nixOnDroidConfiguration {
+    # pkgs = import nixpkgs { system = "aarch64-linux"; };
     system = "aarch64-linux";
     modules = [
       ./nix-on-droid
