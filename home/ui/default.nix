@@ -12,6 +12,7 @@
     ./swayimg.nix
     ./remmina.nix
     ./hypridle.nix
+    ./trayscale.nix
     ./alacritty.nix
     ./schizofox.nix
     ./thunderbird.nix
