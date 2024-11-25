@@ -6,6 +6,7 @@
     # ./anyrun
     ./hyprland
 
+    ./mqttx.nix
     ./dunst.nix
     ./vscode.nix
     ./fractal.nix
