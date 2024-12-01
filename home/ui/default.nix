@@ -10,7 +10,7 @@
     ./dunst.nix
     ./vscode.nix
     ./fractal.nix
-    ./nixcord.nix
+    # ./nixcord.nix
     ./swayimg.nix
     ./remmina.nix
     ./hypridle.nix

@@ -24,10 +24,10 @@ in {
       wireless.enable = true;
     };
 
-    # gaming ={ 
-    #   enable = true;
-    #   xr.enable = true;
-    # };
+    gaming ={ 
+      enable = true;
+      # xr.enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
