@@ -4,7 +4,7 @@
 
     ./audio.nix
     ./values.nix
-    # ./gaming.nix
+    ./gaming.nix
     ./system.nix
     ./packages.nix
     ./services.nix

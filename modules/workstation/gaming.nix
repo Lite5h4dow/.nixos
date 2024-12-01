@@ -33,10 +33,10 @@
     ${notify-send} --urgency=low --app-name='Gamemode' --icon=system-shutdown 'Optimizations deactivated'
   '';
 in{
-  import = [
-    pipewireLowLatency
-    platformOptomizations
-  ];
+  # import = [
+  #   pipewireLowLatency
+  #   platformOptomizations
+  # ];
 
   options = {
     custom.gaming ={
@@ -53,7 +53,7 @@ in{
 
     services = {
       pipewire = {
-        lowLatency.enable = true;
+        # lowLatency.enable = true;
         alsa.support32Bit = true;
       };
     };
@@ -64,7 +64,7 @@ in{
     };
 
     security = {
-      rkit.enable = true;
+      # rkit.enable = true;
     };
 
     programs = {
@@ -77,10 +77,14 @@ in{
         enable = true;
         gamescopeSession.enable = true;
 
+        remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+        dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+        localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+
         extraPackages = [pkgs.openssl_1_1];
         extraCompatPackages = [pkgs.proton-ge-bin];
 
-        platformOptimizations.enable = true;
+        # platformOptimizations.enable = true;
         protontricks.enable = true;
       };
     };
