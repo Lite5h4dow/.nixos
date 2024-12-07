@@ -5,8 +5,6 @@
     bun
     deno
     pnpm
-    prisma
-    prisma-engine
 
     sass
     scss-lint
