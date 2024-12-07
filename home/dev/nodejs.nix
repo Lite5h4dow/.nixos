@@ -11,7 +11,7 @@
     nodePackages_latest.nodemon
     nodePackages_latest.prisma
 
-    vscode-extenstions.prisma.prisma
+    vscode-extensions.prisma.prisma
   ];
 
   home.sessionVariables = with pkgs; {
