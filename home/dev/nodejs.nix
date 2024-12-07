@@ -5,11 +5,15 @@
     bun
     deno
     pnpm
+    prisma
+    prisma-engine
 
     sass
     scss-lint
     nodePackages_latest.nodemon
     nodePackages_latest.prisma
+
+    vscode-extenstions.prisma.prisma
   ];
 
   home.sessionVariables = with pkgs; {
