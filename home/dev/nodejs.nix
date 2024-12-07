@@ -6,6 +6,9 @@
     deno
     pnpm
 
+    prisma
+    prismaPackages."@prisma/language-server"
+
     sass
     scss-lint
     nodePackages_latest.nodemon

@@ -28,6 +28,9 @@
           nixpkgs = {
             inherit system;
             config.allowUnfree = true;
+            overlays = [
+              inputs.prisma.overlay
+            ];
           };
         }
       ]
