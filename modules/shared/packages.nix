@@ -8,6 +8,7 @@
     binsh = lib.getExe pkgs.dash;
 
     systemPackages = with pkgs; [
+      openssl
       lsof
       dash
       htop
