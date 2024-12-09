@@ -4,7 +4,7 @@
     ./input.nix
     ./profiles.nix
     ./uosc.nix
-    ./anime.nix
+    # ./anime.nix
   ];
 
   programs.mpv ={

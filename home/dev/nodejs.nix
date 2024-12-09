@@ -7,7 +7,7 @@
     pnpm
 
     prisma
-    prismaPackages."@prisma/language-server"
+    # prismaPackages."@prisma/language-server"
 
     sass
     scss-lint

@@ -58,9 +58,9 @@
       inputs.systems.follows = "systems";
     };
 
-    prisma = {
-      url = "github:pimeys/nixos-prisma";
-    };
+    # prisma = {
+    #   url = "github:pimeys/nixos-prisma";
+    # };
 
     flake-compat.url = "github:edolstra/flake-compat";
 

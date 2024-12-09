@@ -15,8 +15,8 @@
     };
 
     config = {
-      player_arguments = "--profile=anime";
-      provider = "yugen";
+      # player_arguments = "--profile=anime";
+      # provider = "yugen";
       manga_opener = "swayimg";
       score_on_completion = "true";
       image_preview = "true";
