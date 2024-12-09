@@ -35,8 +35,7 @@ in {
       "${mod}, f, togglefloating"
       "${mod}, p, pseudo"
       "${mod}, s, togglesplit"
-      
-      
+      "${mod}, t, togglegroup"
 
       # audio
       ", XF86AudioPrev, exec, playerctl previous"
