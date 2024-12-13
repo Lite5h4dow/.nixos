@@ -19,6 +19,7 @@ in {
       blender
       opentofu
       google-cloud-sdk
+      ungoogled-chromium
     ];
   };
 }

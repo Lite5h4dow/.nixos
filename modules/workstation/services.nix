@@ -42,6 +42,19 @@
     };
     power-profiles-daemon.enable = true;
 
+    udisks2 ={
+      enable = true;
+      mountOnMedia = true;
+    };
+
+    gvfs = {
+      enable = true;
+    };
+
+    devmon ={
+      enable = true;
+    };
+
     # printing = {
     #   enable = true;
     #   drivers = [pkgs.canon-cups-ufr2];

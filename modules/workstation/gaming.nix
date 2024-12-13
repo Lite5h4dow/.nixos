@@ -51,6 +51,13 @@ in{
   config = lib.mkIf cfg.enable {
     nixpkgs.config.permittedInsecurePackages = ["openssl-1.1.1w"];
 
+    environment={
+      systemPackages = with pkgs;[
+        # alvr
+        modrinth-app
+      ];
+    };
+
     services = {
       pipewire = {
         # lowLatency.enable = true;

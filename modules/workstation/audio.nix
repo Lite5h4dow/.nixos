@@ -1,6 +1,6 @@
 { lib, pkgs, ...}: {
   # services.pipewire.enable = lib.mkForce false;
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
 
   services = {
     greetd = {
@@ -15,7 +15,7 @@
     };
 
     pipewire = {
-      enable = false;
+      enable = true;
       wireplumber.enable = true;
       pulse.enable = true;
       alsa.enable = true;
@@ -27,7 +27,8 @@
   };
 
   environment.systemPackages = with pkgs;[
-    pavucontrol
-    pulsemixer
+    # pavucontrol
+    # pulsemixer
+    helvum
   ];
 }
