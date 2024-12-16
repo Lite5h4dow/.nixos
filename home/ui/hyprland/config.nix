@@ -24,7 +24,9 @@ in {
       scroll_method = "on_button_down";
 
       touchpad = {
-        natural_scroll = false;
+        natural_scroll = true;
+        tap_to_click = true;
+        clickfinger_behaviour = true;
       };
     };
 
