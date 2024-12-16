@@ -28,8 +28,13 @@ in {
       };
     };
 
+    general = {
+      gaps_in = 5;
+      gaps_out = 5;
+    };
+
     decoration = {
-      rounding = 10;
+      rounding = 5;
       blur = {
         enabled = true;
         size = true;
