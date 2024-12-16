@@ -7,7 +7,7 @@
   ...
 }: let
   inherit (pkgs.writers) writeDash;
-  inherit (inputs.nix-gaming.nixosModules) pipewireLowLatency platformOptomizations;
+  inherit (inputs.nix-gaming.nixosModules) pipewireLowLatency platformOptimizations;
   inherit (lib) types;
   cfg = config.custom.gaming;
 
@@ -33,10 +33,10 @@
     ${notify-send} --urgency=low --app-name='Gamemode' --icon=system-shutdown 'Optimizations deactivated'
   '';
 in{
-  # import = [
-  #   pipewireLowLatency
-  #   platformOptomizations
-  # ];
+  imports = [
+    pipewireLowLatency
+    platformOptimizations
+  ];
 
   options = {
     custom.gaming ={
@@ -49,7 +49,10 @@ in{
   };
 
   config = lib.mkIf cfg.enable {
-    nixpkgs.config.permittedInsecurePackages = ["openssl-1.1.1w"];
+    nixpkgs.config.permittedInsecurePackages = [
+      "openssl-1.1.1w"
+      "dotnet-sdk-6.0.428"
+    ];
 
     environment={
       systemPackages = with pkgs;[
@@ -60,7 +63,7 @@ in{
 
     services = {
       pipewire = {
-        # lowLatency.enable = true;
+        lowLatency.enable = true;
         alsa.support32Bit = true;
       };
     };
@@ -91,7 +94,7 @@ in{
         extraPackages = [pkgs.openssl_1_1];
         extraCompatPackages = [pkgs.proton-ge-bin];
 
-        # platformOptimizations.enable = true;
+        platformOptimizations.enable = true;
         protontricks.enable = true;
       };
     };
