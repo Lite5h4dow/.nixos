@@ -25,8 +25,8 @@ in {
 
       touchpad = {
         natural_scroll = true;
-        tap_to_click = true;
-        clickfinger_behaviour = true;
+        # tap_to_click = true;
+        # clickfinger_behaviour = true;
       };
     };
 
