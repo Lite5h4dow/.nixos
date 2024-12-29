@@ -1099,6 +1099,22 @@
         "type": "gitlab"
       }
     },
+    "ouch.yazi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733749354,
+        "narHash": "sha256-eRjdcBJY5RHbbggnMHkcIXUF8Sj2nhD/o7+K3vD3hHY=",
+        "owner": "ndtoan96",
+        "repo": "ouch.yazi",
+        "rev": "b8698865a0b1c7c1b65b91bcadf18441498768e6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ndtoan96",
+        "repo": "ouch.yazi",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -1140,6 +1156,7 @@
         "nixcord": "nixcord",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_6",
+        "ouch.yazi": "ouch.yazi",
         "schizofox": "schizofox",
         "stylix": "stylix",
         "systems": "systems_7",
