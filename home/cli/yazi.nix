@@ -1,7 +1,9 @@
 {pkgs, ...}:{
   home.packages = with pkgs; [
     # ueberzugpp 
+    ouch
   ];
+  
   programs.yazi = {
     enable = true;
     settings = {
