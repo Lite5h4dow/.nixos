@@ -137,6 +137,7 @@
     };
 
     "ouch.yazi" = {
+      flake = false;
       url = "github:ndtoan96/ouch.yazi";
     };
   };
