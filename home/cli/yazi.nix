@@ -1,4 +1,6 @@
-{pkgs, ...}:{
+{pkgs, inputs, ...}: let
+  ouchPath = inputs."ouch.yazi".outPath;
+in {
   home.packages = with pkgs; [
     # ueberzugpp 
     ouch
@@ -31,5 +33,10 @@
         ];
       };
     };
+  };
+
+  home.file.".config/yazi/plugins/ouch.yazi" = {
+    recursive = false;
+    source = ouchPath;
   };
 }

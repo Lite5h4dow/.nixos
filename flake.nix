@@ -135,5 +135,9 @@
     nixcord = {
       url = "github:kaylorben/nixcord";
     };
+
+    "ouch.yazi" = {
+      url = "github:ndtoan96/ouch.yazi";
+    };
   };
 }
