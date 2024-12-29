@@ -5,12 +5,12 @@
     ./rofi
     # ./anyrun
     ./hyprland
-
+    ./iwgtk.nix
     ./mqttx.nix
     ./dunst.nix
     ./vscode.nix
     ./fractal.nix
-    # ./nixcord.nix
+    ./nixcord.nix
     ./swayimg.nix
     ./remmina.nix
     ./hypridle.nix
