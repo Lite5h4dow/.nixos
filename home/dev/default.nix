@@ -6,7 +6,6 @@
     ./nodejs.nix
     ./kubectl.nix
     ./c-sharp.nix
-    ./wireshark.nix
     ./woodpecker-ci.nix
   ];
 }

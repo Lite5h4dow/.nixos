@@ -17,6 +17,7 @@
     ./trayscale.nix
     ./alacritty.nix
     ./schizofox.nix
+    ./zed-editor.nix
     ./thunderbird.nix
   ];
 }
