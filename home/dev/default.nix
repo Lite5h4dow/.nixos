@@ -2,6 +2,7 @@
   imports = [
     ./go.nix
     ./git.nix
+    ./nix.nix
     ./godot.nix
     ./nodejs.nix
     ./kubectl.nix
