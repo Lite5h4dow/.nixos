@@ -20,6 +20,7 @@ in {
       opentofu
       google-cloud-sdk
       ungoogled-chromium
+      bitwarden-desktop
     ];
   };
 }
