@@ -100,10 +100,11 @@
     };
 
     lobster = {
-      url = "github:justchokingaround/lobster";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      # url = "github:justchokingaround/lobster";
+      url = "github:eatmynerds/lobster-rs";
+      # inputs = {
+      #   nixpkgs.follows = "nixpkgs";
+      # };
     };
 
     stylix = {

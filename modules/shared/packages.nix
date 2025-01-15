@@ -25,6 +25,7 @@
       nix-inspect
       yazi
       jq
+      fzf
     ];
   };
 }
