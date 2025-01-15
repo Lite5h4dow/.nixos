@@ -14,7 +14,8 @@
   inputs = {
     nixpkgs = {
       # url = "nixpkgs/nixos-unstable";
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      # url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "github:NixOs/nixpkgs/nixos-24.11";
     };
 
     nixos-wsl = {
