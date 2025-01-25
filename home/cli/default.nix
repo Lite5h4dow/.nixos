@@ -5,6 +5,7 @@
     ./starship
 
     ./bash.nix
+    ./curd.nix
     ./yazi.nix
     ./jerry.nix
     ./lobster.nix

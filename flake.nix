@@ -99,6 +99,11 @@
       };
     };
 
+    curd = {
+        url = "github:Wraient/curd";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     lobster = {
       # url = "github:justchokingaround/lobster";
       url = "github:eatmynerds/lobster-rs";

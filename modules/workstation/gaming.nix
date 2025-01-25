@@ -57,7 +57,7 @@ in{
     environment={
       systemPackages = with pkgs;[
         # alvr
-        modrinth-app
+        # modrinth-app
       ];
     };
 
