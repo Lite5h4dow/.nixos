@@ -1,5 +1,5 @@
 {inputs, pkgs, ...}: {
-  environment.systemPackages = [
+  home.packages = [
     inputs.curd.packages.${pkgs.system}.default
   ];
 }

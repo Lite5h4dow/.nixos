@@ -9,6 +9,7 @@
     ./yazi.nix
     ./jerry.nix
     ./lobster.nix
+    ./csvtool.nix
     ./ytermusic.nix
     # ./ytui-music.nix
   ];
