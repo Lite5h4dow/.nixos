@@ -5,6 +5,7 @@
     ./rofi
     # ./anyrun
     ./hyprland
+    ./lens.nix
     ./iwgtk.nix
     ./mqttx.nix
     ./dunst.nix

@@ -793,11 +793,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1736207508,
-        "narHash": "sha256-EGf9kXESb1VRJPH5b1R5SCmyJNeLLxgliLrwSKM7/0A=",
+        "lastModified": 1737990083,
+        "narHash": "sha256-j7hrvcnpDNNaQ+hqk29B2peVJ55VVcdRVVa3hR5fxtc=",
         "owner": "eatmynerds",
         "repo": "lobster-rs",
-        "rev": "a4e29c210d1bfa6891117d638dd17fd0667cba97",
+        "rev": "25c98d24b7de3f3a3a9a1633c23b3163dde7b6c8",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1735291276,
-        "narHash": "sha256-NYVcA06+blsLG6wpAbSPTCyLvxD/92Hy4vlY9WxFI1M=",
+        "lastModified": 1737885589,
+        "narHash": "sha256-Zf0hSrtzaM1DEz8//+Xs51k/wdSajticVrATqDrfQjg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "634fd46801442d760e09493a794c4f15db2d0cbb",
+        "rev": "852ff1d9e153d8875a83602e03fdef8a63f0ecf8",
         "type": "github"
       },
       "original": {
