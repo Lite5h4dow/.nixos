@@ -12,6 +12,8 @@ in {
       eza
       opentofu
       google-cloud-sdk
+      wslu
+      wsl-open
     ];
   };
 }
