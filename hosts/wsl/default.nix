@@ -20,6 +20,10 @@ in {
   };
 
   users.groups.docker = {};
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w"
+    "dotnet-sdk-6.0.428"
+  ];
 
   system.stateVersion = "24.11";
 }
