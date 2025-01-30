@@ -6,6 +6,7 @@
     # ./anyrun
     ./hyprland
     ./lens.nix
+    ./taxi.nix
     ./iwgtk.nix
     ./mqttx.nix
     ./dunst.nix
