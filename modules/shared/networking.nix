@@ -34,8 +34,6 @@ in {
       };
     };
 
-    # TODO: remove this (temp fix for nvidia build)
-    boot.kernelPackages = pkgs.linuxPackages_6_12;
 
     users.users.${mainUser}.extraGroups = [ "networkmanager" ];
   };
