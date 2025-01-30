@@ -11,6 +11,7 @@
     ./lobster.nix
     ./csvtool.nix
     ./ytermusic.nix
+    ./file-management.nix
     # ./ytui-music.nix
   ];
 }
