@@ -16,7 +16,6 @@ in {
       wl-clipboard
       eza
       obsidian
-      blender
       opentofu
       google-cloud-sdk
       ungoogled-chromium

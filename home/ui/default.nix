@@ -15,6 +15,7 @@
     ./nixcord.nix
     ./swayimg.nix
     ./remmina.nix
+    ./blender.nix
     ./hypridle.nix
     ./trayscale.nix
     ./alacritty.nix
