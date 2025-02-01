@@ -3,7 +3,7 @@
     ./config.nix
     ./input.nix
     ./profiles.nix
-    ./uosc.nix
+    # ./uosc.nix
     # ./anime.nix
   ];
 

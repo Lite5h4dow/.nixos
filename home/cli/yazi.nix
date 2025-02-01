@@ -52,7 +52,7 @@ in {
     };
   };
 
-  home.file.".config/yazi/plugins/ouch.yazi" = {
+  home.file.".config/yazi/plugins/ouch" = {
     enable = false;
     recursive = false;
     source = ouchPath;
