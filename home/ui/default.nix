@@ -1,4 +1,4 @@
-{
+{pkgs, ...}:{
   imports = [
     ./mpv
     ./ags
@@ -22,5 +22,9 @@
     ./schizofox.nix
     ./zed-editor.nix
     ./thunderbird.nix
+  ];
+
+  home.packages = with pkgs; [
+    postman
   ];
 }
