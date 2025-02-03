@@ -8,11 +8,14 @@
 in{  
   imports = [inputs.ags.homeManagerModules.default];
 
+  home.programs =[
+    inputs.astal.packages.${pkgs.system}.default
+  ];
+
   programs.ags = {
     enable = true;
     configDir = inputs.ags-config;
     extraPackages = with pkgs; [
-      inputs.astal.packages.${system}.default
       gtksourceview
       webkitgtk
       accountsservice
