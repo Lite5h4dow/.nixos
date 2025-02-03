@@ -17,6 +17,9 @@
       # url = "nixpkgs/nixos-unstable";
       # url = "github:NixOS/nixpkgs/nixos-unstable";
     };
+    unstable-nixpkgs = {
+      url = "nixpkgs/nixos-unstable";
+    };
 
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
@@ -146,6 +149,9 @@
 
     nixcord = {
       url = "github:kaylorben/nixcord";
+      inputs = {
+        nixpkgs.follows = "unstable-nixpkgs";
+      };
     };
 
     "ouch.yazi" = {
