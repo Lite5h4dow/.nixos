@@ -8,7 +8,7 @@
 in{  
   imports = [inputs.ags.homeManagerModules.default];
 
-  home.programs =[
+  home.packages = [
     inputs.astal.packages.${pkgs.system}.default
   ];
 
