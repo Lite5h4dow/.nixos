@@ -79,6 +79,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ags = {
       # url = "github:Aylur/ags/v1";
       url = "github:Aylur/ags";

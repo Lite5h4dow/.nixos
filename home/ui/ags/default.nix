@@ -12,7 +12,7 @@ in{
     enable = true;
     configDir = inputs.ags-config;
     extraPackages = with pkgs; [
-      
+      inputs.astal.packages.${system}.default
       gtksourceview
       webkitgtk
       accountsservice
