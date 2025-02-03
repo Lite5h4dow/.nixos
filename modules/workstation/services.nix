@@ -23,10 +23,10 @@
     gnome = {
       gnome-keyring.enable = true;
     };
-    # ollama = {
-    #   enable = true;
-    #   acceleration = lib.mkIf config.custom.graphics.nvidia.enable "cuda";
-    # };
+    ollama = {
+      enable = true;
+      acceleration = lib.mkIf config.custom.graphics.nvidia.enable "cuda";
+    };
     ananicy = {
       enable = true;
       package = pkgs.ananicy-cpp;

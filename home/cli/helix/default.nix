@@ -22,6 +22,7 @@ in {
     # nodePackages_latest.vscode-json-languageserver
     python312Packages.python-lsp-server
     omnisharp-roslyn
+    lsp-ai
   ];
 
   home = {
