@@ -8,8 +8,9 @@
 in{  
   imports = [inputs.ags.homeManagerModules.default];
 
-  home.packages = [
+  home.packages = with pkgs; [
     inputs.astal.packages.${pkgs.system}.default
+    gjs
   ];
 
   programs.ags = {
