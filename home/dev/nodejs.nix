@@ -10,7 +10,7 @@
     # prismaPackages."@prisma/language-server"
 
     sass
-    scss-lint
+    # scss-lint
     nodePackages_latest.nodemon
     nodePackages_latest.prisma
 

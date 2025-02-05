@@ -25,7 +25,7 @@
   ];
 
   home.packages = with pkgs; [
-    orca-slicer
-    postman
+    # orca-slicer
+    # postman
   ];
 }
