@@ -1,4 +1,4 @@
-{
+{pkgs, ...}:{
   imports = [
     ./fish
     ./helix
@@ -13,5 +13,10 @@
     ./ytermusic.nix
     ./file-management.nix
     # ./ytui-music.nix
+  ];
+
+  home.packages = with pkgs; [
+    neovim
+    steam-run
   ];
 }

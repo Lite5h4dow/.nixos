@@ -1,5 +1,5 @@
-{pkgs, ...}:{
+{pkgs, inputs, ...}:{
   home.packages = with pkgs; [
-    blender-hip
+    inputs.blender-pkgs.legacyPackages.${system}.blender-hip
   ];
 }

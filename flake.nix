@@ -17,8 +17,9 @@
       # url = "nixpkgs/nixos-unstable";
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
-    unstable-nixpkgs = {
-      url = "nixpkgs/nixos-unstable";
+
+    blender-pkgs = {
+      url = "nixpkgs/nixos-24.11";
     };
 
     nixos-wsl = {
@@ -150,7 +151,7 @@
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs = {
-        nixpkgs.follows = "unstable-nixpkgs";
+        nixpkgs.follows = "nixpkgs";
       };
     };
 

@@ -1,14 +1,17 @@
-{config, ...}: let
+{config, lib, ...}: let
   cfg = config.stylix;
+  inherit (lib) mkOverride;
 in {
   config = {
     stylix.targets.kde.enable = false;
 
-    qt = {
-      enable = true;
-      platformTheme.name = "qtct";
-      style.name = "kvantum";
-    };
+    # qt = {
+    #   enable = false;
+    #   platformTheme.name = "qtct";
+    #   # style = mkOverride {
+    #   #   name = "kvantum";
+    #   # };
+    # };
 
     xdg.configFile = {
       "qt5ct/qt5ct.conf".text = ''

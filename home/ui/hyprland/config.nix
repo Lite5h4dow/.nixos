@@ -12,7 +12,7 @@ in {
 
       "GDK_BACKEND, wayland"
       "SDL_VIDEODRIVER, wayland"
-      "QT_QPA_PLATFORM, wayland;xcb"
+      # "QT_QPA_PLATFORM, wayland;xcb"
     ];
 
     input = {

@@ -2,13 +2,13 @@
   imports = [
     ./shared.nix
     ./gtk.nix
-    ./qt.nix
+    # ./qt.nix
   ];
 
   config = {
     stylix = {
       inherit (osConfig.stylix) icons;
-      targets.qt = osConfig.stylix.targets.qt;
+      # targets.qt = osConfig.stylix.targets.qt;
     };
   };
 }

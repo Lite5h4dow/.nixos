@@ -38,10 +38,10 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nr#desktop" = "sudo nixos-rebuild switch --flake ~/.nixos#desktop";
-    "nr#laptop" = "sudo nixos-rebuild switch --flake ~/.nixos#laptop";
-    "nr#wsl" = "sudo nixos-rebuild switch --flake ~/.nixos#wsl";
-    "nr#nod" = "sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
+    "nr#desktop" = "nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#desktop";
+    "nr#laptop" = "nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#laptop";
+    "nr#wsl" = "nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#wsl";
+    "nr#nod" = "nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
 
     # git
     g = "git";

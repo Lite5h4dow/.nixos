@@ -17,7 +17,7 @@
 
   home.file = {
     ".config/rofi" = {
-      source = config.lib.file.mkOutOfStoreSymlink ./config;
+      source =  ./config;
     };
   };
 }
