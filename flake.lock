@@ -181,11 +181,11 @@
     },
     "blender-pkgs": {
       "locked": {
-        "lastModified": 1739758141,
-        "narHash": "sha256-uq6A2L7o1/tR6VfmYhZWoVAwb3gTy7j4Jx30MIrH0rE=",
+        "lastModified": 1739888266,
+        "narHash": "sha256-LdZ0o2MQEKQGTwfIOlHuGuMUItv7HK3P3qxtULkYwqQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c618e28f70257593de75a7044438efc1c1fc0791",
+        "rev": "340311d2296cc6034405c0d72c964988f2d5931a",
         "type": "github"
       },
       "original": {
@@ -1272,6 +1272,7 @@
         "schizofox": "schizofox",
         "stylix": "stylix",
         "systems": "systems_6",
+        "wallpapers": "wallpapers",
         "wrapper-manager": "wrapper-manager"
       }
     },
@@ -1577,6 +1578,22 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740003759,
+        "narHash": "sha256-C8f79HIEFOTnSm75rWOyG2K47+zsqWLY+ebbr/rIEhg=",
+        "ref": "refs/heads/main",
+        "rev": "527f685f49968197ec3ef5ab3091dec433add5ae",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
       }
     },
     "wrapper-manager": {
