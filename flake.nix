@@ -50,7 +50,7 @@
     ags-config = {
       flake = false;
       # url = "git+https://git.litelot.us/litelotus/ags-config.git";
-      url = "git+https://git.litelot.us/litelotus/ags-config?ref=AGS-V2";
+      url = "git+https://git.litelot.us/litelotus/.ags?ref=AGS-V2";
     };
 
     wrapper-manager = {
