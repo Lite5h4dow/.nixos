@@ -42,10 +42,10 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
-    # wallpapers = {
-    #   flake = false;
-    #   url = "git+https://git.litelot.us/litelotus/.wallpapers";
-    # };
+    wallpapers = {
+      flake = false;
+      url = "git+https://git.litelot.us/litelotus/.wallpapers";
+    };
 
     ags-config = {
       flake = false;
