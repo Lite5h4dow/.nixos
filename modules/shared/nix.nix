@@ -37,4 +37,6 @@ in {
       "default=${nixpkgsPath}"
     ];
   };
+
+  systemd.services.nix-daemon.environment.TMPDIR = "/var/tmp/nix-daemon";
 }
