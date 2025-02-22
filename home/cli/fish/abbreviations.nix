@@ -42,10 +42,10 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nr#desktop" = update-command " --flake ~/.nixos#desktop";
+    "nr#desktop" = update-command "--flake ~/.nixos#desktop";
     "nr#laptop" = update-command "--flake ~/.nixos#laptop";
     "nr#wsl" = update-command "--flake ~/.nixos#wsl";
-    "nr#nod" = update-command " --flake ~/.nixos#nix-on-droid";
+    "nr#nod" = update-command "--flake ~/.nixos#nix-on-droid";
 
     # git
     g = "git";
