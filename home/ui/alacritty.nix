@@ -1,5 +1,6 @@
-{osConfig, lib, ...}:let
+{osConfig, lib, config, ...}:let
   inherit (lib) mkForce;
+  inherit (config.stylix) fonts;
 in{
   programs.alacritty = {
     enable = true;
@@ -7,6 +8,12 @@ in{
       general = {
         ipc_socket = osConfig.values.terminal.firstInstance != null;
         live_config_reload = true;
+      };
+
+      font = {
+        normal = {
+          family = fonts.sansSerif.name;
+        };
       };
 
       window = {

@@ -9,7 +9,7 @@ in {
     fonts = {
       sansSerif = {
         package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode";
+        name = "FiraCode Nerd Font Mono";
       };
 
       # serif = stylix.fonts.sansSerif;
@@ -22,7 +22,7 @@ in {
 
       monospace = {
         package = pkgs.nerd-fonts.fira-code;
-        name = "FiraCode Nerd Fonts Mono";
+        name = "FiraCode Nerd Font Mono";
       };
     };
   };
