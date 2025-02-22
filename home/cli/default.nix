@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, inputs, ...}:{
   imports = [
     ./fish
     ./helix
@@ -7,7 +7,6 @@
     ./bash.nix
     ./yazi.nix
     ./jerry.nix
-    ./lobster.nix
   ];
 
   home.packages = with pkgs; [

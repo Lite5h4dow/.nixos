@@ -1,11 +1,10 @@
-{pkgs, ...}:{
+{pkgs, inputs, ...}:{
   imports = [
     ./mpv
     ./ags
     ./rofi
     ./hyprland
     ./dunst.nix
-    ./fractal.nix
     ./nixcord.nix
     ./swayimg.nix
     ./hypridle.nix
