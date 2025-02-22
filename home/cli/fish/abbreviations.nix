@@ -4,10 +4,9 @@
     inherit expansion;
   };
 
-  nixUpdateCommand = "sudo nixos-rebuild switch";
-  nixStoreCleanupCommand = "sudo nix-store --gc";
+  nixUpdateCommand = "sudo nixos-rebuild switch --option build-dir /var/tmp/nix-daemon";
   nixGenerationCleanupCommand  = "sudo nix-collect-garbage -d";
-  update-command =  a: "${nixUpdateCommand} ${a} && ${nixGenerationCleanupCommand} && ${nixStoreCleanupCommand}";
+  update-command =  a: "${nixUpdateCommand} ${a} && ${nixGenerationCleanupCommand}";
 in {
   programs.fish.shellAbbrs = {
     hash = "sha256sum";
