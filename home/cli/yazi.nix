@@ -48,7 +48,7 @@ in {
       };
     };
     plugins = {
-      "ouch.yazi" = ouchPath;
+      "ouch" = ouchPath;
     };
   };
 

@@ -8,7 +8,7 @@ in {
   stylix = {
     fonts = {
       sansSerif = {
-        package = pkgs.fira-code;
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode";
       };
 
@@ -21,8 +21,7 @@ in {
       };
 
       monospace = {
-        # package = pkgs.nerd-fonts.fira-code;
-        package = pkgs.fira-code-nerdfont;
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode Nerd Fonts Mono";
       };
     };

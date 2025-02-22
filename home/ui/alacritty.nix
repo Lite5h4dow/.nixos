@@ -1,4 +1,6 @@
-{osConfig, ...}:{
+{osConfig, lib, ...}:let
+  inherit (lib) mkForce;
+in{
   programs.alacritty = {
     enable = true;
     settings = {
@@ -8,7 +10,7 @@
       };
 
       window = {
-        opacity = 0.8;
+        opacity = mkForce 0.9;
         padding = {
           x = 5;
           y = 5;
