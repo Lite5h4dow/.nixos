@@ -2,7 +2,6 @@
   imports = [
     ./git.nix
     ./nodejs.nix
-    ./wireshark.nix
   ];
 
   home.packages = with pkgs; [
