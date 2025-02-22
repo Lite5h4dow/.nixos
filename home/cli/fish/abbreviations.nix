@@ -4,6 +4,10 @@
     inherit expansion;
   };
 
+  nixUpdateCommand = "sudo nixos-rebuild switch";
+  nixStoreCleanupCommand = "sudo nix-store --gc";
+  nixGenerationCleanupCommand  = "sudo nix-collect-garbage -d";
+  update-command =  a: "${nixUpdateCommand} ${a} && ${nixGenerationCleanupCommand} && ${nixStoreCleanupCommand}";
 in {
   programs.fish.shellAbbrs = {
     hash = "sha256sum";
@@ -38,10 +42,10 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nr#desktop" = "sudo nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#desktop";
-    "nr#laptop" = "sudo nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#laptop";
-    "nr#wsl" = "sudo nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#wsl";
-    "nr#nod" = "sudo nix-store --gc && sudo nixos-rebuild switch --flake ~/.nixos#nix-on-droid";
+    "nr#desktop" = update-command " --flake ~/.nixos#desktop";
+    "nr#laptop" = update-command "--flake ~/.nixos#laptop";
+    "nr#wsl" = update-command "--flake ~/.nixos#wsl";
+    "nr#nod" = update-command " --flake ~/.nixos#nix-on-droid";
 
     # git
     g = "git";
