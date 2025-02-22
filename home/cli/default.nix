@@ -5,18 +5,19 @@
     ./starship
 
     ./bash.nix
-    ./curd.nix
     ./yazi.nix
     ./jerry.nix
     ./lobster.nix
-    ./csvtool.nix
-    ./ytermusic.nix
-    ./file-management.nix
-    # ./ytui-music.nix
   ];
 
   home.packages = with pkgs; [
+    zip
+    rar
     neovim
+    csvtool
     steam-run
+    ytermusic
+    inputs.lobster.packages.${pkgs.system}.lobster-rs
+    # inputs.curd.packages.${pkgs.system}.default
   ];
 }

@@ -49,6 +49,8 @@ in {
       "${mod}${secondary}, Return, togglespecialworkspace, terminal_zen" 
       "${mod}, e, togglespecialworkspace, file_manager_tui"
       "${mod}${secondary}, e, togglespecialworkspace, file_manager_gui"
+      "${mod}, r, togglespecialworkspace, remote_desktop_gui"
+      "${mod}${secondary}, r, togglespecialworkspace, remote_desktop_glacier"
 
       # move focus
       "${mod}, h, movefocus, l"

@@ -1,13 +1,18 @@
-{
+{pkgs, ...}:{
   imports = [
-    ./go.nix
     ./git.nix
-    ./nix.nix
     ./godot.nix
     ./nodejs.nix
-    ./kubectl.nix
-    ./android.nix
-    ./c-sharp.nix
-    ./woodpecker-ci.nix
+  ];
+
+  home.packages = with pkgs; [
+    go
+    nixd
+    android-tools
+    dotnet-sdk
+    fractal
+    dotnetPackages.Nuget
+    kubectl
+    woodpecker-cli
   ];
 }

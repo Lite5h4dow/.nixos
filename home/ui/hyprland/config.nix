@@ -3,6 +3,7 @@
 }: let
   inherit (osConfig.values) terminal;
   # noDecorations = "gapsin:0, gapsOut:0, border:false, shadow:false, rounding:false, decorate:false";
+  glacier-remmina-file = "~/.local/share/remmina/glacier-tailscale.remmina";
 in {
 
   wayland.windowManager.hyprland.settings = {
@@ -92,7 +93,9 @@ in {
     workspace = [
       "special:terminal_zen, on-created-empty:${terminal.command}"
       "special:file_manager_gui, on-created-empty:thunar"
-      "special:file_manager_tui, on-created-empty:yazi"
+      "special:file_manager_tui, on-created-empty:alacritty --command yazi"
+      "special:remote_desktop_gui, on-created-empty:remmina"
+      "special:remote_desktop_glacier, on-created-empty:remmina -c ${glacier-remmina-file}"
     ];
   };
 }

@@ -3,19 +3,11 @@
     ./mpv
     ./ags
     ./rofi
-    # ./anyrun
     ./hyprland
-    ./lens.nix
-    ./taxi.nix
-    ./iwgtk.nix
-    ./mqttx.nix
     ./dunst.nix
-    ./vscode.nix
     ./fractal.nix
     ./nixcord.nix
     ./swayimg.nix
-    ./remmina.nix
-    ./blender.nix
     ./hypridle.nix
     ./trayscale.nix
     ./alacritty.nix
@@ -25,8 +17,17 @@
   ];
 
   home.packages = with pkgs; [
+    taxi
+    lens
+    mqttx
+    iwgtk
+    vscode
     neovide
-    # orca-slicer
-    # postman
+    remmina
+    fractal
+    filezilla
+    inputs.blender-pkgs.legacyPackages.${system}.blender-hip
+    orca-slicer
+    postman
   ];
 }
