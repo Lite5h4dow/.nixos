@@ -1,8 +1,8 @@
 {pkgs, ...}:{
   imports = [
     ./git.nix
-    ./godot.nix
     ./nodejs.nix
+    ./wireshark.nix
   ];
 
   home.packages = with pkgs; [

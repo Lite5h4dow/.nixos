@@ -26,7 +26,7 @@
     fractal
     filezilla
     inputs.blender-pkgs.legacyPackages.${system}.blender-hip
-    orca-slicer
+    # orca-slicer
     postman
   ];
 }
