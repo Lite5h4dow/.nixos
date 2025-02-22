@@ -3,7 +3,6 @@
   programs.nixcord = {
     enable = true;
     config = {
-      frameless = true;
     };
   };
 }
