@@ -32,7 +32,7 @@ in {
       oci-containers.backend = "podman";
     };
 
-    users.users.${mainUser}.extraGrops = ["podman"];
+    users.users.${mainUser}.extraGroups = ["podman"];
 
     hardware.nvidia-container-toolkit.enable = podman.nvidia;
   };
