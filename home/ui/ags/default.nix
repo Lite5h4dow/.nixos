@@ -1,9 +1,4 @@
-{
-  inputs, 
-  pkgs,
-  lib,
-  ...
-}:let
+{inputs, pkgs, lib, ...}:let
   inherit (lib) attrValues;
 in{  
   imports = [inputs.ags.homeManagerModules.default];

@@ -24,11 +24,11 @@
     "ags-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1739997414,
-        "narHash": "sha256-T/OBK7RGaNGU4jopvMC/08P8+PO7EaiPGNT+3OVWx9Q=",
+        "lastModified": 1740322312,
+        "narHash": "sha256-MS6o+NLlMiATLjUlzARWHbng1iu/EKS7s0kSJs4kF/M=",
         "ref": "AGS-V2",
-        "rev": "5fb0904f217959401146f5c44af59aa54c8cbab1",
-        "revCount": 58,
+        "rev": "5724aa04b510bd0840cfdde5631675c3690d7d8f",
+        "revCount": 59,
         "type": "git",
         "url": "https://git.litelot.us/litelotus/.ags"
       },
