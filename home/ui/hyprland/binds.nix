@@ -37,6 +37,10 @@ in {
       "${mod}, s, togglesplit"
       "${mod}, t, togglegroup"
 
+      # hyprshot
+      "${mod} ${shift}, s, hyprshot -m region"
+      "${mod} , Print, hyprshot -m output"
+
       # audio
       ", XF86AudioPrev, exec, playerctl previous"
       ", XF86AudioNext, exec, playerctl next"

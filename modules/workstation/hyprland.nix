@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}: {
+{ inputs, pkgs, lib, ... }: {
   imports = [inputs.hyprland.nixosModules.default];
 
   # Needed for XDPH
@@ -11,6 +6,7 @@
     grim
     grimblast
     slurp
+    hyprshot
   ];
 
   services.logind.extraConfig = ''
