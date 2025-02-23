@@ -14,7 +14,7 @@ in {
       nvidia = mkOption {
         description = "Enable nvidia tools for podman";
         type = types.bool;
-        default = nvidia.enable;
+        default = false;
       };
     };
   };
