@@ -26,7 +26,7 @@ in {
         dockerCompat = docker.enable;
         enableNvidia = podman.nvidia;
         dockerSocket.enable = true;
-        autoPrune = true;
+        autoPrune.enable = true;
       };
 
       oci-containers.backend = "podman";
