@@ -12,7 +12,7 @@ in {
       intel.enable = true;
       nvidia.enable = true;
     };
-    docker = {
+    podman = {
       enable = true;
       nvidia = true;
     };
