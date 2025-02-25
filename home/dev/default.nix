@@ -13,5 +13,10 @@
     dotnetPackages.Nuget
     kubectl
     woodpecker-cli
+    gnumake
+    python3
+    usbutils
+    gcc-arm-embedded
+    dfu-util
   ];
 }
