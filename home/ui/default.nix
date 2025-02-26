@@ -5,6 +5,7 @@
     ./rofi
     ./hyprland
     ./dunst.nix
+    ./ghostty.nix
     ./nixcord.nix
     ./swayimg.nix
     ./hypridle.nix
