@@ -17,6 +17,6 @@
     steam-run
     ytermusic
     inputs.lobster.packages.${pkgs.system}.lobster-rs
-    # inputs.curd.packages.${pkgs.system}.default
+    inputs.curd.packages.${pkgs.system}.default
   ];
 }
