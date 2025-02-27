@@ -13,7 +13,7 @@ in {
         command = mkOption {
           description = "The terminal command to run";
           type = types.str;
-          default = "alacritty";
+          default = "ghostty";
         };
         separator = mkOption {
           description = "The separator between the terminal command and the command it should run";
