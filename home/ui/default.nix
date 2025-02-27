@@ -3,9 +3,10 @@
     ./mpv
     ./ags
     ./rofi
+    ./ghostty
     ./hyprland
+
     ./dunst.nix
-    ./ghostty.nix
     ./nixcord.nix
     ./swayimg.nix
     ./hypridle.nix
