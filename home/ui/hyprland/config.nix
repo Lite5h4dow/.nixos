@@ -93,7 +93,7 @@ in {
     workspace = [
       "special:terminal_zen, on-created-empty:${terminal.command}"
       "special:file_manager_gui, on-created-empty:thunar"
-      "special:file_manager_tui, on-created-empty:yazi"
+      "special:file_manager_tui, on-created-empty:ghostty -e yazi"
       "special:remote_desktop_gui, on-created-empty:remmina"
       "special:remote_desktop_glacier, on-created-empty:remmina -c ${glacier-remmina-file}"
     ];
