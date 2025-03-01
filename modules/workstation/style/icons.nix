@@ -13,7 +13,8 @@
 
   environment.systemPackages = [
     config.stylix.icons.package
-    pkgs.breeze-icons
+    pkgs.libsForQt5.breeze-icons
+    # pkgs.breeze-icons
   ];
   programs.gdk-pixbuf.modulePackages = [pkgs.librsvg];
 }
