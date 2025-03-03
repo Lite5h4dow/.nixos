@@ -19,6 +19,7 @@ steps:
       owner: ${CI_REPO_OWNER}
       repo: ${CI_REPO_NAME}
       base_branch: main
+      branch: auto-update
       pr_title: Nix Flake Upgrade
       pr_body: |
         Automated Nix Flake upgrade
@@ -26,4 +27,3 @@ steps:
         Triggered By: ${CI_PIPELINE_EVENT}
       close_pr_if_empty: true
       delete_branch_if_pr_empty: true
-      delete_branch_after_merge: true
