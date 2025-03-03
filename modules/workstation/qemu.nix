@@ -19,7 +19,7 @@ in{
 
         package = mkOption {
           description = "QEmu ui package";
-          type = types.listOf types.set;
+          type = types.listOf types.package;
           default = with pkgs;[
             virt-manager
             virt-viewer
