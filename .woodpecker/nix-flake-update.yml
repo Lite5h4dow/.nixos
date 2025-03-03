@@ -1,6 +1,7 @@
 when:
   - cron: "* 8 * * 5"
   - event: push
+    branch: auto-update
 
 steps:
   - name: Nix Flake Update
