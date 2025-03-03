@@ -1,6 +1,6 @@
 {lib, pkgs, osConfig, ...}:let
   inherit (osConfig.custom) podman;
-  inherit (lib) optional;
+  inherit (lib) mkIf;
 in{
   imports = [
     ./git.nix
@@ -25,7 +25,7 @@ in{
     ];
 
     file = {
-      ".config/containers/config.json" = optional podman.enable {
+      ".config/containers/config.json" = mkIf podman.enable {
         text = ''
           {
             "credHelpers": {
