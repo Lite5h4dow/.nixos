@@ -29,6 +29,7 @@ in {
         quickemu = {
           enable = true;
         };
+        ui.enable = true;
       };
     };
 
