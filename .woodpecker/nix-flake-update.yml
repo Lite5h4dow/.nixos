@@ -1,0 +1,29 @@
+when:
+  - cron: "* 8 * * 5"
+  - event: push
+
+steps:
+  - name: Nix Flake Update
+    image: nixos/nix:latest
+    pull: true
+    commands:
+      - nix flake update
+
+  - name: Create PR
+    image: johnwalkerx/gitea-pull-request-create-plugin:latest
+    pull: true
+    settings:
+      gitea_address: https://git.litelot.us
+      gitea_token:
+        from_secret: gitea_token
+      owner: ${CI_REPO_OWNER}
+      repo: ${CI_REPO_NAME}
+      base_branch: main
+      pr_title: Nix Flake Upgrade
+      pr_body: |
+        Automated Nix Flake upgrade
+        Ran At: ${CI_PIPELINE_STARTED}
+        Triggered By: ${CI_PIPELINE_EVENT}
+      close_pr_if_empty: true
+      delete_branch_if_pr_empty: true
+      delete_branch_after_merge: true
