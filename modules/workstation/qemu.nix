@@ -20,7 +20,7 @@ in{
 
       architectures = mkOption {
         description = "Architectures to emulate";
-        type = types.list;
+        type = types.listOf types.string;
         default = [
           "aarch64-linux"
           "riscv64-linux"
