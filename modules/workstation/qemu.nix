@@ -50,6 +50,22 @@ in{
     ++ optional cfg.quickemu.enable pkgs.quickemu
     ++ optionals cfg.ui.enable cfg.ui.package;
 
+    virtualisation.libvirtd ={
+      enable = true;
+      qemu = {
+        package = pkgs.qemu;
+        runAsRoot = true;
+        swtpm.enable = true;
+        ovmf = {
+          enable = true;
+          packages = [(pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          }).fd];
+        };
+      };
+    };
+
     systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
     boot.binfmt.emulatedSystems = cfg.architectures;
   };
