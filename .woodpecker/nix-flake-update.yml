@@ -15,7 +15,7 @@ steps:
     settings:
       gitea_address: https://git.litelot.us
       gitea_token:
-        from_secret: gitea_token
+        from_secret: automation-token
       owner: ${CI_REPO_OWNER}
       repo: ${CI_REPO_NAME}
       base_branch: main
