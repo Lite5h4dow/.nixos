@@ -27,6 +27,7 @@
     remmina
     fractal
     filezilla
+    inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.stable-pkgs.legacyPackages.${system}.orca-slicer
     postman

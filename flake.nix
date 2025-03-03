@@ -148,6 +148,10 @@
       };
     };
 
+    zen-browser = {
+      url = "github:MarceColl/zen-browser-flake";
+    };
+
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs = {
