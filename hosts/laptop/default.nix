@@ -26,7 +26,9 @@ in {
     virtualisation ={
       qemu ={
         enable = true;
-        quickemu = true;
+        quickemu = {
+          enable = true;
+        };
       };
     };
 
