@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}: let
   inherit (config.custom.virtualisation) qemu;
   cfg = qemu;
-  inherit (lib) optional types mkIf mkOption mkEnableOption ;
+  inherit (lib) optional optionals types mkIf mkOption mkEnableOption ;
 in{
   options ={
     custom.virtualisation.qemu = {
@@ -9,6 +9,22 @@ in{
         description = "Enable QEMU virtualisation";
         type = types.bool;
         default = false;
+      };
+      ui ={
+        enable = mkEnableOption {
+          description = "Enable QEmu ui";
+          type = types.bool;
+          default = false;
+        };
+
+        package = mkOption {
+          description = "QEmu ui package";
+          type = types.listOf types.set;
+          default = with pkgs;[
+            virt-manager
+            virt-viewer
+          ];
+        };
       };
       quickemu = {
         enable = mkEnableOption {
@@ -30,9 +46,9 @@ in{
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [
-      pkgs.qemu
-    ]++ optional cfg.quickemu.enable pkgs.quickemu;
+    environment.systemPackages = [ pkgs.qemu ]
+    ++ optional cfg.quickemu.enable pkgs.quickemu
+    ++ optionals cfg.ui.enable cfg.ui.package;
 
     systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
     boot.binfmt.emulatedSystems = cfg.architectures;
