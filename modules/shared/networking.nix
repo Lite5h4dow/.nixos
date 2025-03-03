@@ -11,6 +11,12 @@ in {
         default = true;
       };
 
+      useIPv6 = mkEnableOption {
+        description = "Enable the use of IPv6";
+        type = types.bool;
+        default = false;
+      };
+
       useDHCP = mkOption {
         description = "Enable DHCP usage";
         default = false;
@@ -29,6 +35,7 @@ in {
     networking = {
       useDHCP = mkForce cfg.useDHCP;
       hostName = cfg.hostName;
+      enableIPv6 = cfg.useIPv6;
       networkmanager = {
         enable = true;
       };

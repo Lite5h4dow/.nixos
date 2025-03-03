@@ -1,5 +1,6 @@
 { config, lib, pkgs, lib', ...}: let
   cfg = config.custom.networking.wireless;
+  inherit (config.custom.networking) useIPv6;
   mobile = config.custom.mobile;
   inherit (lib) types mkIf mkEnableOption;
 in {
@@ -19,7 +20,7 @@ in {
         iwd = {
           enable = true;
           settings = {
-            IPv6.Enabled = true;
+            IPv6.Enabled = useIPv6;
             Settings.AutoConnect = true;
           };
         };
