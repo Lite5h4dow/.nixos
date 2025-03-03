@@ -37,6 +37,11 @@ in {
       "default=${nixpkgsPath}"
     ];
   };
+  # system.autoUpgrade = {
+  #   enable = true;
+  #   flake = inputs.self.outPath;
+    
+  # };
 
   systemd.services.nix-daemon.environment.TMPDIR = "/var/tmp/nix-daemon";
 }
