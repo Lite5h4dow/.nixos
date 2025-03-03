@@ -34,6 +34,7 @@ in{
       pkgs.qemu
     ]++ optional cfg.quickemu.enable pkgs.quickemu;
 
+    systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
     boot.binfmt.emulatedSystems = cfg.architectures;
   };
 }
