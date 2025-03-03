@@ -1,6 +1,6 @@
 {pkgs, config, lib, ...}: let
   inherit (config.custom.virtualisation) qemu;
-  inherit (qemu) cfg;
+  cfg = qemu;
   inherit (lib) types mkIf mkOption mkEnableOption ;
 in{
   options ={
