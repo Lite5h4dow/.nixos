@@ -7,7 +7,7 @@ steps:
     image: nixos/nix:latest
     pull: true
     commands:
-      - nix flake update
+      - nix flake update --extra-experimental-features nix-command
 
   - name: Create PR
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
