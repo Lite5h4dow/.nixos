@@ -1,7 +1,7 @@
 {pkgs, config, lib, ...}: let
   inherit (config.custom.virtualisation) qemu;
   cfg = qemu;
-  inherit (lib) types mkIf mkOption mkEnableOption ;
+  inherit (lib) optional types mkIf mkOption mkEnableOption ;
 in{
   options ={
     custom.virtualisation.qemu = {
@@ -20,7 +20,7 @@ in{
 
       architectures = mkOption {
         description = "Architectures to emulate";
-        type = types.listOf types.string;
+        type = types.listOf types.str;
         default = [
           "aarch64-linux"
           "riscv64-linux"
@@ -32,7 +32,7 @@ in{
   config = mkIf cfg.enable {
     environment.systemPackages = [
       pkgs.qemu
-    ]++ mkIf cfg.quickemu.enable pkgs.quickemu;
+    ]++ optional cfg.quickemu.enable pkgs.quickemu;
 
     boot.binfmt.emulatedSystems = cfg.architectures;
   };
