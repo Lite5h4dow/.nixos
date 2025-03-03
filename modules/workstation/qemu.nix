@@ -10,7 +10,7 @@ in{
         type = types.bool;
         default = false;
       };
-      quickEmu = {
+      quickemu = {
         enable = mkEnableOption {
           description = "Enable QuickEmu";
           type = types.bool;
