@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.values) mainUser;
-  inherit (config.custom) nvidia;
+  inherit (config.custom.graphics) nvidia;
   inherit (lib) types;
   cfg = config.custom.docker;
 in {
@@ -21,7 +21,7 @@ in {
       nvidia = lib.mkOption {
         description = "Enable Nvidia container toolkit for docker";
         type = types.bool;
-        default = true;
+        default = nvidia.enable;
       };
     };
   };

@@ -14,7 +14,6 @@ in {
     };
     podman = {
       enable = true;
-      nvidia = true;
     };
     bluetooth.enable = true;
     tailscale.enable = true;
@@ -22,6 +21,13 @@ in {
       hostName = "glacier-flake";
       useDHCP = true;
       wireless.enable = true;
+    };
+
+    virtualisation ={
+      qemu ={
+        enable = true;
+        quickemu = true;
+      };
     };
 
     gaming ={ 

@@ -1,6 +1,7 @@
 {config, lib, ...}: let
   inherit (config.values) mainUser;
-  inherit (config.custom) nvidia docker podman;
+  inherit (config.custom) graphics docker podman;
+  inherit (graphics) nvidia;
   inherit (lib) types mkEnableOption mkOption mkIf;
 in {
   options = {
@@ -14,7 +15,7 @@ in {
       nvidia = mkOption {
         description = "Enable nvidia tools for podman";
         type = types.bool;
-        default = false;
+        default = nvidia.enable;
       };
     };
   };
@@ -24,7 +25,6 @@ in {
       podman = {
         enable = true;
         dockerCompat = docker.enable;
-        enableNvidia = podman.nvidia;
         dockerSocket.enable = true;
         autoPrune.enable = true;
       };

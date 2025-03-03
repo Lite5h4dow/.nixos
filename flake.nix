@@ -18,7 +18,7 @@
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
 
-    blender-pkgs = {
+    stable-pkgs = {
       url = "nixpkgs/nixos-24.11";
     };
 
