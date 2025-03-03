@@ -32,7 +32,7 @@ in{
   config = mkIf cfg.enable {
     environment.systemPackages = [
       pkgs.qemu
-    ]++ mkIf cfg.quickemu pkgs.quickemu;
+    ]++ mkIf cfg.quickemu.enable pkgs.quickemu;
 
     boot.binfmt.emulatedSystems = cfg.architectures;
   };
