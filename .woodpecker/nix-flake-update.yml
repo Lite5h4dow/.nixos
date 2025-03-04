@@ -18,6 +18,9 @@ steps:
       branch: auto-update
       local_ref: auto-update
       remote_name: origin
+      remote: git@git.litelot.us:litelotus/.nixos.git
+      ssh_key:
+        from_secret: git-bot-sshkey
       force: false
       commit: true
       author_name: ${CI_COMMIT_AUTHOR}
