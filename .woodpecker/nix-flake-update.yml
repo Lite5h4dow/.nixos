@@ -6,13 +6,21 @@ when:
     cron: weekly-update
 
 steps:
-  - name: Nix Flake Update
+  - name: nix flake update
     image: nixos/nix:latest
     pull: true
     commands:
       - nix flake update --extra-experimental-features nix-command --extra-experimental-features flakes
 
-  - name: Create PR
+  - name: push flake commit
+    image: appleboy/drone-git-push
+    settings:
+      branch: auto-update
+      remote: git@git.litelot.us:litelotus/.nixos.git
+      force: false
+      commit: true
+
+  - name: create pull request
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
     settings:
