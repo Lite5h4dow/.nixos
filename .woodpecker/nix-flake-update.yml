@@ -1,8 +1,9 @@
 when:
-  - event: push
+  - event: pull_request_closed
     branch: auto-update
-  - cron: "* 8 * * 5"
-    branch: auto-update
+
+  - event : cron
+    cron: weekly-update
 
 steps:
   - name: Nix Flake Update
