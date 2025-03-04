@@ -20,6 +20,8 @@ steps:
       remote_name: origin
       force: false
       commit: true
+      author_name: $CI_COMMIT_AUTHOR
+      author_email: $CI_COMMIT_AUTHOR_EMAIL
 
   - name: create pull request
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
