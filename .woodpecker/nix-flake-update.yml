@@ -1,6 +1,7 @@
 when:
-  - cron: "* 8 * * 5"
   - event: push
+    branch: auto-update
+  - cron: "* 8 * * 5"
     branch: auto-update
 
 steps:
