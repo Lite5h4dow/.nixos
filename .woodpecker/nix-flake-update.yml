@@ -18,7 +18,7 @@ steps:
       branch: auto-update
       local_ref: auto-update
       # remote_name: origin
-      remote: ssh://git@git.litelot.us:litelotus/.nixos.git
+      remote: 'git@git.litelot.us:litelotus/.nixos.git'
       ssh_key:
         from_secret: git-bot-sshkey
       force: false
