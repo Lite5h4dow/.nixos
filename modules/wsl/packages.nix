@@ -9,9 +9,6 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
-      eza
-      opentofu
-      google-cloud-sdk
       wslu
       wsl-open
     ];

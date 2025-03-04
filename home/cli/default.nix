@@ -9,16 +9,25 @@
     ./jerry.nix
   ];
 
-  home.packages = with pkgs; [
-    zip
-    rar
-    neovim
-    csvtool
-    steam-run
-    ytermusic
-    aria2
-    inputs.lobster.packages.${pkgs.system}.lobster-rs
-    inputs.curd.packages.${pkgs.system}.default
-    neofetch
-  ];
+  home ={
+    packages = with pkgs; [
+      eza
+      zip
+      opentofu
+      rar
+      neovim
+      csvtool
+      steam-run
+      ytermusic
+      aria2
+      inputs.lobster.packages.${pkgs.system}.lobster-rs
+      inputs.curd.packages.${pkgs.system}.default
+      neofetch
+      google-cloud-sdk
+    ];
+  };
+
+  sessionVariables = {
+    "KUBE_CONFIG_PATH" = "~/.kube/config";
+  };
 }

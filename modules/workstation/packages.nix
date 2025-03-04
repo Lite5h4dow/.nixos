@@ -14,10 +14,7 @@ in {
 
     systemPackages = with pkgs; [
       wl-clipboard
-      eza
       obsidian
-      opentofu
-      google-cloud-sdk
       ungoogled-chromium
       bitwarden-desktop
     ];
