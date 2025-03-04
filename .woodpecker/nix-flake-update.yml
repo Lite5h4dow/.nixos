@@ -16,7 +16,7 @@ steps:
     image: appleboy/drone-git-push
     settings:
       branch: auto-update
-      local_ref: auto-update
+      # local_ref: auto-update
       # remote_name: origin
       remote: 'git@git.litelot.us:litelotus/.nixos.git'
       ssh_key:
