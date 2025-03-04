@@ -15,10 +15,9 @@ steps:
   - name: push flake commit
     image: appleboy/drone-git-push
     settings:
-      ssh_key:
-        from_secret: git-bot-sshkey
       branch: auto-update
-      remote: git@git.litelot.us:litelotus/.nixos.git
+      local_ref: auto-update
+      remote_name: origin
       force: false
       commit: true
 
