@@ -22,6 +22,14 @@ in{
       usbutils
       gcc-arm-embedded
       dfu-util
+      (wrapHelm kubernetes-helm {
+        plugins = with pkgs.kubernetes-helmPlugins; [
+          helm-secrets
+          helm-diff
+          helm-s3
+          helm-git
+        ];
+      })
     ];
 
     file = {
