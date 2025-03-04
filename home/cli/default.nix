@@ -25,9 +25,9 @@
       neofetch
       google-cloud-sdk
     ];
-  };
 
-  sessionVariables = {
-    "KUBE_CONFIG_PATH" = "~/.kube/config";
+    sessionVariables = {
+      "KUBE_CONFIG_PATH" = "~/.kube/config";
+    };
   };
 }
