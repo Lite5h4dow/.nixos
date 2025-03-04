@@ -1,17 +1,9 @@
 when:
   - event: push
-    branch: auto-update
-  - cron: "* 8 * * 5"
-    branch: auto-update
+    branch: main
 
 steps:
-  - name: Nix Flake Update
-    image: nixos/nix:latest
-    pull: true
-    commands:
-      - nix flake update --extra-experimental-features nix-command --extra-experimental-features flakes
-
-  - name: Create PR
+  - name: create sync pr
     image: johnwalkerx/gitea-pull-request-create-plugin:latest
     pull: true
     settings:
@@ -20,11 +12,13 @@ steps:
         from_secret: automation-token
       owner: ${CI_REPO_OWNER}
       repo: ${CI_REPO_NAME}
-      base_branch: main
-      branch: auto-update
-      pr_title: Nix Flake Upgrade
+      base_branch: auto-update
+      branch: main
+      pr_title: Automation Branch Update
       pr_body: |
-        Automated Nix Flake upgrade
+        Automated branch sync
         Ran At: ${CI_PIPELINE_STARTED}
         Triggered By: ${CI_PIPELINE_EVENT}
       close_pr_if_empty: true
+      merge_when_checks_succeed: true
+      
