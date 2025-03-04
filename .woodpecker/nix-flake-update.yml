@@ -23,6 +23,7 @@ steps:
         from_secret: git-bot-sshkey
       force: false
       commit: true
+      rebase: true
       author_name: ${CI_COMMIT_AUTHOR}
       author_email: ${CI_COMMIT_AUTHOR_EMAIL}
 
