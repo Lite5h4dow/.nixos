@@ -7,10 +7,10 @@
   programs.fish = {
     enable = true;
 
-    # plugins = with pkgs.fishPlugins; [
-    #   autopair.src
-    #   sponge.src
-    #   done.src
-    # ];
+    plugins = with pkgs.fishPlugins; [
+      autopair.src
+      sponge.src
+      done.src
+    ];
   };
 }
