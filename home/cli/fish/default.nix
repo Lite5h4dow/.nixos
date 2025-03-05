@@ -8,9 +8,9 @@
     enable = true;
 
     plugins = with pkgs.fishPlugins; [
-      autopair.src
-      sponge.src
-      done.src
+      # autopair.src
+      # sponge.src
+      # done.src
     ];
   };
 }
