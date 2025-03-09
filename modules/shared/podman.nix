@@ -25,7 +25,7 @@ in {
       podman = {
         enable = true;
         dockerCompat = docker.enable;
-        dockerSocket.enable = true;
+        # dockerSocket.enable = true;
         autoPrune.enable = true;
       };
 
