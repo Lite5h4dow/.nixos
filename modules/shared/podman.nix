@@ -24,8 +24,8 @@ in {
     virtualisation = {
       podman = {
         enable = true;
-        dockerCompat = docker.enable;
-        # dockerSocket.enable = true;
+        dockerCompat = !docker.enable;
+        dockerSocket.enable = !docker.enable;
         autoPrune.enable = true;
       };
 
