@@ -21,6 +21,10 @@ in {
       # default-flake = nixpkgs;
       log-lines = 30;
       http-connections = 50;
+
+      substituters=[
+        "https://cache.nixos.org/"
+      ];
     };
 
     registry = {
