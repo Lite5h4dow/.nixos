@@ -15,9 +15,9 @@ in {
     podman = {
       enable = true;
     };
-    # docker = {
-    #   enable = true;
-    # };
+    docker = {
+      enable = true;
+    };
     bluetooth.enable = true;
     tailscale.enable = true;
     networking = {
