@@ -31,5 +31,6 @@
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.stable-pkgs.legacyPackages.${system}.orca-slicer
     postman
+    freecad-wayland
   ];
 }
