@@ -16,7 +16,7 @@ in {
       enable = true;
     };
     docker = {
-      enable = true;
+      enable = false;
     };
     bluetooth.enable = true;
     tailscale.enable = true;
