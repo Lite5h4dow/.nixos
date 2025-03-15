@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
-cd ~/.nixos;
-
 nix flake update\
+ --flake ~/.nixos\
  wrapper-manager\
  flake-utils\
  flake-compat\
@@ -15,5 +13,3 @@ nix flake update\
  stylix\
  zen-browser\
  nixcord\
-
-cd -;

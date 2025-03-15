@@ -30,11 +30,11 @@
         "rev": "6798b499611e627802a9ac00b7a5356838e39ba0",
         "revCount": 63,
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.ags"
+        "url": "git:litelotus/.ags"
       },
       "original": {
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.ags"
+        "url": "git:litelotus/.ags"
       }
     },
     "aquamarine": {
@@ -962,11 +962,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1741289847,
-        "narHash": "sha256-MWdNZLqOwDTJULli7C+hDmRbmL6+l0aI3Q87QIayP14=",
+        "lastModified": 1742019091,
+        "narHash": "sha256-zzAn6mBiK0+UFjcmG7indZJMPpPt0kMEzck5Jx00au8=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "5215f924f945f2148bcd82f453483cd125c313f6",
+        "rev": "c1a2a14393dba951994442199b9adfe14bb78a99",
         "type": "github"
       },
       "original": {
@@ -1673,11 +1673,11 @@
         "rev": "527f685f49968197ec3ef5ab3091dec433add5ae",
         "revCount": 2,
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.wallpapers"
+        "url": "git:litelotus/.wallpapers"
       },
       "original": {
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.wallpapers"
+        "url": "git:litelotus/.wallpapers"
       }
     },
     "wrapper-manager": {
