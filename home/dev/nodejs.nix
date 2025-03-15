@@ -7,7 +7,7 @@
     deno
     pnpm
 
-    # prisma
+    prisma
     # prismaPackages."@prisma/language-server"
 
     sass

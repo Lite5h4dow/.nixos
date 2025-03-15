@@ -17,8 +17,10 @@ in{
       python3
       usbutils
       dfu-util
+      protobuf
       netcoredbg
       dotnet-sdk
+      clang-tools
       android-tools
       woodpecker-cli
       gcc-arm-embedded

@@ -16,7 +16,6 @@ in {
     gopls
     taplo
     hyprls
-    clangd
     lsp-ai
     fortls
     nimlsp
