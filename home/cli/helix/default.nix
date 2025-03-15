@@ -28,6 +28,7 @@ in {
     lua-language-server
     yaml-language-server
     bash-language-server
+    svelte-language-server
     typescript-language-server
     vscode-langservers-extracted
     docker-compose-language-service
