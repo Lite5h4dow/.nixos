@@ -13,10 +13,10 @@
       };
 
       url = {
-        "https://github.com/".insteadOf = "github:";
+        "https://github.com/".insteadOf = "github+https:";
         "ssh://git@github.com/".insteadOf = "github:";
 
-        "https://git.litelot.us/".insteadOf = "git:";
+        "https://git.litelot.us/".insteadOf = "git+https:";
         "ssh://git.litelot.us/".insteadOf = "git:";
       };
     };
