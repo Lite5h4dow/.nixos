@@ -12,21 +12,32 @@ in {
     nil
     zls
     nixd
-    lldb
     ruff
     gopls
     taplo
+    hyprls
+    clangd
     lsp-ai
     fortls
     nimlsp
     helm-ls
+    openscad-lsp
     terraform-ls
-    omnisharp-roslyn
+    glsl_analyzer
     rust-analyzer
+    omnisharp-roslyn
     lua-language-server
     yaml-language-server
+    bash-language-server
     typescript-language-server
     vscode-langservers-extracted
+    docker-compose-language-service
+    dockerfile-language-server-nodejs
+
+
+    # debuggers
+    lldb
+    delve
   ];
 
   home = {
