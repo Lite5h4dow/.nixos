@@ -14,10 +14,10 @@ in {
 
   config = mkIf cfg.enable {
     # TODO: remove this (temp fix for nvidia build)
-    boot.kernelPackages = pkgs.linuxPackages_6_12;
+    # boot.kernelPackages = pkgs.linuxPackages_6_12;
 
     hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
       open = false;
 
       modesetting.enable = true;
