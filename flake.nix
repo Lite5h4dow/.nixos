@@ -42,12 +42,12 @@
 
     wallpapers = {
       flake = false;
-      url = "git+https://git.litelot.us/litelotus/.wallpapers";
+      url = "git:litelotus/.wallpapers";
     };
 
     ags-config = {
       flake = false;
-      url = "git+https://git.litelot.us/litelotus/.ags";
+      url = "git:litelotus/.ags";
       # url = "git+https://git.litelot.us/litelotus/.ags?ref=AGS-V2";
     };
 
