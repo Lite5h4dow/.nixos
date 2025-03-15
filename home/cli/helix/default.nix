@@ -22,7 +22,7 @@ in {
     helm-ls
     terraform-ls
     omnisharp-roslyn
-    rust-rust-analyzer
+    rust-analyzer
     lua-language-server
     yaml-language-server
     typescript-language-server
