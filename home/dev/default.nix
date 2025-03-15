@@ -10,25 +10,26 @@ in{
   home={
     packages = with pkgs; [
       go
-      nixd
-      android-tools
-      dotnet-sdk
+      zig
       fractal
-      dotnetPackages.Nuget
       kubectl
-      woodpecker-cli
       gnumake
       python3
       usbutils
-      gcc-arm-embedded
       dfu-util
+      netcoredbg
+      dotnet-sdk
+      android-tools
+      woodpecker-cli
+      gcc-arm-embedded
+      dotnetPackages.Nuget
 
       (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
           helm-secrets
           helm-diff
-          helm-s3
           helm-git
+          helm-s3
         ];
       })
     ];

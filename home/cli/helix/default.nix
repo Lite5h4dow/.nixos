@@ -10,19 +10,23 @@ in {
 
     # language servers
     nil
+    zls
+    nixd
+    lldb
+    ruff
     gopls
+    taplo
+    lsp-ai
     fortls
     nimlsp
+    helm-ls
     terraform-ls
-    yaml-language-server
-    # vscode-langserves-extracted
-    nodePackages_latest.typescript-language-server
-    # nodePackages_latest.vscode-html-languageserver-bin
-    # nodePackages_latest.vscode-css-languageserver-bin
-    # nodePackages_latest.vscode-json-languageserver
-    python312Packages.python-lsp-server
     omnisharp-roslyn
-    lsp-ai
+    rust-rust-analyzer
+    lua-language-server
+    yaml-language-server
+    typescript-language-server
+    vscode-langservers-extracted
   ];
 
   home = {
