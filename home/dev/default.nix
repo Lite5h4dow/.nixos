@@ -16,6 +16,7 @@ in{
       gnumake
       python3
       usbutils
+      opentofu
       dfu-util
       protobuf
       netcoredbg
@@ -26,6 +27,10 @@ in{
       gcc-arm-embedded
       kubectl-validate
       dotnetPackages.Nuget
+
+      google-cloud-sdk.withExtraComponents [
+        google-cloud-sdk.components.gke-gcloud-auth-plugin
+      ]
 
       (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
