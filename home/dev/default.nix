@@ -1,6 +1,10 @@
 {lib, pkgs, osConfig, ...}:let
   inherit (osConfig.custom) podman;
   inherit (lib) mkIf;
+
+  gcloud = pkgs.google-cloud-sdk.withExtraComponents [
+    pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+  ];
 in{
   imports = [
     ./git.nix
@@ -11,6 +15,7 @@ in{
     packages = with pkgs; [
       go
       zig
+      gcloud
       fractal
       kubectl
       gnumake
@@ -27,10 +32,6 @@ in{
       gcc-arm-embedded
       kubectl-validate
       dotnetPackages.Nuget
-
-      google-cloud-sdk.withExtraComponents [
-        google-cloud-sdk.components.gke-gcloud-auth-plugin
-      ]
 
       (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
