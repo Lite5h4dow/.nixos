@@ -24,6 +24,7 @@ in{
       android-tools
       woodpecker-cli
       gcc-arm-embedded
+      kubectl-validate
       dotnetPackages.Nuget
 
       (wrapHelm kubernetes-helm {
