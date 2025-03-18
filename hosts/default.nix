@@ -1,4 +1,4 @@
-{lib', self}: let
+{lib', nixpkgs}: let
   inherit (lib') mkNixosSystem mkNixOnDroidSystem;
 
   modulePath = ../modules;
@@ -56,7 +56,15 @@ in {
     ];
   };
 
-  images ={
-    raspberry-pi = self.raspberry-pi.config.system.build.sdImage;
+  images = {
+    raspberry-pi = mkNixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+        ./raspberry-pi
+        raspberry-pi
+        shared
+      ];
+    };
   };
 }
