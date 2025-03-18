@@ -35,6 +35,11 @@ in {
 
     channel.enable = false;
 
+    gc ={
+      automatic = true;
+      options = "--delete-older-than 7d";
+    };
+
     nixPath = [
       "nixpkgs=${nixpkgsPath}"
       "n=${nixpkgsPath}"

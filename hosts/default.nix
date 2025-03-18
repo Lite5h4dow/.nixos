@@ -8,6 +8,7 @@
   server = modulePath + /server;
   wsl = modulePath + /wsl;
   nix-on-droid = modulePath + /nix-on-droid;
+  raspberry-pi = modulePath + /rasppberry-pi;
 
 in {
   desktop = mkNixosSystem {
@@ -33,6 +34,15 @@ in {
     modules = [
       ./wsl
       wsl
+      shared
+    ];
+  };
+
+  raspberry-pi = mkNixosSystem {
+    system = "aarch64-linux";
+    modules = [
+      ./raspberry-pi
+      raspberry-pi
       shared
     ];
   };
