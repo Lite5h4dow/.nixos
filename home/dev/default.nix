@@ -20,6 +20,7 @@ in{
       kubectl
       gnumake
       python3
+      popsicle
       usbutils
       opentofu
       dfu-util
