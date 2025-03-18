@@ -1,7 +1,6 @@
 {config, lib, pkgs, ...} : let
   inherit (config) values;
 in {
-  imports = [./hardware.nix];
   custom = {
     mobile.enable = false;
     boot.enable = false;
