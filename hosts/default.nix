@@ -1,4 +1,4 @@
-{lib'}: let
+{lib', self}: let
   inherit (lib') mkNixosSystem mkNixOnDroidSystem;
 
   modulePath = ../modules;
@@ -46,6 +46,8 @@ in {
       shared
     ];
   };
+
+  raspberry-pi-image = self.raspberry-pi.config.system.build.sdImage;
 
   nix-on-droid = mkNixOnDroidSystem {
     system = "aarch64-linux";
