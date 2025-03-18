@@ -25,8 +25,8 @@
           on-resume = "hyprctl dispatch dpms on";
         }
         {
-          timeout = 600; # 10m
-          on-timeout = "systemctl suspend";
+          # timeout = 600; # 10m
+          # on-timeout = "systemctl suspend";
         }
       ]
       ++ lib.optional osConfig.custom.mobile.enable {
