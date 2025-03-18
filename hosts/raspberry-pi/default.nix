@@ -23,6 +23,5 @@ in {
       ui.enable = false;
     };
     tailscale.enable = true;
-    gaming.enable = false;
   };
 }
