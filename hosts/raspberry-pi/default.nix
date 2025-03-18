@@ -23,6 +23,7 @@ in {
       qemu.enable = false;
       ui.enable = false;
     };
+    tailscale.enable = true;
     gaming.enable = false;
   };
 }
