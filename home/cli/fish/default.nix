@@ -2,11 +2,11 @@
   inherit (lib) mkIf;
   inherit (osConfig.custom) fish;
 in {
+  imports = [
+    ./abbreviations.nix
+    # ./aliases.nix
+  ];
   config = mkIf fish.enable {
-    imports = [
-      ./abbreviations.nix
-      # ./aliases.nix
-    ];
 
     programs.fish = {
       plugins = with pkgs.fishPlugins; [
