@@ -6,6 +6,9 @@
       inherit inputs lib';
     };
   in {
+    images = import ./images {
+      inherit lib' inputs;
+    };
     nixosConfigurations = import ./hosts {
       inherit lib';
     };

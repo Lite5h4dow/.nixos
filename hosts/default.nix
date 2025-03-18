@@ -10,6 +10,16 @@
   nix-on-droid = modulePath + /nix-on-droid;
   raspberry-pi = modulePath + /raspberry-pi;
 
+  pi-image = mkNixosSystem {
+    system = "aarch64-linux";
+    modules = [
+      "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+      ./raspberry-pi
+      raspberry-pi
+      shared
+    ];
+  };
+
 in {
   desktop = mkNixosSystem {
     system = "x86_64-linux";
@@ -56,15 +66,5 @@ in {
     ];
   };
 
-  images = {
-    raspberry-pi = mkNixosSystem {
-      system = "aarch64-linux";
-      modules = [
-        "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
-        ./raspberry-pi
-        raspberry-pi
-        shared
-      ];
-    };
-  };
+  images.raspberry-pi = pi-image.config.system.build.sdImage;
 }
