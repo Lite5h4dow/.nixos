@@ -2,17 +2,19 @@
   imports = [
     ./graphics
 
+    ./ssh.nix
+    ./nix.nix
+    ./fish.nix
     ./boot.nix
     ./system.nix
-    ./packages.nix
-    ./scripts.nix
-    ./nix.nix
-    ./networking.nix
-    ./wireless.nix
-    ./bluetooth.nix
-    ./tailscale.nix
     ./docker.nix
     ./podman.nix
     ./mobile.nix
+    ./scripts.nix
+    ./wireless.nix
+    ./packages.nix
+    ./bluetooth.nix
+    ./tailscale.nix
+    ./networking.nix
   ];
 }
