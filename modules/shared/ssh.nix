@@ -3,7 +3,7 @@
   inherit (config.custom) ssh;
 in {
   options = {
-    options.custom.ssh = {
+    custom.ssh = {
       enable = mkEnableOption {
         description = "Enable SSH";
         type = values.bool;
