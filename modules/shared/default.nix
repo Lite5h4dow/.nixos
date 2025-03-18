@@ -4,8 +4,8 @@
 
     ./ssh.nix
     ./nix.nix
-    ./fish.nix
     ./boot.nix
+    ./shell.nix
     ./system.nix
     ./docker.nix
     ./podman.nix
