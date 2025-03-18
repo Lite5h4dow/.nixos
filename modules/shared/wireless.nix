@@ -17,7 +17,6 @@ in {
   config = mkIf cfg.enable {
     networking = {
       wireless = {
-        enable = true;
         iwd = {
           enable = true;
           settings = {
