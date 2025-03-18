@@ -18,10 +18,6 @@ in {
       useDHCP = true;
       wireless.enable = true;
     };
-    virtualisation = {
-      qemu.enable = false;
-      ui.enable = false;
-    };
     tailscale.enable = true;
   };
 }
