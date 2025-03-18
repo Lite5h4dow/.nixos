@@ -12,15 +12,11 @@
   home ={
     packages = with pkgs; [
       eza
-      zip
-      rar
+      ouch
       neovim
       csvtool
-      steam-run
       ytermusic
       aria2
-      inputs.lobster.packages.${pkgs.system}.lobster-rs
-      inputs.curd.packages.${pkgs.system}.default
       neofetch
     ];
 

@@ -1,11 +1,5 @@
-{ pkgs, lib, config, ... }: let
-  inherit (config.values) mainUser;
-  inherit (config) home-manager;
-in {
+{ pkgs, ... }:  {
   programs.command-not-found.enable =  false;
-  programs.fish.enable = true;
-
-  users.users.${mainUser}.shell = home-manager.users.${mainUser}.programs.fish.package;
 
   environment = {
     sessionVariables = {
@@ -13,10 +7,13 @@ in {
     };
 
     systemPackages = with pkgs; [
-      wl-clipboard
       obsidian
-      ungoogled-chromium
+      steam-run
+      wl-clipboard
       bitwarden-desktop
+      ungoogled-chromium
+      inputs.lobster.packages.${pkgs.system}.lobster-rs
+      inputs.curd.packages.${pkgs.system}.default
     ];
   };
 }

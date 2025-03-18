@@ -1,10 +1,7 @@
 {
-  config,
   pkgs,
   ...
-}: let
-  inherit (config.values) mainUser;
-in {
+}: {
   home.packages = with pkgs; [
     helix
 

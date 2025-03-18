@@ -1,8 +1,12 @@
-{pkgs, ...}: {
+{pkgs, config, ...}:let
+  inherit (config) mainUser; 
+in {
   imports = [
     ./abbreviations.nix
     # ./aliases.nix
   ];
+
+  users.users.${mainUser}.shell = pkgs.fish;
 
   programs.fish = {
     enable = true;
