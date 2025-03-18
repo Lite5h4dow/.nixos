@@ -1,5 +1,5 @@
 {pkgs, config, ...}:let
-  inherit (config) mainUser; 
+  inherit (config.values) mainUser; 
 in {
   imports = [
     ./abbreviations.nix
