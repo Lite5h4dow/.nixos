@@ -27,8 +27,6 @@ in {
       ];
     };
 
-    users.users."root".initialPassword = "toor";
-
     registry = {
       nixpkgs.flake = nixpkgs;
       n.flake = nixpkgs;
@@ -48,6 +46,7 @@ in {
       "default=${nixpkgsPath}"
     ];
   };
+  users.users."root".initialPassword = "toor";
   # system.autoUpgrade = {
   #   enable = true;
   #   flake = inputs.self.outPath;
