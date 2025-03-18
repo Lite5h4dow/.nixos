@@ -47,8 +47,6 @@ in {
     ];
   };
 
-  raspberry-pi-image = self.raspberry-pi.config.system.build.sdImage;
-
   nix-on-droid = mkNixOnDroidSystem {
     system = "aarch64-linux";
     modules = [
@@ -56,5 +54,9 @@ in {
       nix-on-droid
       shared
     ];
+  };
+
+  images ={
+    raspberry-pi = self.raspberry-pi.config.system.build.sdImage;
   };
 }
