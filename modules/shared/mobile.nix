@@ -24,12 +24,6 @@ in {
     };
 
     services = {
-      openssh = {
-        enable = true;
-        startWhenNeeded = true;
-        settings.PermitRootLogin = "yes";
-      };
-
       power-profiles-daemon.enable = mkForce true;
       auto-cpufreq.enable = mkForce false;
       thermald.enable = true;

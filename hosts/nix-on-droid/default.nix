@@ -2,6 +2,7 @@
   inherit (config) values;
 in {
   custom = {
+    fish.enable = true;
     boot.enable = false;
     mobile.enable = false;
     graphics = {

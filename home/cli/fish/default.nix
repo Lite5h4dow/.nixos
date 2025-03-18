@@ -1,20 +1,19 @@
-{pkgs, osConfig, ...}:let
-  inherit (osConfig.values) mainUser; 
+{pkgs, lib ,osConfig, ...}:let
+  inherit (lib) mkIf;
+  inherit (osConfig.custom) fish;
 in {
-  imports = [
-    ./abbreviations.nix
-    # ./aliases.nix
-  ];
-
-  users.users.${mainUser}.shell = pkgs.fish;
-
-  programs.fish = {
-    enable = true;
-
-    plugins = with pkgs.fishPlugins; [
-      { name = "autopair"; src = autopair.src; }
-      { name = "sponge"; src = sponge.src; }
-      { name = "done"; src = done.src; }
+  config = mkIf fish.enable {
+    imports = [
+      ./abbreviations.nix
+      # ./aliases.nix
     ];
+
+    programs.fish = {
+      plugins = with pkgs.fishPlugins; [
+        { name = "autopair"; src = autopair.src; }
+        { name = "sponge"; src = sponge.src; }
+        { name = "done"; src = done.src; }
+      ];
+    };
   };
 }

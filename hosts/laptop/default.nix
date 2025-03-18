@@ -7,6 +7,7 @@ in {
 
   custom = {
     boot.enable = true;
+    fish.enable = true;
     mobile.enable = true;
     graphics = {
       intel.enable = true;

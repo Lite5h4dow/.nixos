@@ -4,6 +4,7 @@ in {
   custom = {
     boot.enable = false;
     mobile.enable = false;
+    fish.enable = true;
     graphics = {
       intel.enable = false;
       nvidia.enable = false;
