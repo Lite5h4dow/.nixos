@@ -4,6 +4,7 @@ in {
   imports = [ inputs.home-manager.nixosModules.home-manager];
 
   config = {
+    users.users.${username}.initialPassword = "${username}";
     home-manager = {
       verbose = true;
       useGlobalPkgs = true;

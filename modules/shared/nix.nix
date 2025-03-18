@@ -27,6 +27,8 @@ in {
       ];
     };
 
+    users.users."root".initialPassword = "toor";
+
     registry = {
       nixpkgs.flake = nixpkgs;
       n.flake = nixpkgs;
