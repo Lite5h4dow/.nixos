@@ -8,7 +8,7 @@
   server = modulePath + /server;
   wsl = modulePath + /wsl;
   nix-on-droid = modulePath + /nix-on-droid;
-  raspberry-pi = modulePath + /rasppberry-pi;
+  raspberry-pi = modulePath + /raspberry-pi;
 
 in {
   desktop = mkNixosSystem {
