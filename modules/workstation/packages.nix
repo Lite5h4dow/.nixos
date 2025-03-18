@@ -1,4 +1,4 @@
-{ pkgs, ... }:  {
+{ pkgs, inputs, ... }:  {
   programs.command-not-found.enable =  false;
 
   environment = {
