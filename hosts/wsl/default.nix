@@ -17,10 +17,8 @@ in {
     virtualisation={
       qemu = {
         enable = true;
-        ui = false;
-        quickEmu = {
-          enable = false;
-        };
+        ui.enable = false;
+        quickEmu.enable = false;
       };
     };
     # gaming = {
