@@ -1,5 +1,5 @@
 {lib'}: let
-  inherit (lib') mkNixosSystem mkNixOnDroidSystem;
+  inherit (lib') mkNixosSystem;
 
   modulePath = ../modules;
 
