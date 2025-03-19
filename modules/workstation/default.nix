@@ -2,7 +2,6 @@
   imports = [
     ./style
 
-    ./qemu.nix
     ./audio.nix
     ./values.nix
     ./gaming.nix

@@ -5,6 +5,7 @@
     ./ssh.nix
     ./nix.nix
     ./boot.nix
+    ./qemu.nix
     ./shell.nix
     ./system.nix
     ./docker.nix

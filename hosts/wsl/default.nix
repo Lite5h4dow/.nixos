@@ -14,6 +14,15 @@ in {
     networking = {
       enable = false;
     };
+    virtualisation={
+      qemu = {
+        enable = true;
+        ui = false;
+        quickEmu = {
+          enable = false;
+        };
+      };
+    };
     # gaming = {
     #   enable = false;
     #   xr.enable = false;
