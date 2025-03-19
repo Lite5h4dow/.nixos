@@ -1,7 +1,7 @@
-{lib', lib, inputs}: let
+{lib', inputs}: let
   inherit (inputs) nixpkgs;
   inherit (lib') mkNixosSystem;
-  inherit (lib) optional;
+  inherit (inputs.nixpkgs.lib) optional;
 
   modulePath = ../modules;
   hostPath = ../hosts;
