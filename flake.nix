@@ -6,12 +6,15 @@
       inherit inputs lib';
     };
   in {
-
     images = import ./images {
       inherit lib' inputs;
     };
 
     nixosConfigurations = import ./hosts {
+      inherit lib';
+    };
+
+    nixOnDroidConfigurations = import ./hosts/nix-on-droid {
       inherit lib';
     };
   };
