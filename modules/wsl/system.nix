@@ -11,4 +11,5 @@ in {
   wsl.enable = true;
   wsl.defaultUser = mainUser;
   wsl.docker-desktop.enable = true;
+  wsl.interop.register = true;
 }

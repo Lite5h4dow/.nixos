@@ -18,7 +18,7 @@ in {
       qemu = {
         enable = true;
         ui.enable = false;
-        quickEmu.enable = false;
+        quickemu.enable = false;
       };
     };
     # gaming = {
