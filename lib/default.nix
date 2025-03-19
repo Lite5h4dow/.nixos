@@ -3,7 +3,6 @@
   lib',
 }: let
   nix-lib = inputs.nixpkgs.lib;
-  nod-lib = inputs.nix-on-droid.lib;
 
   getPkgs = input: system:
     if (input.legacyPackages.${system} or {}) == {}
@@ -11,8 +10,8 @@
     else input.legacyPackages.${system};
 
   # Builders 🤷‍♂️
-  mkNixosSystem = args @ {system, ...}:
-    nix-lib.nixosSystem {
+  mkNixosSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
+    nixpkgs.lib.nixosSystem {
       system = null;
       specialArgs = {
         inherit inputs;
@@ -38,7 +37,7 @@
     };
 
   mkNixOnDroidSystem = args @ {system, ...}:
-    nod-lib.nixOnDroidConfiguration {
+    inputs.nix-on-droid.nixOnDroidConfiguration {
       system = null;
       specialArgs = {
         inherit inputs;

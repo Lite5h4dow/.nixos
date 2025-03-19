@@ -1,17 +1,18 @@
-{lib'}: let
+{lib', inputs}: let
   inherit (lib') mkNixosSystem;
 
   modulePath = ../modules;
 
-  shared = modulePath + /shared;
+  raspberry-pi = modulePath + /raspberry-pi;
   workstation = modulePath + /workstation;
+  shared = modulePath + /shared;
   server = modulePath + /server;
   wsl = modulePath + /wsl;
-  nix-on-droid = modulePath + /nix-on-droid;
-  raspberry-pi = modulePath + /raspberry-pi;
+
 in {
   desktop = mkNixosSystem {
     system = "x86_64-linux";
+    nixpkgs = inputs.nixpkgs;
     modules = [
       ./desktop
       shared
@@ -21,6 +22,7 @@ in {
 
   laptop = mkNixosSystem {
     system = "x86_64-linux";
+    nixpkgs = inputs.nixpkgs;
     modules = [
       ./laptop
       shared
@@ -30,6 +32,7 @@ in {
 
   wsl = mkNixosSystem {
     system = "x86_64-linux";
+    nixpkgs = inputs.nixpkgs;
     modules = [
       ./wsl
       wsl
@@ -39,6 +42,7 @@ in {
 
   raspberry-pi = mkNixosSystem {
     system = "aarch64-linux";
+    nixpkgs = inputs.stable-pkgs;
     modules = [
       ./raspberry-pi
       raspberry-pi

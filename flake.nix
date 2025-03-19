@@ -3,7 +3,7 @@
   description = "My universal NixOS configuration";
   outputs = inputs: let
     lib' = import ./lib {
-      inherit inputs lib';
+      inherit lib' inputs;
     };
   in {
     images = import ./images {
@@ -11,11 +11,11 @@
     };
 
     nixosConfigurations = import ./hosts {
-      inherit lib';
+      inherit lib' inputs;
     };
 
     nixOnDroidConfigurations = import ./hosts/nix-on-droid {
-      inherit lib';
+      inherit lib' inputs;
     };
   };
 

@@ -25,16 +25,19 @@
 
   "rpi02w" = mkNixosSystem {
     system = "aarch64-linux";
+    nixpkgs = inputs.stable-pkgs;
     modules = pi-modules "rpi02w";
   };
 
   "rpi0" = mkNixosSystem {
     system = "aarch64-linux";
+    nixpkgs = inputs.stable-pkgs;
     modules = pi-modules "rpi0";
   };
 
   "rpi3" = mkNixosSystem {
     system = "aarch64-linux";
+    nixpkgs = inputs.stable-pkgs;
     modules = pi-modules "rpi3";
   };
 
