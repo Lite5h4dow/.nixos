@@ -1,5 +1,5 @@
 {lib, pkgs, osConfig, ...}:let
-  inherit (osConfig.custom) podman;
+  inherit (osConfig.custom) podman minimal;
   inherit (lib) mkIf;
 
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
@@ -14,26 +14,27 @@ in{
   home={
     packages = with pkgs; [
       go
+      gnumake
+      python3
+      usbutils
+      dfu-util
+      clang-tools
+    ]
+    ++ optional (!minimal) [
       zig
       gcloud
       fractal
       kubectl
-      gnumake
-      python3
       popsicle
-      usbutils
       opentofu
-      dfu-util
       protobuf
       netcoredbg
       dotnet-sdk
-      clang-tools
       android-tools
       woodpecker-cli
       gcc-arm-embedded
       kubectl-validate
       dotnetPackages.Nuget
-
       (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
           helm-secrets
@@ -42,7 +43,8 @@ in{
           helm-s3
         ];
       })
-    ];
+    ]
+    ;
 
     file = {
       ".config/containers/config.json" = mkIf podman.enable {

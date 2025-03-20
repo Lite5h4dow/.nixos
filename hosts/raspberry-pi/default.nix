@@ -1,5 +1,6 @@
 {...}:{
   custom = {
+    minimal = true;
     mobile.enable = false;
     boot.enable = false;
     fish.enable = false;

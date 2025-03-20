@@ -30,6 +30,10 @@ in {
       "${mod}${secondary}, b, exec, rofi-bluetooth"
       "${mod}${secondary}, Space, exec, ~/.config/ags/shared/scripts/sidebar.sh toggle-applauncher"
 
+      #window switcher
+      "${mod}, tab, exec, hyprswitch gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch"
+      "${mod}${shift}, tab, exec, hyprswitch gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch -r"
+
       # utils
       "${mod} ${shift}, p, pin"
       "${mod}, f, togglefloating"
