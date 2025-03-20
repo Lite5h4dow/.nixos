@@ -1,9 +1,13 @@
-{
-  pkgs,
-  ...
-}: {
+{ osConfig, lib, pkgs, ...}: let
+
+  inherit (lib) optional;
+  inherit (osConfig.custom) minimal;
+
+in {
   home.packages = with pkgs; [
     helix
+  ]
+  ++ optional (!minimal) [
 
     # language servers
     nil

@@ -12,6 +12,7 @@
     ./podman.nix
     ./mobile.nix
     ./scripts.nix
+    ./minimal.nix
     ./wireless.nix
     ./packages.nix
     ./bluetooth.nix
