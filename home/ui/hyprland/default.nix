@@ -8,6 +8,7 @@
     ./binds.nix
     ./exec.nix
     ./xdph.nix
+    ./hyprswitch.nix
   ];
 
   home.packages = with pkgs; [

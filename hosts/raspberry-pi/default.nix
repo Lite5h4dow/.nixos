@@ -2,7 +2,7 @@
   custom = {
     mobile.enable = false;
     boot.enable = false;
-    fish.enable = true;
+    fish.enable = false;
     graphics = {
       intel.enable = false;
       nvidia.enable = false;

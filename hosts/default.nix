@@ -12,7 +12,6 @@
 in {
   desktop = mkNixosSystem {
     system = "x86_64-linux";
-    nixpkgs = inputs.nixpkgs;
     modules = [
       ./desktop
       shared
@@ -22,7 +21,6 @@ in {
 
   laptop = mkNixosSystem {
     system = "x86_64-linux";
-    nixpkgs = inputs.nixpkgs;
     modules = [
       ./laptop
       shared
@@ -32,7 +30,6 @@ in {
 
   wsl = mkNixosSystem {
     system = "x86_64-linux";
-    nixpkgs = inputs.nixpkgs;
     modules = [
       ./wsl
       wsl
@@ -42,7 +39,6 @@ in {
 
   raspberry-pi = mkNixosSystem {
     system = "aarch64-linux";
-    nixpkgs = inputs.stable-pkgs;
     modules = [
       ./raspberry-pi
       raspberry-pi

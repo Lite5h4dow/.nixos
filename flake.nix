@@ -81,6 +81,10 @@
       url = "github:hyprwm/Hyprland";
     };
 
+    hyprswitch = {
+      url = "github:h3rmt/hyprswitch/release";
+    };
+
     hyprwm-contrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";

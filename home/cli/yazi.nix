@@ -48,7 +48,7 @@ in {
       };
     };
     plugins = {
-      "ouch" = ouchPath;
+      # "ouch" = ouchPath;
     };
   };
 
