@@ -32,5 +32,6 @@
     inputs.stable-pkgs.legacyPackages.${system}.orca-slicer
     postman
     freecad-wayland
+    kicad
   ];
 }

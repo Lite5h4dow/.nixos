@@ -1,6 +1,6 @@
 {lib, pkgs, osConfig, ...}:let
   inherit (osConfig.custom) podman minimal;
-  inherit (lib) mkIf;
+  inherit (lib) optionals mkIf;
 
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
     pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
@@ -20,7 +20,7 @@ in{
       dfu-util
       clang-tools
     ]
-    ++ optional (!minimal) [
+    ++ optionals (!minimal) [
       zig
       gcloud
       fractal

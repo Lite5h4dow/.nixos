@@ -1,5 +1,5 @@
 {osConfig, pkgs, lib, inputs, ...}:let
-  inherit (lib) optional;
+  inherit (lib) optionals;
   inherit (osConfig.custom) minimal; 
 in{
   imports = [
@@ -11,10 +11,9 @@ in{
     ./helix
     ./yazi.nix
 
-  ] ++ optional (!minimal) [
+  ] ++ optionals (!minimal) [
     ./jerry.nix
-  ]
-  ;
+  ];
 
   home ={
     packages = with pkgs; [
@@ -22,14 +21,12 @@ in{
       ouch
       aria2
     ]
-    ++ optional (!minimal) [
+    ++ optionals (!minimal) [
       neovim
       neofetch
       ytermusic
       csvtool
-    ]
-
-    ;
+    ];
 
     sessionVariables = {
       "KUBE_CONFIG_PATH" = "~/.kube/config";
