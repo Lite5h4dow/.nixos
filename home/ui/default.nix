@@ -29,8 +29,8 @@
     filezilla
     inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
-    inputs.stable-pkgs.legacyPackages.${system}.orca-slicer
     postman
+    orca-slicer
 
     (pkgs.symlinkJoin {
       name = "FreeCAD";
@@ -56,5 +56,16 @@
       meta.mainProgram = "KiCAD";
     })
 
+    # (pkgs.symlinkJoin {
+    #   name = "OrcaSlicer";
+    #   paths = [ pkgs.orca-slicer ];
+    #   buildInputs = [ pkgs.makeWrapper];
+    #   postBuild = ''
+    #       wrapProgram $out/bin/kicad \
+    #       --set __GLX_VENDOR_LIBRARY_NAME mesa \
+    #       --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa.drivers}/share/glvnd/egl_vendor.d/50_mesa.json
+    #   '';
+    #   meta.mainProgram = "OrcaSlicer";
+    # })
   ];
 }

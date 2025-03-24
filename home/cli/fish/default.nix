@@ -1,8 +1,8 @@
 {pkgs, lib ,osConfig, ...}:let
-  inherit (lib) mkIf optional;
+  inherit (lib) mkIf optionals;
   inherit (osConfig.custom) fish;
 in {
-  imports = optional fish.enable [
+  imports = optionals fish.enable [
     ./abbreviations.nix
     # ./aliases.nix
   ];
