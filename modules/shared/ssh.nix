@@ -21,9 +21,11 @@ in {
   config = mkIf ssh.enable {
     services.openssh = {
       enable = true;
+      ports = [ 22 ];
       startWhenNeeded = true;
       settings = {
-        PermitRootLogin = "yes";
+        PasswordAuthentication = true;
+        PermitRootLogin = "prohibit-password";
       };
     };
   };

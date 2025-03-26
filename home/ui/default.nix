@@ -30,7 +30,7 @@
     inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     postman
-    orca-slicer
+    # orca-slicer
 
     (pkgs.symlinkJoin {
       name = "FreeCAD";
