@@ -19,13 +19,19 @@ in {
   };
 
   config = mkIf ssh.enable {
-    services.openssh = {
-      enable = true;
-      ports = [ 22 ];
-      startWhenNeeded = true;
-      settings = {
-        PasswordAuthentication = true;
-        PermitRootLogin = "prohibit-password";
+    services = {
+      sshd = {
+        enable = true;
+      };
+      openssh = {
+        enable = true;
+        ports = [ 22 ];
+        startWhenNeeded = true;
+        openFirewall = true;
+        settings = {
+          PasswordAuthentication = true;
+          PermitRootLogin = "prohibit-password";
+        };
       };
     };
   };
