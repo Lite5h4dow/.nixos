@@ -19,10 +19,13 @@ in {
   };
 
   config = mkIf ssh.enable {
-    services = {
-      sshd = {
+    networking = {
+      firewall = {
         enable = true;
+        allowedTCPPorts = [ 22 ];
       };
+    };
+    services = {
       openssh = {
         enable = true;
         ports = [ 22 ];
@@ -30,6 +33,7 @@ in {
         openFirewall = true;
         settings = {
           PasswordAuthentication = true;
+          PubkeyAuthentication = true;
           PermitRootLogin = "prohibit-password";
         };
       };
