@@ -8,6 +8,10 @@
       intel.enable = false;
       nvidia.enable = false;
     };
+    ssh= {
+      enable = true;
+      allowRoot = true;
+    };
     podman = {
       enable = true;
     };

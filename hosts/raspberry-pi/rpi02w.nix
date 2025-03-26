@@ -4,5 +4,16 @@
   hardware.deviceTree = {
     enable = true;
     filter = "*rpi-zero-2-w*.dtb";
+    overlays = [
+      { name = "enable-spi";
+        dtsText = ''
+          /dts-v1/;
+          /plugin/;
+          / { compatible = "broadcom,bcm2385"; };
+          &spi { status = "okay"; };
+        '';
+      }
+    ];
   };
+  
 }
