@@ -1,5 +1,6 @@
 {lib', inputs}: let
   inherit (lib') mkNixosSystem;
+  inherit (inputs) nixpkgs;
 
   modulePath = ../modules;
 
@@ -33,6 +34,17 @@ in {
     modules = [
       ./wsl
       wsl
+      shared
+    ];
+  };
+
+  prodpod = mkNixosSystem {
+    system = "aarch64-linux";
+    modules = [
+      "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+      ./raspberry-pi
+      ./raspberry-pi/rpi02w.nix
+      raspberry-pi
       shared
     ];
   };
