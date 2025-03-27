@@ -11,5 +11,5 @@ in{
       nix-on-droid
       shared
     ];
-  }
+  };
 }
