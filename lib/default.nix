@@ -1,5 +1,5 @@
 {
-  inputs, 
+  inputs,
   lib',
 }: let
   nix-lib = inputs.nixpkgs.lib;
@@ -37,7 +37,7 @@
     };
 
   mkNixOnDroidSystem = args @ {system, ...}:
-    inputs.nix-on-droid.nixOnDroidConfiguration {
+    inputs.nix-on-droid.lib.nixOnDroidConfiguration {
       system = null;
       specialArgs = {
         inherit inputs;
