@@ -40,9 +40,6 @@
     inputs.nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = nixpkgs {system = system;};
       system = null;
-      specialArgs = {
-        inherit inputs;
-      };
 
       modules = [
         {
