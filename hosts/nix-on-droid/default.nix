@@ -1,4 +1,4 @@
-{lib'}:let
+{lib', inputs}:let
   inherit (lib') mkNixOnDroidSystem;
 
   modulePath = ../modules;
