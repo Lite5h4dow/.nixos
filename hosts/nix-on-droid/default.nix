@@ -1,7 +1,7 @@
 {lib', inputs}:let
   inherit (lib') mkNixOnDroidSystem;
 
-  modulePath = ../modules;
+  modulePath = ../../modules;
   shared = modulePath + /shared;
   nix-on-droid = modulePath + /nix-on-droid;
 in{
