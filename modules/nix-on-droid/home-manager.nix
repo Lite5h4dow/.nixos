@@ -10,11 +10,11 @@ in {
       useGlobalPkgs = true;
       useUserPackages = true;
       backupFileExtension = "old";
-      extraSpecialArgs = {
-        inherit inputs system flakePkgs customPkgs lib';
-      };
+      # extraSpecialArgs = {
+      #   inherit inputs system flakePkgs customPkgs lib';
+      # };
       
-      users.${username} = ../../home/wsl.nix;
+      users.${username} = ../../home/nix-on-droid.nix;
     };
   };
 }
