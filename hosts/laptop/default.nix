@@ -44,7 +44,7 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
-    razergenie
+    # razergenie
   ];
 
   home-manager.users.${values.mainUser} = {
@@ -58,10 +58,10 @@ in {
   #   "python3.12-youtube-dl-2021.12.17"
   # ];
 
-  hardware.openrazer = {
-    enable = true;
-    users = [ values.mainUser ];
-  };
+  # hardware.openrazer = {
+  #   enable = true;
+  #   users = [ values.mainUser ];
+  # };
 
   system.stateVersion = "24.11";
 }

@@ -30,6 +30,7 @@
     inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     postman
+    qFlipper
     # orca-slicer
 
     (pkgs.symlinkJoin {
