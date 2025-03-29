@@ -19,6 +19,12 @@
     config.common.default = "gtk";
   };
 
+  environment= {
+    systemPackages = with pkgs;[
+      alpaca
+    ];
+  };
+
   services = {
     gnome = {
       gnome-keyring.enable = true;
