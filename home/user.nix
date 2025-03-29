@@ -8,7 +8,4 @@ in{
     stateVersion = mkDefault "24.11";
   };
 
-  users.users.${username}.extraGroups = [
-    "dialout"
-  ];
 }

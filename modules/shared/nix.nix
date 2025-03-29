@@ -1,10 +1,12 @@
 {
+  config,
   inputs,
   pkgs,
   ...
 }: let
   inherit (inputs) nixpkgs;  
   nixpkgsPath = nixpkgs.outPath;
+  inherit (config.values) mainUser;
 in {
   nix = {
     package = pkgs.lix;
@@ -52,7 +54,17 @@ in {
       "default=${nixpkgsPath}"
     ];
   };
-  users.users."root".initialPassword = "toor";
+  users.users= {
+    "root" = {
+      initialPassword = "toor";
+    };
+    ${mainUser}={
+      extraGroups = [
+        "dialout"
+      ];
+    };
+  };
+
   # system.autoUpgrade = {
   #   enable = true;
   #   flake = inputs.self.outPath;
