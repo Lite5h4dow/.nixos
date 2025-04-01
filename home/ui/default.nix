@@ -32,6 +32,8 @@
     postman
     qFlipper
     # orca-slicer
+    davinci-resolve
+    gimp-with-plugins
 
     (pkgs.symlinkJoin {
       name = "FreeCAD";
