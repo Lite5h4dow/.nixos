@@ -11,7 +11,12 @@ in {
     mobile.enable = true;
     graphics = {
       intel.enable = true;
-      nvidia.enable = true;
+      nvidia ={
+        enable = true;
+        prime ={
+          enable=true;
+        };
+      };
     };
     podman = {
       enable = true;
