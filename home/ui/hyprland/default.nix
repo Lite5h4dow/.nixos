@@ -16,6 +16,7 @@
     hyprpicker # https://github.com/hyprwm/hyprpicker
     gammastep # https://gitlab.com/chinstrap/gammastep
     flakePkgs.hyprwm-contrib.grimblast # https://github.com/hyprwm/contrib/blob/main/grimblast/grimblast.1.scd
+    geoclue2
   ];
 
   wayland.windowManager.hyprland = {
