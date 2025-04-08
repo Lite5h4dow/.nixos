@@ -4,6 +4,11 @@
     extraGroups = ["wheel"];
   };
 
+  services = {
+    geoclue2 = {
+      enable = true;
+    };
+  };
   fonts.fontconfig.subpixel.rgba = "rgb";
 
   # This is already enabled by modules that require it

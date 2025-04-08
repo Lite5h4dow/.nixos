@@ -32,8 +32,5 @@
       enable = true;
       provider = "geoclue2";
     };
-    geoclue2 = {
-      enable = true;
-    };
   };
 }

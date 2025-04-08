@@ -34,6 +34,7 @@
     # orca-slicer
     davinci-resolve
     gimp-with-plugins
+    libreoffice-fresh
 
     (pkgs.symlinkJoin {
       name = "FreeCAD";

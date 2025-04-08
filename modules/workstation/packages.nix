@@ -1,6 +1,8 @@
 { pkgs, inputs, ... }:  {
   programs.command-not-found.enable =  false;
 
+  services.teamviewer.enable = true;
+
   environment = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
