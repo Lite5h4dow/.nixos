@@ -35,6 +35,7 @@
     davinci-resolve
     gimp-with-plugins
     libreoffice-fresh
+    onlyoffice-desktopeditors
 
     (pkgs.symlinkJoin {
       name = "FreeCAD";
