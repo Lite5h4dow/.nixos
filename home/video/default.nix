@@ -10,7 +10,7 @@ in{
       obs-ndi
       obs-tuna
       droidcam-obs
-      obs-obs-websocket
+      obs-websocket
       input-overlay
       advanced-scene-switcher
     ];
