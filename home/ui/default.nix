@@ -32,7 +32,6 @@
     postman
     qFlipper
     # orca-slicer
-    davinci-resolve
     gimp-with-plugins
     libreoffice-fresh
     onlyoffice-desktopeditors
