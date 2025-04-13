@@ -1,4 +1,8 @@
-{pkgs, ...}:{
+{pkgs, lib, osConfig, ...}:let
+  inherit (lib) mkIf;
+  inherit (osConfig.custom) minimal;
+in{
+  config = mkIf (!minimal) {
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
@@ -15,4 +19,5 @@
   home.packages = with pkgs;[
     davinci-resolve
   ];
+};
 }
