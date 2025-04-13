@@ -6,6 +6,7 @@ in {
   zramSwap.enable = true;
 
   custom = {
+    minimal = false;
     boot.enable = true;
     fish.enable = true;
     mobile.enable = true;
