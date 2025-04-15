@@ -36,9 +36,8 @@
       ++ args.modules or [];
     };
 
-  mkNixOnDroidSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
+  mkNixOnDroidSystem = args @ {system, ...}:
     inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
 
       modules = [
         {
