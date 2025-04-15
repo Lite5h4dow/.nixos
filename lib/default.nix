@@ -38,7 +38,7 @@
 
   mkNixOnDroidSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
     inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = nixpkgs;
+      pkgs = getPkgs nixpkgs system;
       modules = [
         {
           _module.args = {
