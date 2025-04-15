@@ -39,7 +39,6 @@
   mkNixOnDroidSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
     inputs.nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
-      system = null;
 
       modules = [
         {
@@ -52,7 +51,7 @@
             inherit system;
             config.allowUnfree = true;
             overlays = [
-              inputs.nix-on-droid.overlays.default
+              # inputs.nix-on-droid.overlays.default
             ];
           };
         }
