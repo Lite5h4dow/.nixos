@@ -26,6 +26,7 @@ in{
       neofetch
       ytermusic
       csvtool
+      ffmpeg
     ];
 
     sessionVariables = {

@@ -12,7 +12,6 @@ in{
       droidcam-obs
       obs-websocket
       input-overlay
-      advanced-scene-switcher
     ];
   };
 
