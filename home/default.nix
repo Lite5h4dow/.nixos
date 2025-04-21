@@ -8,6 +8,7 @@ in{
     ./dev
     ./style
     ./video
+    ./photo
 
     # user home config
     ./user.nix
