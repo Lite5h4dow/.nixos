@@ -47,13 +47,13 @@
 
     wallpapers = {
       flake = false;
-      url = "git:litelotus/.wallpapers";
+      url = "git+https://git.litelot.us/litelotus/.wallpapers";
     };
 
     ags-config = {
       flake = false;
-      url = "git:litelotus/.ags";
-      # url = "git+https://git.litelot.us/litelotus/.ags?ref=AGS-V2";
+      # url = "git:litelotus/.ags";
+      url = "git+https://git.litelot.us/litelotus/.ags";
     };
 
     wrapper-manager = {
