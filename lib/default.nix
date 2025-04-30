@@ -38,20 +38,22 @@
 
   mkNixOnDroidSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
     inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-      pkgs = getPkgs nixpkgs system;
+      pkgs = import nixpkgs {
+        system= system;
+        overlays = [
+          inputs.nix-on-droid.overlays.default
+        ];
+      };
       modules = [
         {
           _module.args = {
             inherit system lib';
             flakePkgs = builtins.mapAttrs (_: value: getPkgs value system) inputs;
           };
-          nixpkgs = {
-            inherit system;
-            config.allowUnfree = true;
-          };
         }
       ]
       ++ args.modules or [];
+
     };
 
   wrapProgram = {
