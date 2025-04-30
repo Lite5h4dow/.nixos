@@ -14,10 +14,10 @@ in {
         { name = "sponge"; src = sponge.src; }
         { name = "done"; src = done.src; }
       ];
-    };
 
-    interactiveShellInit = ''
-      starship init fish | source
-    '';
+      interactiveShellInit = ''
+        starship init fish | source
+      '';
+    };
   };
 }
