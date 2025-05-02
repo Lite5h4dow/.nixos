@@ -15,7 +15,7 @@ in {
         { name = "done"; src = done.src; }
       ];
 
-      interactiveShellInit = ''
+      shellInit = ''
         starship init fish | source
       '';
     };

@@ -20,7 +20,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # core
-      "${mod}, Return, exec, ${terminal.command}"
+      "${mod}, Return, exec, ghostty --gtk-single-instance=true"
       "${mod}, q, killactive"
 
       # menus
