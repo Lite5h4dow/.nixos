@@ -138,25 +138,12 @@
       };
     };
 
-    schizofox = {
-      url = "github:schizofox/schizofox";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
-        home-manager.follows = "home-manager";
-        flake-compat.follows = "flake-compat";
-        flake-parts.follows = "flake-parts";
-
-        # searx-randomizer.inputs = {
-        #   crane.follows = "crane";
-        #   flake-parts.follows = "flake-parts";
-        #   nixpkgs.follows = "nixpkgs";
-        # };
-      };
-    };
-
     zen-browser = {
       url = "github:MarceColl/zen-browser-flake";
+    };
+
+    polymc = {
+      url = "github:PolyMC/PolyMC";
     };
 
     nixcord = {
