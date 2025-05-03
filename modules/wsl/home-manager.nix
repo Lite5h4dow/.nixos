@@ -7,7 +7,7 @@ in {
     users.users.${username}.initialPassword = "${username}";
     home-manager = {
       verbose = true;
-      useGlobalPkgs = true;
+      # useGlobalPkgs = true;
       useUserPackages = true;
       backupFileExtension = "old";
       extraSpecialArgs = {

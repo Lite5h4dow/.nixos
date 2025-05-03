@@ -31,6 +31,7 @@
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     postman
     qFlipper
+    modrinth-app
     # orca-slicer
     gimp-with-plugins
     libreoffice-fresh
