@@ -26,11 +26,8 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # TODO: remove this (temp fix for nvidia build)
-    # boot.kernelPackages = pkgs.linuxPackages_6_12;
-
     hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       open = false;
 
       prime=mkIf cfg.prime.enable{
@@ -53,10 +50,10 @@ in {
     services.xserver.videoDrivers = ["nvidia"];
 
     # Optimizations taken from https://github.com/ventureoo/nvidia-tweaks
-    services.udev.extraRules = '';
-      ACTION=="bind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="auto"
-      ACTION=="unbind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="on"
-    '';
+    # services.udev.extraRules = '';
+    #   ACTION=="bind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="auto"
+    #   ACTION=="unbind", SUBSYSTEM=="pci", DRIVERS=="nvidia", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", TEST=="power/control", ATTR{power/control}="on"
+    # '';
 
     boot.kernelParams = [
       "nvidia.NVreg_UsePageAttributeTable=1"

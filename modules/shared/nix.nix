@@ -62,6 +62,36 @@ in {
       "default=${nixpkgsPath}"
     ];
   };
+  programs = {
+    nix-ld ={
+      enable = true;
+      libraries = with pkgs;[
+        atk
+        nss
+        gtk3
+        cups
+        dbus
+        nspr
+        glibc
+        libGL
+        pango
+        cairo
+        expat
+        libdrm
+        libgbm
+        alsa-lib
+        gdk-pixbuf
+        libxkbcommon
+        xorg.libxcb
+        xorg.libX11
+        xorg.libXext
+        xorg.libXfixes
+        xorg.libXrandr
+        xorg.libXdamage
+        xorg.libXcomposite
+      ];
+    };
+  };
   users.users= {
     "root" = {
       initialPassword = "toor";

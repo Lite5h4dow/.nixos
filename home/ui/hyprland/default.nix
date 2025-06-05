@@ -17,6 +17,7 @@
     flakePkgs.hyprwm-contrib.grimblast # https://github.com/hyprwm/contrib/blob/main/grimblast/grimblast.1.scd
   ];
 
+  # programs.dconf.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
 

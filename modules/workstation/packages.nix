@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:  {
   programs.command-not-found.enable =  false;
 
-  services.teamviewer.enable = true;
+  # services.teamviewer.enable = true;
 
   environment = {
     sessionVariables = {

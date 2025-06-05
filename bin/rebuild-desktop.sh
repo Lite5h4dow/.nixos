@@ -2,6 +2,6 @@
 
 sudo nixos-rebuild switch\
  --option build-dir /var/tmp/nix-daemon\
- --flake ~/.nix#desktop;
+ --flake ~/.nixos#desktop;
 
 sudo nix-collect-garbage -d;
