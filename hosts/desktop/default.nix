@@ -16,7 +16,7 @@ in {
       nvidia ={
         enable = true;
         prime ={
-          enable=true;
+          enable=false;
         };
       };
     };
