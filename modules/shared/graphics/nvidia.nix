@@ -9,6 +9,11 @@ in {
         type = types.bool;
         default = false;
       };
+      open = mkEnableOption {
+        description = "enable NVidia Open Source Kernel";
+        type = types.bool;
+        default = false;
+      };
       prime = {
         enable = mkEnableOption {
           description = "Enable NVidia Prime Offload";
@@ -28,7 +33,9 @@ in {
   config = mkIf cfg.enable {
     hardware.nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.beta;
-      open = false;
+      # package = config.boot.kernelPackages.nvidiaPackages.stable;
+      # package = config.boot.kernelPackages.nvidiaPackages.production;
+      open = cfg.open;
 
       prime=mkIf cfg.prime.enable{
         offload = mkIf (cfg.prime.mode == "offload"){

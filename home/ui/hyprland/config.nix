@@ -2,7 +2,6 @@
   osConfig, ...
 }: let
   inherit (osConfig.values) terminal;
-  # noDecorations = "gapsin:0, gapsOut:0, border:false, shadow:false, rounding:false, decorate:false";
   glacier-remmina-file = "~/.local/share/remmina/glacier-tailscale.remmina";
 in {
 
@@ -13,12 +12,13 @@ in {
 
       "GDK_BACKEND, wayland"
       "SDL_VIDEODRIVER, wayland"
-      # "QT_QPA_PLATFORM, wayland;xcb"
+      "LIBVA_DRIVER_NAME, nvidia"
+      "__GLX_VENDOR_LIBRARY_NAME, nvidia"
+      "QT_QPA_PLATFORM, wayland;xcb"
     ];
 
     input = {
       kb_layout = "us";
-      kb_options = "caps:swapescape";
       follow_mouse = "1";
 
       accel_profile = "flat";

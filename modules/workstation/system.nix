@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   users.users.${config.values.mainUser} = {
     isNormalUser = true;
     extraGroups = ["wheel"];
@@ -9,6 +9,10 @@
       enable = true;
     };
   };
+
+  services.xserver.desktopManager.gnome.enable = true;
+  services.gnome.core-utilities.enable = false;
+
   fonts.fontconfig.subpixel.rgba = "rgb";
 
   # This is already enabled by modules that require it

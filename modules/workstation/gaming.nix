@@ -56,6 +56,7 @@ in{
 
     environment={
       systemPackages = with pkgs;[
+        openvr
         # alvr
         # modrinth-app
       ];

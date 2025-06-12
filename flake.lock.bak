@@ -1176,11 +1176,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1749237914,
-        "narHash": "sha256-N5waoqWt8aMr/MykZjSErOokYH6rOsMMXu3UOVH5kiw=",
+        "lastModified": 1748162331,
+        "narHash": "sha256-rqc2RKYTxP3tbjA+PB3VMRQNnjesrT0pEofXQTrMsS8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "70c74b02eac46f4e4aa071e45a6189ce0f6d9265",
+        "rev": "7c43f080a7f28b2774f3b3f43234ca11661bf334",
         "type": "github"
       },
       "original": {
@@ -1384,7 +1384,6 @@
         "stable-pkgs": "stable-pkgs",
         "stylix": "stylix",
         "systems": "systems_5",
-        "tinygo-machine": "tinygo-machine",
         "wallpapers": "wallpapers",
         "wrapper-manager": "wrapper-manager",
         "zen-browser": "zen-browser"
@@ -1639,22 +1638,6 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
-        "type": "github"
-      }
-    },
-    "tinygo-machine": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1742365968,
-        "narHash": "sha256-XcL7UoWSZnO0gXBYQSMPqURrt3pdGkH6rgdXgWOL6vA=",
-        "owner": "tinygo-org",
-        "repo": "tinygo",
-        "rev": "3e60eeb368f25f237a512e7553fd6d70f36dc74c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tinygo-org",
-        "repo": "tinygo",
         "type": "github"
       }
     },

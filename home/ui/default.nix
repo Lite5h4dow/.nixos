@@ -40,6 +40,13 @@
     libreoffice-fresh
     onlyoffice-desktopeditors
 
+    (orca-slicer.overrideAttrs(oldAttrs: {
+      cmakeFlags = oldAttrs.cmakeFlags ++ [
+        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
+      ];
+    }))
+    super-slicer
+
     (pkgs.symlinkJoin {
       name = "KiCAD";
       paths = [ pkgs.kicad ];

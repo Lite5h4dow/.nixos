@@ -1,4 +1,4 @@
-{lib, pkgs, osConfig, ...}:let
+{lib, pkgs, osConfig, inputs, ...}:let
   inherit (osConfig.custom) podman minimal;
   inherit (lib) optionals mkIf;
 
@@ -11,9 +11,16 @@ in{
     ./nodejs.nix
   ];
 
-  home={
-    packages = with pkgs; [
-      go
+  programs = {
+    go = {
+      enable = true;
+      # packages = {
+        # "machine" = inputs."tinygo-machine" + /src/machine;
+      # };
+    };
+  };
+ home={
+   packages = with pkgs; [
       gnumake
       python3
       usbutils
@@ -23,9 +30,11 @@ in{
     ++ optionals (!minimal) [
       zig
       gcloud
+      tinygo
       fractal
       kubectl
       popsicle
+      pico-sdk
       opentofu
       protobuf
       netcoredbg

@@ -155,6 +155,11 @@
       };
     };
 
+    "tinygo-machine" = {
+      url = "github:tinygo-org/tinygo";
+      flake = false;
+    };
+
     "ouch.yazi" = {
       flake = false;
       url = "github:ndtoan96/ouch.yazi";
