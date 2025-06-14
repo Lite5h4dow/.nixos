@@ -8,22 +8,30 @@ in {
   ];
   config = mkIf fish.enable {
 
-    programs.fish = {
-      plugins = with pkgs.fishPlugins; [
-        { name = "autopair"; src = autopair.src; }
-        { name = "sponge"; src = sponge.src; }
-        { name = "done"; src = done.src; }
-      ];
+    home.shell.enableFishIntegration = true;
 
-      interactiveShellInit = ''
-        starship init fish | source
-      '';
-      loginShellInit = ''
-        starship init fish | source
-      '';
-      shellInit = ''
-        starship init fish | source
-      '';
+    programs={
+      fish = {
+        enable = true;
+        plugins = with pkgs.fishPlugins; [
+          { name = "autopair"; src = autopair.src; }
+          { name = "sponge"; src = sponge.src; }
+          { name = "done"; src = done.src; }
+          # { name = "fzf"; src = fzf-fish.src; }
+        ];
+
+        # interactiveShellInit = ''
+        #   atuin init fish | source
+        #   starship init fish | source
+        # '';
+        # loginShellInit = ''
+        #   starship init fish | source
+        # '';
+        # shellInit = ''
+        #   starship init fish | source
+        # '';
+      };
+      eza.enableFishIntegration = true;
     };
   };
 }

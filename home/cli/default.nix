@@ -6,6 +6,7 @@ in{
     ./starship
 
     ./fish
+    ./atuin
     ./bash.nix
 
     ./helix
@@ -27,6 +28,7 @@ in{
       ytermusic
       csvtool
       ffmpeg
+      inputs.atuin.packages.${system}.atuin
     ];
 
     sessionVariables = {

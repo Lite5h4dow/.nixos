@@ -14,7 +14,7 @@
       wl-clipboard
       bitwarden-desktop
       ungoogled-chromium
-      inputs.lobster.packages.${pkgs.system}.lobster-rs
+      inputs.lobster.packages.${pkgs.system}.lobster
       inputs.curd.packages.${pkgs.system}.default
     ];
   };

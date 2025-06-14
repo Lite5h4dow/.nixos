@@ -9,6 +9,7 @@ in {
     minimal = false;
     boot.enable = true;
     fish.enable = true;
+    atuin.enable = true;
     mobile.enable = true;
     graphics = {
       intel.enable = true;

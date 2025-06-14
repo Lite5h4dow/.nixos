@@ -41,6 +41,10 @@
       url = "github:nix-community/home-manager";
     };
 
+    atuin = {
+      url = "github:atuinsh/atuin";
+    };
+
     systems = {
       url = "github:nix-systems/x86_64-linux";
     };
@@ -123,8 +127,8 @@
     };
 
     lobster = {
-      # url = "github:justchokingaround/lobster";
-      url = "github:eatmynerds/lobster-rs";
+      url = "github:justchokingaround/lobster";
+      # url = "github:eatmynerds/lobster-rs";
       # inputs = {
       #   nixpkgs.follows = "nixpkgs";
       # };
@@ -141,7 +145,7 @@
     };
 
     zen-browser = {
-      url = "github:MarceColl/zen-browser-flake";
+      url = "github:0xc000022070/zen-browser-flake";
     };
 
     polymc = {

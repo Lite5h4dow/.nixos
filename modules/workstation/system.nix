@@ -10,7 +10,7 @@
     };
   };
 
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
   services.gnome.core-utilities.enable = false;
 
   fonts.fontconfig.subpixel.rgba = "rgb";

@@ -13,7 +13,8 @@ in {
     };
     boot.enable = true;
     fish.enable = true;
-    mobile.enable = true;
+    atuin.enable = true;
+    mobile.enable = false;
     graphics = {
       intel.enable = true;
       nvidia ={
