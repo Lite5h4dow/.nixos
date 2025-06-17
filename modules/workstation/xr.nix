@@ -22,13 +22,8 @@ in {
     services = {
       # depending on wether steam works this may not be needed 👀
       monado = {
-        # enable = true;
-        # defaultRuntime = true;
-        # package = (pkgs.monado.overrideAttrs(oldAttrs:{
-        #   cmakeFlags = oldAttrs.cmakeFlags ++ [
-        #     (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${pkgs.cudaPackages.cudatoolkit}")
-        #   ];
-        # }));
+        enable = true;
+        defaultRuntime = true;
         # environment = {
         #   STEAMVR_LH_ENABLE = "1";
         #   XRT_COMPOSITOR_COMPUTE = "1";

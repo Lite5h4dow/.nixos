@@ -15,6 +15,10 @@ in {
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      iwgtk
+    ];
+
     networking = {
       wireless = {
         iwd = {

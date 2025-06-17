@@ -9,6 +9,11 @@ in  {
       type = types.bool;
       default = true;
     };
+    custom.atuin.enable = mkEnableOption{
+      description = "enable Atuin in home config";
+      type = types.bool;
+      default = false;
+    };
   };
   config = mkIf fish.enable {
     programs.fish = {

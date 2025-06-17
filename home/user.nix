@@ -5,7 +5,7 @@ in{
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
-    stateVersion = mkDefault "24.11";
+    stateVersion = mkDefault "25.05";
   };
 
 }

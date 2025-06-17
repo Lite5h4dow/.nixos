@@ -1,4 +1,3 @@
-
 { config, lib, pkgs, ... }: let
   inherit (config) values;
 in {
@@ -7,36 +6,25 @@ in {
   zramSwap.enable = true;
 
   custom = {
-    minimal = false;
     ssh = {
       enable = true;
     };
     boot.enable = true;
     fish.enable = true;
     atuin.enable = true;
-    mobile.enable = false;
     graphics = {
-      intel.enable = true;
       nvidia ={
         enable = true;
         open = true;
-        prime ={
-          enable=false;
-        };
       };
     };
     podman = {
       enable = true;
     };
-    docker = {
-      enable = false;
-    };
-    bluetooth.enable = false;
     tailscale.enable = true;
     networking = {
       hostName = "glacier-flake";
       useDHCP = true;
-      wireless.enable = false;
     };
 
     virtualisation ={

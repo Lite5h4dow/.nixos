@@ -22,7 +22,6 @@
     taxi
     lens
     mqttx
-    iwgtk
     vscode
     (pkgs.bottles.override{removeWarningPopup = true;})
     neovide

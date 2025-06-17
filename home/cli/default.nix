@@ -28,7 +28,7 @@ in{
       ytermusic
       csvtool
       ffmpeg
-      inputs.atuin.packages.${system}.atuin
+      # inputs.atuin.packages.${system}.atuin
     ];
 
     sessionVariables = {
