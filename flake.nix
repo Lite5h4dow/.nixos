@@ -49,18 +49,18 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
-    wallpapers = {
-      flake = false;
+    # wallpapers = {
+      # flake = false;
       # url = "git+https://git.litelot.us/litelotus/.wallpapers";
-      url = "git+file:///home/lotus/.wallpapers";
-    };
+      # url = "git+file:///home/lotus/.wallpapers";
+    # };
 
-    ags-config = {
-      flake = false;
+    # ags-config = {
+      # flake = false;
       # url = "git:litelotus/.ags";
       # url = "git+https://git.litelot.us/litelotus/.ags";
-      url = "git+file:///home/lotus/.ags";
-    };
+      # url = "git+file:///home/lotus/.ags";
+    # };
 
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
@@ -144,9 +144,9 @@
       };
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-    };
+    # zen-browser = {
+    #   url = "github:0xc000022070/zen-browser-flake";
+    # };
 
     polymc = {
       url = "github:PolyMC/PolyMC";

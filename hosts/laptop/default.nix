@@ -59,6 +59,12 @@ in {
       mpv.config.ao = "pulse";
       jerry.config.player_arguments = lib.mkForce "";
     };
+
+    wayland.windowManager.hyprland.settings ={
+      input ={
+        kb_options ="caps:swapescape";
+      };
+    };
   };
 
   # nixpkgs.config.permittedInsecurePackages = [

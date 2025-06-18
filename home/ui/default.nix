@@ -28,7 +28,7 @@
     remmina
     fractal
     filezilla
-    inputs.zen-browser.packages.${system}.default
+    # inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.polymc.packages.${system}.default
     # postman
@@ -39,12 +39,12 @@
     libreoffice-fresh
     onlyoffice-desktopeditors
 
-    (orca-slicer.overrideAttrs(oldAttrs: {
-      cmakeFlags = oldAttrs.cmakeFlags ++ [
-        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
-      ];
-    }))
-    super-slicer
+    # (orca-slicer.overrideAttrs(oldAttrs: {
+    #   cmakeFlags = oldAttrs.cmakeFlags ++ [
+    #     (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
+    #   ];
+    # }))
+    # super-slicer
 
     (pkgs.symlinkJoin {
       name = "KiCAD";

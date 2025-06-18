@@ -3,7 +3,7 @@
   inherit (config.stylix) fonts;
 in{
   programs.alacritty = {
-    enable = true;
+    enable = false;
     settings = {
       general = {
         ipc_socket = osConfig.values.terminal.firstInstance != null;
