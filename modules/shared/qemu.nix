@@ -70,6 +70,8 @@ in{
     systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
     boot.binfmt.emulatedSystems = cfg.architectures;
 
+    programs.dconf.enable = true;
+
     users.users.${username} ={
       extraGroups = [ "libvirtd" ];
     };
