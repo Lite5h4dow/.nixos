@@ -2,6 +2,7 @@
   inherit (config.custom.virtualisation) qemu;
   cfg = qemu;
   inherit (lib) optional optionals types mkIf mkOption mkEnableOption ;
+  username = config.values.mainUser;
 in{
   options ={
     custom.virtualisation.qemu = {
@@ -68,5 +69,9 @@ in{
 
     systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
     boot.binfmt.emulatedSystems = cfg.architectures;
+
+    users.users.${username} ={
+      extraGroups = [ "libvirtd" ];
+    };
   };
 }
