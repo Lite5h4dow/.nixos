@@ -1,9 +1,9 @@
 {config, pkgs, lib,...}:let
-  kubeMasterIP = 192.168.10.1;
+  kubeMasterIP = "192.168.10.1";
   kubeMasterHostname = "api.kube";
   kubeMasterAPIPort = 6443;
 
-  inherit (lib) types mkOption mkEnableOption optional;
+  inherit (lib) types mkOption mkEnableOption optional mkIf;
   inherit (config.custom.server) kubernetes;
 in{
   options =  {
@@ -29,9 +29,29 @@ in{
       kubernetes
     ];
 
-    services.kubernetes = {
+    services.kubernetes = let
+      api = "https://${kubeMasterHostname}:${toString kubeMasterAPIPort}";
+    in{
       roles = [ "node" ]
       ++ optional kubernetes.isMaster "master";
+
+      masterAddress =
+        if kubernetes.isMaster then
+          "127.0.0.1"
+        else
+          kubeMasterHostname;
+
+      apiserverAddress = api;
+      kubelet.kubeconfig.server =
+        mkIf (!kubernetes.isMaster) api;
+
+      apiserver = mkIf kubernetes.isMaster{
+        securePort = kubeMasterAPIPort;
+        advertiseAddress = kubeMasterIP;
+      };
+
+      easyCerts = true;
+      addons.dns.enable = true;
     };
   };
 }
