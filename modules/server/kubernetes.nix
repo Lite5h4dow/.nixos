@@ -6,7 +6,7 @@
   inherit (lib) types mkOption mkEnableOption optional mkIf;
   inherit (config.custom.server) kubernetes;
 in{
-  options =  {
+  options = {
     custom.server.kubernetes = {
       enable = mkEnableOption {
         description = "Enable Kubernetes on this server";
@@ -20,6 +20,7 @@ in{
       };
     };
   };
+
   config ={
     networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
 
