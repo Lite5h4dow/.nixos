@@ -1,5 +1,7 @@
 {
   imports = [
     ./kubernetes
+
+    ./values.nix
   ];
 }
