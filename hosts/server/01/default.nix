@@ -21,12 +21,14 @@
         22
         80
         443
+        6443
         25565
       ];
       allowedUDPPorts =[
         25565
       ];
     };
+
     defaultGateway= "192.168.1.1";
     nameservers = ["1.1.1.1"];
     hostName = "01.server";
