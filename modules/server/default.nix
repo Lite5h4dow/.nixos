@@ -3,5 +3,6 @@
     ./kubernetes
 
     ./values.nix
+    ./system.nix
   ];
 }
