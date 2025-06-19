@@ -10,9 +10,9 @@ in {
     boot.enable = true;
     fish.enable = true;
     atuin.enable = true;
-    podman = {
-      enable = true;
-    };
+    # podman = {
+    #   enable = true;
+    # };
     tailscale.enable = true;
 
     virtualisation ={
