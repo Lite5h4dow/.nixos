@@ -27,7 +27,7 @@ in{
     environment.systemPackages = with pkgs;[
       kompose
       kubectl
-      k8s
+      kubernetes
     ];
 
     services.kubernetes = let
