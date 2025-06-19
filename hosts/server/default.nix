@@ -22,7 +22,7 @@ in {
     };
 
     server={
-      kubernetes = {
+      k8s = {
         enable = true;
       };
     };

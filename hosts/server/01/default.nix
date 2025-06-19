@@ -6,7 +6,7 @@
 
   custom = {
     server={
-      kubernetes = {
+      k8s = {
         isMaster = true;
       };
     };

@@ -4,10 +4,10 @@
   kubeMasterAPIPort = 6443;
 
   inherit (lib) types mkOption mkEnableOption optional mkIf;
-  inherit (config.custom.server) kubernetes;
+  inherit (config.custom.server) k8s;
 in{
   options = {
-    custom.server.kubernetes = {
+    custom.server.k8s = {
       enable = mkEnableOption {
         description = "Enable Kubernetes on this server";
         type = types.bool;
@@ -27,26 +27,26 @@ in{
     environment.systemPackages = with pkgs;[
       kompose
       kubectl
-      kubernetes
+      k8s
     ];
 
     services.kubernetes = let
       api = "https://${kubeMasterHostname}:${toString kubeMasterAPIPort}";
     in{
       roles = [ "node" ]
-      ++ optional kubernetes.isMaster "master";
+      ++ optional k8s.isMaster "master";
 
       masterAddress =
-        if kubernetes.isMaster then
+        if k8s.isMaster then
           "127.0.0.1"
         else
           kubeMasterHostname;
 
       apiserverAddress = api;
       kubelet.kubeconfig.server =
-        mkIf (!kubernetes.isMaster) api;
+        mkIf (!k8s.isMaster) api;
 
-      apiserver = mkIf kubernetes.isMaster{
+      apiserver = mkIf k8s.isMaster{
         securePort = kubeMasterAPIPort;
         advertiseAddress = kubeMasterIP;
       };
