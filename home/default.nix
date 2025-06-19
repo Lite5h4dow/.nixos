@@ -1,16 +1,17 @@
 {lib, osConfig}:let
-  inherit (osConfig.custom) minimal;
+  inherit (osConfig.custom) minimal server;
   inherit (lib) optionals;
 in{
   imports = [
-    ./ui
     ./cli
     ./dev
-    ./style
-    ./video
-    ./photo
 
     # user home config
     ./user.nix
+  ] ++ optionals (!server.enable && !minimal) [
+    ./ui
+    ./style
+    ./video
+    ./photo
   ];
 }
