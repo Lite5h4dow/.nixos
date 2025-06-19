@@ -1,6 +1,8 @@
 { config, lib, pkgs, ...}: let
   inherit (config) values;
 in {
+  zramSwap.enable = true;
+
   custom = {
     ssh = {
       enable = true;
@@ -16,9 +18,12 @@ in {
     virtualisation ={
       qemu ={
         enable = true;
-        quickemu = {
-          enable = true;
-        };
+      };
+    };
+
+    server={
+      kubernetes = {
+        enable = true;
       };
     };
   };
