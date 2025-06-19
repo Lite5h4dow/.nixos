@@ -5,7 +5,6 @@
   ];
 
   custom = {
-    networking.hostname = "node-01";
     server={
       kubernetes = {
         isMaster = true;
