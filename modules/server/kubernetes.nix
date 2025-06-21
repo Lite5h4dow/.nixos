@@ -54,7 +54,7 @@ in{
         advertiseAddress = kubeMasterIP;
       };
 
-      # easyCerts = true;
+      easyCerts = true;
       addons.dns.enable = true;
     };
   };
