@@ -5,4 +5,6 @@ in {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
   };
+
+  services.openiscsi.enable = true;
 }

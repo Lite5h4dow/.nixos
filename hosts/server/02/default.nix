@@ -12,6 +12,7 @@
         22
         80
         443
+        2202
         25565
       ];
       allowedUDPPorts =[
@@ -22,11 +23,11 @@
     defaultGateway= "192.168.1.1";
     nameservers = ["1.1.1.1"];
     hostName = "02-server";
-    # interfaces = {
-    #   eno1.ipv4.addresses = [{
-    #     address = "192.168.10.2";
-    #     prefixLength = 16;
-    #   }];
-    # };
+    interfaces = {
+      eno1.ipv4.addresses = [{
+        address = "192.168.10.2";
+        prefixLength = 16;
+      }];
+    };
   };
 }
