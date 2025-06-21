@@ -39,11 +39,7 @@ in{
       roles = [ "node" ]
       ++ optional k8s.isMaster "master";
 
-      masterAddress =
-        if k8s.isMaster then
-          "127.0.0.1"
-        else
-          kubeMasterIP;
+      masterAddress = kubeMasterIP;
 
       apiserverAddress = api;
       kubelet.kubeconfig.server =
