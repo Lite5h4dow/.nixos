@@ -6,5 +6,5 @@ in {
     extraGroups = [ "wheel" ];
   };
 
-  services.openiscsi.enable = true;
+  # services.openiscsi.enable = true;
 }
