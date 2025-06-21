@@ -34,7 +34,7 @@ in{
     ];
 
     services.kubernetes = let
-      api = "https://${kubeMasterHostname}:${toString kubeMasterAPIPort}";
+      api = "https://${kubeMasterIP}:${toString kubeMasterAPIPort}";
     in{
       roles = [ "node" ]
       ++ optional k8s.isMaster "master";
@@ -43,7 +43,7 @@ in{
         if k8s.isMaster then
           "127.0.0.1"
         else
-          kubeMasterHostname;
+          kubeMasterIP;
 
       apiserverAddress = api;
       kubelet.kubeconfig.server =
