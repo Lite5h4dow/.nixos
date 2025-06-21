@@ -1,6 +1,6 @@
 {config, pkgs, lib,...}:let
   kubeMasterIP = "192.168.10.1";
-  kubeMasterHostname = "api.kube";
+  kubeMasterHostname = "01-server";
   kubeMasterAPIPort = 6443;
 
   inherit (lib) types mkOption mkEnableOption optional mkIf;
