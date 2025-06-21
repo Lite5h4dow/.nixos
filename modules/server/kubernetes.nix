@@ -28,6 +28,9 @@ in{
       kompose
       kubectl
       kubernetes
+      openssl
+      cfssl
+      certmgr
     ];
 
     services.kubernetes = let
