@@ -32,7 +32,7 @@ in{
     ];
 
     sessionVariables = {
-      # "KUBE_CONFIG_PATH" = "~/.kube/config";
+      "KUBE_CONFIG_PATH" = "~/.kube/config";
     };
   };
 }
