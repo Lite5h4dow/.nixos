@@ -48,6 +48,7 @@ in{
       apiserver = mkIf k8s.isMaster{
         securePort = kubeMasterAPIPort;
         advertiseAddress = kubeMasterIP;
+        allowPrivileged = true;
       };
 
       easyCerts = true;
