@@ -1,4 +1,4 @@
-{config, inputs, ...}: let
+{config, inputs, pkgs, ...}: let
   inherit (config.values) mainUser;
 in {
   users.users.${mainUser} = {
@@ -6,5 +6,12 @@ in {
     extraGroups = [ "wheel" ];
   };
 
-  # services.openiscsi.enable = true;
+  environment.systemPackages = [
+    pkgs.openiscsi
+  ];
+
+  # services.openiscsi ={
+    # enable = true;
+    # name = "c"
+  # };
 }
