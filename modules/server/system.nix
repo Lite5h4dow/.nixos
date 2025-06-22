@@ -10,8 +10,8 @@ in {
     pkgs.openiscsi
   ];
 
-  # services.openiscsi ={
-    # enable = true;
+  services.openiscsi ={
+    enable = true;
     # name = "c"
-  # };
+  };
 }
