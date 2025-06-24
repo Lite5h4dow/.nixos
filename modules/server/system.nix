@@ -12,6 +12,6 @@ in {
 
   services.openiscsi ={
     enable = true;
-    # name = "c"
+    name = "${config.networking.hostName}-initiatorhost";
   };
 }
