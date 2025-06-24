@@ -21,10 +21,10 @@ in {
       };
     };
 
-    server={
-      k8s = {
-        enable = true;
-      };
-    };
+    # server={
+    #   k8s = {
+    #     enable = true;
+    #   };
+    # };
   };
 }

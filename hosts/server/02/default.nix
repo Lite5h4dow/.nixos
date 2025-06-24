@@ -4,6 +4,15 @@
     ../default.nix
   ];
 
+  service = {
+    k3s = {
+      enable = true;
+      token = "701a0bcbd15a1fa49b45ea342a3c216f"; #need to find away to pull this in
+      role = "server";
+      serverAddr = "192.168.10.1:6443";
+    };
+  };
+
   networking ={
     firewall = {
       enable = true;

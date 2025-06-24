@@ -4,11 +4,19 @@
     ../default.nix
   ];
 
-  custom = {
-    server={
-      k8s = {
-        isMaster = true;
-      };
+  # custom = {
+  #   server={
+  #     k8s = {
+  #       isMaster = true;
+  #     };
+  #   };
+  # };
+
+  services ={
+    k3s ={
+      enable = true;
+      token = "701a0bcbd15a1fa49b45ea342a3c216f"; #ned to find a way to pull this in
+      role = "server";
     };
   };
 
