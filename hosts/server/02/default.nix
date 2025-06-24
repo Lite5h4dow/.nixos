@@ -7,9 +7,10 @@
   service = {
     k3s = {
       enable = true;
-      token = "701a0bcbd15a1fa49b45ea342a3c216f"; #need to find away to pull this in
+      token = "K107a1c725b53d9004555c0b543328b06434c33c6199a21bc1ef6b10f898669a897::server:701a0bcbd15a1fa49b45ea342a3c216f"; #need to find away to pull this in
       role = "server";
-      serverAddr = "192.168.10.1:6443";
+      clusterInit = true;
+      serverAddr = "https://192.168.10.1:6443";
     };
   };
 
@@ -22,6 +23,7 @@
         80
         443
         2202
+        2379
         8888
         25565
       ];

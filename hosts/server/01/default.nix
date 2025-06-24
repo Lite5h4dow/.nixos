@@ -9,6 +9,7 @@
       enable = true;
       token = "701a0bcbd15a1fa49b45ea342a3c216f"; #need to find a way to pull this in
       role = "server";
+      clusterInit = true;
     };
   };
 
@@ -21,6 +22,7 @@
         80
         443
         2202
+        2379
         6443
         8888
         25565
