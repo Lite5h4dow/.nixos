@@ -61,6 +61,13 @@ in {
     };
 
     wayland.windowManager.hyprland.settings ={
+      general ={
+        snap = {
+          enabled = true;
+          window_gap = 20;
+          monitor_gap = 20;
+        };
+      };
       input ={
         kb_options ="caps:swapescape";
       };
