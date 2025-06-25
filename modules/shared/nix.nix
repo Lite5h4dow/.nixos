@@ -2,6 +2,7 @@
   config,
   inputs,
   pkgs,
+  lib,
   ...
 }: let
   inherit (inputs) nixpkgs;  
@@ -91,6 +92,10 @@ in {
         xorg.libXcomposite
       ];
     };
+  };
+
+  environment.variables ={
+    LD_LIBRARY_PATH = lib.mkDefault "$LD_LIBRARY_PATH:${pkgs.glibc}/lib";
   };
   users.users= {
     "root" = {

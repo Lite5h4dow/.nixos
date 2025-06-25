@@ -9,6 +9,7 @@
     };
 
     systemPackages = with pkgs; [
+      nss
       obsidian
       steam-run
       wl-clipboard
