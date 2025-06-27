@@ -58,7 +58,7 @@ in{
       systemPackages = with pkgs;[
         openvr
         # alvr
-        # modrinth-app
+        modrinth-app
       ];
     };
 
