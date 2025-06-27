@@ -37,7 +37,7 @@
     # orca-slicer
     gimp-with-plugins
     libreoffice-fresh
-    onlyoffice-desktopeditors
+    grayjay
 
     # (orca-slicer.overrideAttrs(oldAttrs: {
     #   cmakeFlags = oldAttrs.cmakeFlags ++ [
