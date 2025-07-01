@@ -30,7 +30,6 @@ in{
     ++ optionals (!minimal) [
       zig
       ruby
-      ruby-lsp
       gcloud
       tinygo
       fractal
@@ -46,6 +45,7 @@ in{
       gcc-arm-embedded
       kubectl-validate
       dotnetPackages.Nuget
+      rubyPackages.solargraph
       (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
           helm-secrets
