@@ -5,6 +5,7 @@ in {
     boot.enable = false;
     mobile.enable = false;
     fish.enable = true;
+    atuin.enable = true;
     graphics = {
       intel.enable = false;
       nvidia.enable = false;

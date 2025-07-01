@@ -25,6 +25,7 @@ in {
     terraform-ls
     glsl_analyzer
     rust-analyzer
+    markdown-oxide
     omnisharp-roslyn
     lua-language-server
     yaml-language-server
