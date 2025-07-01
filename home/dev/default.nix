@@ -29,6 +29,8 @@ in{
     ]
     ++ optionals (!minimal) [
       zig
+      ruby
+      ruby-lsp
       gcloud
       tinygo
       fractal
