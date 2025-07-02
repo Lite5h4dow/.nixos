@@ -28,7 +28,6 @@ in{
       ytermusic
       csvtool
       ffmpeg
-      mermaid-cli
       # inputs.atuin.packages.${system}.atuin
     ];
 

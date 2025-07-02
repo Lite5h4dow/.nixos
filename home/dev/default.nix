@@ -40,6 +40,7 @@ in{
       protobuf
       netcoredbg
       dotnet-sdk
+      mermaid-cli
       android-tools
       woodpecker-cli
       gcc-arm-embedded
