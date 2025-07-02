@@ -5,6 +5,7 @@ line-number = "relative"
 auto-pairs = true
 completion-trigger-len = 1
 shell = ["dash", "-c"]
+bufferline = "always"
 
 [editor.lsp]
 enable = true
@@ -17,6 +18,7 @@ render = "all"
 
 [editor.indent-guides]
 render = true
+
 
 [editor.statusline]
 left = ["spinner", "mode"]
