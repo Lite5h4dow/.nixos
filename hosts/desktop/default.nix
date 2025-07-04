@@ -2,6 +2,7 @@
   inherit (config) values;
 in {
   imports = [./hardware.nix];
+  time.timeZone = "Europe/London";
 
   zramSwap.enable = true;
 
