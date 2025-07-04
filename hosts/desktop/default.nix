@@ -44,7 +44,10 @@ in {
     };
   };
 
-  services.ratbagd.enable = true;
+  services = {
+    ratbagd.enable = true;
+    hardware.openrgb.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     # razergenie
