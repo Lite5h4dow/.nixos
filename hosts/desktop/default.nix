@@ -51,6 +51,7 @@ in {
     piper
     heroic
     bazecor
+    openrgb-with-all-plugins
   ];
 
   home-manager.users.${values.mainUser} = {
