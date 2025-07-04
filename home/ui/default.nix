@@ -38,6 +38,7 @@
     gimp-with-plugins
     libreoffice-fresh
     grayjay
+    ferdium
 
     # (orca-slicer.overrideAttrs(oldAttrs: {
     #   cmakeFlags = oldAttrs.cmakeFlags ++ [
