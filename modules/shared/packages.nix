@@ -26,6 +26,7 @@
       yazi
       jq
       fzf
+      tzupdate
     ];
   };
 }

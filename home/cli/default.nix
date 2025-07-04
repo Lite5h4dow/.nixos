@@ -28,6 +28,7 @@ in{
       ytermusic
       csvtool
       ffmpeg
+      yt-dlp
       # inputs.atuin.packages.${system}.atuin
     ];
 
