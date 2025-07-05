@@ -15,12 +15,12 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/3cc18197-6afe-44ec-bcea-50d92d752018";
+    { device = "/dev/disk/by-uuid/09b4ae7b-5902-45f7-a197-38c9a3af2ce8";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3A1B-8A04";
+    { device = "/dev/disk/by-uuid/AAA9-BEEA";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
@@ -42,7 +42,7 @@
   };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/2581ae0d-2f19-47ce-b93c-0a7ecd69e9e5"; }
+    [ { device = "/dev/disk/by-uuid/a5e4d7bc-bf18-457b-b830-e01c7894310b"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
