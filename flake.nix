@@ -49,18 +49,18 @@
       url = "github:nix-systems/x86_64-linux";
     };
 
-    # wallpapers = {
-      # flake = false;
-      # url = "git+https://git.litelot.us/litelotus/.wallpapers";
-      # url = "git+file:///home/lotus/.wallpapers";
-    # };
+    wallpapers = {
+      flake = false;
+      url = "git+https://git.litelot.us/litelotus/.wallpapers";
+    # url = "git+file:///home/lotus/.wallpapers";
+    };
 
-    # ags-config = {
-      # flake = false;
-      # url = "git:litelotus/.ags";
-      # url = "git+https://git.litelot.us/litelotus/.ags";
-      # url = "git+file:///home/lotus/.ags";
-    # };
+    ags-config = {
+      flake = false;
+      url = "git:litelotus/.ags";
+    # url = "git+https://git.litelot.us/litelotus/.ags";
+    # url = "git+file:///home/lotus/.ags";
+    };
 
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
