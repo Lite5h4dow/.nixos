@@ -51,15 +51,15 @@
 
     wallpapers = {
       flake = false;
-      url = "git+https://git.litelot.us/litelotus/.wallpapers";
-    # url = "git+file:///home/lotus/.wallpapers";
+      # url = "git+https://git.litelot.us/litelotus/.wallpapers";
+      url = "git+file:///home/lotus/.wallpapers";
     };
 
     ags-config = {
       flake = false;
-      url = "git:litelotus/.ags";
-    # url = "git+https://git.litelot.us/litelotus/.ags";
-    # url = "git+file:///home/lotus/.ags";
+      # url = "git:litelotus/.ags";
+      # url = "git+https://git.litelot.us/litelotus/.ags";
+      url = "git+file:///home/lotus/.ags";
     };
 
     wrapper-manager = {
