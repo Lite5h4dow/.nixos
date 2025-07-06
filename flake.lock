@@ -21,6 +21,21 @@
         "type": "github"
       }
     },
+    "ags-config": {
+      "flake": false,
+      "locked": {
+        "dirtyRev": "6798b499611e627802a9ac00b7a5356838e39ba0-dirty",
+        "dirtyShortRev": "6798b49-dirty",
+        "lastModified": 1740325414,
+        "narHash": "sha256-HCDZypTsYb0FbUaLaacVm2ZuPJp1CaoBrfd3emM6kAg=",
+        "type": "git",
+        "url": "file:///home/lotus/.ags"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/lotus/.ags"
+      }
+    },
     "aquamarine": {
       "inputs": {
         "hyprutils": [
@@ -1462,6 +1477,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "ags-config": "ags-config",
         "astal": "astal_2",
         "atuin": "atuin",
         "curd": "curd",
@@ -1485,6 +1501,7 @@
         "stylix": "stylix",
         "systems": "systems_7",
         "tinygo-machine": "tinygo-machine",
+        "wallpapers": "wallpapers",
         "wrapper-manager": "wrapper-manager",
         "zen-browser": "zen-browser"
       }
@@ -1840,6 +1857,22 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740003759,
+        "narHash": "sha256-C8f79HIEFOTnSm75rWOyG2K47+zsqWLY+ebbr/rIEhg=",
+        "ref": "refs/heads/main",
+        "rev": "527f685f49968197ec3ef5ab3091dec433add5ae",
+        "revCount": 2,
+        "type": "git",
+        "url": "file:///home/lotus/.wallpapers"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/lotus/.wallpapers"
       }
     },
     "wrapper-manager": {

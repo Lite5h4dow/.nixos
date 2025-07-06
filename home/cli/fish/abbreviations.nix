@@ -6,7 +6,7 @@
 
   nixUpdateCommand = "sudo nixos-rebuild switch --option build-dir /var/tmp/nix-daemon";
   nixGenerationCleanupCommand  = "sudo nix-collect-garbage -d";
-  update-command =  a: "${nixUpdateCommand} ${a} && ${nixGenerationCleanupCommand}";
+  update-command =  a: "${nixUpdateCommand} ${a}";
 in {
   programs.fish.shellAbbrs = {
     hash = "sha256sum";
