@@ -15,7 +15,7 @@
       enable = true;
       base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-mocha.yaml;
       polarity = "dark";
-      # image = inputs.wallpapers + /NixOS.png;
+      image = inputs.wallpapers + /NixOS.png;
     };
   };
 }

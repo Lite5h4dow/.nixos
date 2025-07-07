@@ -10,7 +10,7 @@ in{
 
   programs.ags = {
     enable = true;
-    # configDir = inputs.ags-config;
+    configDir = inputs.ags-config;
     extraPackages = with pkgs; [
       gtksourceview
       webkitgtk
