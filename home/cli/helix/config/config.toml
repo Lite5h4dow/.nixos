@@ -19,7 +19,6 @@ render = "all"
 [editor.indent-guides]
 render = true
 
-
 [editor.statusline]
 left = ["spinner", "mode"]
 center = ["read-only-indicator", "file-name", "file-modification-indicator"]
@@ -34,3 +33,12 @@ other-lines = "error"
 
 [editor.smart-tab]
 enable = true
+
+[[language]]
+name = "__common__"
+scope = "source.__common__"
+file-types = []
+language-servers = ["lsp-ai"]
+
+[language-server.lsp-ai]
+command = "lsp-ai"

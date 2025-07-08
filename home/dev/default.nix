@@ -9,14 +9,12 @@ in{
   imports = [
     ./git.nix
     ./nodejs.nix
+    ./lsp-ai.nix
   ];
 
   programs = {
     go = {
       enable = true;
-      # packages = {
-        # "machine" = inputs."tinygo-machine" + /src/machine;
-      # };
     };
   };
  home={

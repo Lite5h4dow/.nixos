@@ -36,7 +36,6 @@ in {
     docker-compose-language-service
     dockerfile-language-server-nodejs
 
-
     # debuggers
     lldb
     delve
