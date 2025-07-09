@@ -56,6 +56,8 @@ in{
       pulumi
       pulumictl
       pulumi-esc
+      pulumiPackages.pulumi-go
+      pulumiPackages.pulumi-nodejs
     ]
     ;
 
