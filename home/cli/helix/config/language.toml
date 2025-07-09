@@ -1,0 +1,8 @@
+[[language]]
+name = "__common__"
+scope = "source.__common__"
+file-types = []
+language-servers = ["lsp-ai"]
+
+[language-server.lsp-ai]
+command = "lsp-ai"
