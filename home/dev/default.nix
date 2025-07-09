@@ -53,6 +53,9 @@ in{
           helm-s3
         ];
       })
+      pulumi
+      pulumictl
+      pulumi-esc
     ]
     ;
 
