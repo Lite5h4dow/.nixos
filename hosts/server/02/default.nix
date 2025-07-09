@@ -13,9 +13,6 @@
       # clusterInit = true;
       serverAddr = "https://192.168.10.1:6443";
     };
-    openiscsi = {
-      enable = true;
-    };
   };
 
   networking ={
