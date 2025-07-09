@@ -12,8 +12,8 @@
       role = "server";
       clusterInit = true;
     };
-    openiscsi={
-      enable=true;
+    openiscsi = {
+      enable = true;
     };
   };
 
