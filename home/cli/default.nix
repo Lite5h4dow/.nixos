@@ -25,11 +25,12 @@ in{
       eza
       ouch
       aria2
-      ripgrep
     ]
     ++ optionals (!minimal)[
       du-dust
       dua
+      ripgrep
+      ripgrep-all
     ]
     ++ optionals (!minimal && !corp) [
       neovim
