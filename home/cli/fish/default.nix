@@ -4,7 +4,7 @@
 in {
   imports = optionals fish.enable [
     ./abbreviations.nix
-    # ./aliases.nix
+    ./aliases.nix
   ];
   config = mkIf fish.enable {
 
