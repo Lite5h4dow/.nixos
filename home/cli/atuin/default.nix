@@ -13,10 +13,12 @@ in {
       atuin = {
         enable = true;
         enableFishIntegration = fish.enable;
-        settings = {
-          sync = canSync;
+        settings = if canSync then {
+          auto_sync = true;
           sync_address = "https://atuin.litelot.us";
           sync_frequency = "5m";
+          search_mode = "fuzzy";
+        }else{
           search_mode = "fuzzy";
         };
       };
