@@ -8,6 +8,7 @@ in{
 
     ./fish
     ./atuin
+    ./zoxide
     ./bash.nix
 
     ./helix
@@ -19,9 +20,12 @@ in{
 
   home ={
     packages = with pkgs; [
+      fd
+      bat
       eza
       ouch
       aria2
+      ripgrep
     ]
     ++ optionals (!minimal && !corp) [
       neovim
