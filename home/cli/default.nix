@@ -27,6 +27,10 @@ in{
       aria2
       ripgrep
     ]
+    ++ optionals (!minimal)[
+      du-dust
+      dua
+    ]
     ++ optionals (!minimal && !corp) [
       neovim
       neofetch
@@ -34,8 +38,6 @@ in{
       csvtool
       ffmpeg
       yt-dlp
-      du-dust
-      dua
       # inputs.atuin.packages.${system}.atuin
     ];
 
