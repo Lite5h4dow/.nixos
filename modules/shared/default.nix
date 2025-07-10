@@ -17,6 +17,7 @@
     ./packages.nix
     ./bluetooth.nix
     ./tailscale.nix
+    ./corporate.nix
     ./networking.nix
   ];
 }
