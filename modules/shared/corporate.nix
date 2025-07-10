@@ -1,9 +1,9 @@
 {lib, ...}:let
-  inherit (lib) mkEnableObtion types;
+  inherit (lib) mkObtion types;
 in{
   options = {
     custom.corporate = {
-      enable = mkEnableObtion {
+      enable = mkObtion {
         type = types.bool;
         description = "Modify config for corpo environment";
         default = false;

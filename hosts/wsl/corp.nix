@@ -1,4 +1,3 @@
-
 {config, lib, ...}: let
   inherit (config) values;
 in {
@@ -22,10 +21,6 @@ in {
         enable = false;
       };
     };
-    # gaming = {
-    #   enable = false;
-    #   xr.enable = false;
-    # };
   };
 
   users.groups.docker = {};
@@ -34,5 +29,5 @@ in {
     "dotnet-sdk-6.0.428"
   ];
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }
