@@ -34,6 +34,8 @@ in{
       csvtool
       ffmpeg
       yt-dlp
+      du-dust
+      dua
       # inputs.atuin.packages.${system}.atuin
     ];
 
