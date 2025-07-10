@@ -1,7 +1,7 @@
-{pkgs, ...}:{
+{...}:{
   imports = [
-    ./hardware.nix
     ../default.nix
+    /etc/nixos/hardware-configuration.nix
   ];
 
   services = {
@@ -15,29 +15,16 @@
     };
   };
 
-  # might not be needed, need to check if nvidia-container-runtime needs to be in
-  # /run/current-system/sw/bin/nvidia-container-runtime
-  # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/k3s/docs/examples/NVIDIA.md
-  virtualisation.docker = {
-    enable = true;
-    enableNvidia = true;
-  };
-
-  environment.systemPackages=with pkgs;[
-    nvidia-container-toolkit
-    docker
-    runc
-  ];
-
   networking = {
     defaultGateway= "192.168.1.1";
     nameservers = ["1.1.1.1"];
     hostName = "02-server";
     interfaces = {
       eno1.ipv4.addresses = [{
-        address = "192.168.10.2";
+        address = "192.168.10.3";
         prefixLength = 16;
       }];
     };
   };
 }
+

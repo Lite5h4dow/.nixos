@@ -84,6 +84,14 @@ in {
       shared
     ];
   };
-  
+
+  server-03 = mkNixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ./server/03
+      server
+      shared
+    ];
+  };
 
 }

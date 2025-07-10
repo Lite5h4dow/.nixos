@@ -15,26 +15,6 @@
   };
 
   networking ={
-    firewall = {
-      enable = true;
-      allowedTCPPorts = [
-        21
-        22
-        80
-        443
-        2202
-        2379
-        2380
-        6443
-        8888
-        25565
-      ];
-      allowedUDPPorts =[
-        25565
-        8472
-      ];
-    };
-
     defaultGateway= "192.168.1.1";
     nameservers = ["1.1.1.1"];
     hostName = "01-server";

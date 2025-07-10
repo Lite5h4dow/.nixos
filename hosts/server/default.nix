@@ -10,9 +10,6 @@ in {
     boot.enable = true;
     fish.enable = true;
     atuin.enable = true;
-    # podman = {
-    #   enable = true;
-    # };
     tailscale.enable = true;
 
     virtualisation ={
@@ -20,11 +17,26 @@ in {
         enable = true;
       };
     };
+  };
 
-    # server={
-    #   k8s = {
-    #     enable = true;
-    #   };
-    # };
+  networking ={
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        21
+        22
+        80
+        443
+        2202
+        2379
+        2380
+        8888
+        25565
+      ];
+      allowedUDPPorts =[
+        25565
+        8472
+      ];
+    };
   };
 }
