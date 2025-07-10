@@ -38,6 +38,15 @@ in {
     ];
   };
 
+  corp-wsl = mkNixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ./wsl/corp.nix
+      wsl
+      shared
+    ];
+  };
+
   prodpod = mkNixosSystem {
     system = "aarch64-linux";
     modules = [

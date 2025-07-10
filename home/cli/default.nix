@@ -1,6 +1,7 @@
 {osConfig, pkgs, lib, inputs, ...}:let
   inherit (lib) optionals;
-  inherit (osConfig.custom) minimal; 
+  inherit (osConfig.custom) minimal corporate; 
+  corp = corporate.enable;
 in{
   imports = [
     ./starship
@@ -22,7 +23,7 @@ in{
       ouch
       aria2
     ]
-    ++ optionals (!minimal) [
+    ++ optionals (!minimal && !corp) [
       neovim
       neofetch
       ytermusic
