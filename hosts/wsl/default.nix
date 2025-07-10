@@ -3,15 +3,8 @@
 in {
   custom = {
     boot.enable = false;
-    mobile.enable = false;
     fish.enable = true;
     atuin.enable = true;
-    graphics = {
-      intel.enable = false;
-      nvidia.enable = false;
-    };
-    bluetooth.enable = false;
-    tailscale.enable = false;
     networking = {
       enable = false;
     };

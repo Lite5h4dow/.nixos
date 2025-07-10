@@ -4,22 +4,9 @@ in {
   custom = {
     corporate.enable = true;
     boot.enable = false;
-    mobile.enable = false;
     fish.enable = true;
-    atuin.enable = false;
-    graphics = {
-      intel.enable = false;
-      nvidia.enable = false;
-    };
-    bluetooth.enable = false;
-    tailscale.enable = false;
     networking = {
       enable = false;
-    };
-    virtualisation={
-      qemu = {
-        enable = false;
-      };
     };
   };
 
