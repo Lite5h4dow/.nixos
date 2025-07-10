@@ -2,7 +2,7 @@
   inherit (lib) mkEnableObtion types;
 in{
   options = {
-    corporate = {
+    custom.corporate = {
       enable = mkEnableObtion {
         type = types.bool;
         description = "Modify config for corpo environment";
