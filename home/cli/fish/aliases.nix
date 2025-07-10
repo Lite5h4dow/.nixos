@@ -1,6 +1,6 @@
 {...}:{
   programs.fish.shellAliases = {
-    "ls" = "eza --icons";
+    # "ls" = "eza --icons";
     "cat" = "bat";
   };
 }

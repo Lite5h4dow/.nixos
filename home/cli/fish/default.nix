@@ -31,7 +31,13 @@ in {
         #   starship init fish | source
         # '';
       };
-      eza.enableFishIntegration = true;
+      eza = {
+        enable = true;
+        icons = "auto";
+        git = true;
+        enableFishIntegration = true;
+        
+      };
     };
   };
 }

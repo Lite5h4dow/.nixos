@@ -22,7 +22,6 @@ in{
     packages = with pkgs; [
       fd
       bat
-      eza
       ouch
       aria2
     ]
