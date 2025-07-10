@@ -5,6 +5,7 @@ in {
     corporate.enable = true;
     boot.enable = false;
     fish.enable = true;
+    atuin.enable = true;
     networking = {
       enable = false;
     };

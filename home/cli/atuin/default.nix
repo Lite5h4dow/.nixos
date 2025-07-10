@@ -1,6 +1,7 @@
 {pkgs, lib, osConfig, ...}: let
   inherit (lib) optionals mkIf types;
-  inherit (osConfig.custom) atuin fish; 
+  inherit (osConfig.custom) atuin fish corporate; 
+  canSync = (!corporate.enable);
 in {
 
   imports = optionals atuin.enable [
@@ -12,6 +13,12 @@ in {
       atuin = {
         enable = true;
         enableFishIntegration = fish.enable;
+        settings = {
+          sync = canSync;
+          sync_address = "https://atuin.litelot.us";
+          sync_frequency = "5m";
+          search_mode = "fuzzy";
+        };
       };
     };
   };
