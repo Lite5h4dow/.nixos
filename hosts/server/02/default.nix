@@ -18,16 +18,16 @@
   # might not be needed, need to check if nvidia-container-runtime needs to be in
   # /run/current-system/sw/bin/nvidia-container-runtime
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/k3s/docs/examples/NVIDIA.md
-  virtualisation.docker = {
-    enable = true;
-    enableNvidia = true;
-  };
+  # virtualisation.docker = {
+  #   enable = true;
+  #   enableNvidia = true;
+  # };
 
-  environment.systemPackages=with pkgs;[
-    nvidia-container-toolkit
-    docker
-    runc
-  ];
+  # environment.systemPackages=with pkgs;[
+  #   nvidia-container-toolkit
+  #   docker
+  #   runc
+  # ];
 
   networking = {
     defaultGateway= "192.168.1.1";
