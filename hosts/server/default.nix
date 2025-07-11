@@ -1,5 +1,6 @@
 { config, lib, pkgs, ...}: let
   inherit (config) values;
+  inherit (lib) mkForce;
 in {
   zramSwap.enable = true;
 
@@ -20,7 +21,7 @@ in {
   };
 
   networking ={
-    enableIPv6 = false;
+    enableIPv6 = mkForce false;
     firewall = {
       enable = true;
       allowedTCPPorts = [

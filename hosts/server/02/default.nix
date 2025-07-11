@@ -1,4 +1,6 @@
-{pkgs, ...}:{
+{lib, ...}:let
+  inherit (lib) mkForce;
+in{
   imports = [
     ./hardware.nix
     ../default.nix
@@ -30,6 +32,7 @@
   # ];
 
   networking = {
+    enableIPv6 = mkForce false;
     firewall = {
       enable = true;
       allowedTCPPorts = [
