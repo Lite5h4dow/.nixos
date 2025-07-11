@@ -20,6 +20,7 @@ in {
   };
 
   networking ={
+    enableIPv6 = false;
     firewall = {
       enable = true;
       allowedTCPPorts = [
