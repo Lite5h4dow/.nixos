@@ -7,5 +7,6 @@
     variables = {
       EDITOR = "hx";
     };
+    enableAllTerminfo = true;
   };
 }
