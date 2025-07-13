@@ -19,27 +19,4 @@ in {
       };
     };
   };
-
-  networking ={
-    enableIPv6 = mkForce false;
-    firewall = {
-      enable = true;
-      allowedTCPPorts = [
-        21
-        22
-        80
-        443
-        2202
-        2379
-        2380
-        8888
-        10250
-        25565
-      ];
-      allowedUDPPorts =[
-        25565
-        8472
-      ];
-    };
-  };
 }
