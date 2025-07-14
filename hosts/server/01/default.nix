@@ -14,9 +14,6 @@ in{
       role = "server";
       clusterInit = true;
     };
-    etcd = {
-      enable = true;
-    };
   };
 
   networking ={
@@ -32,7 +29,7 @@ in{
         2379
         2380
         8888
-        # 10250
+        10250
         25565
       ];
       allowedUDPPorts =[
