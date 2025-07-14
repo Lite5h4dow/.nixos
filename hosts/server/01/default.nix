@@ -14,6 +14,9 @@ in{
       role = "server";
       clusterInit = true;
     };
+    etcd = {
+      enable = true;
+    };
   };
 
   networking ={
