@@ -2,7 +2,7 @@
   inherit (config) values;
 in {
   import = [
-    inputs.vscode-server.default
+    inputs.vscode-server.nixosModules.default
   ];
 
   custom = {
