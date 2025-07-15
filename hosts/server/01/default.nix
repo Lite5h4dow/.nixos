@@ -11,6 +11,9 @@ in{
       enable = true;
       role = "server";
       clusterInit = true;
+      extraFlags = [
+        "--disable traefik"
+      ];
     };
   };
 

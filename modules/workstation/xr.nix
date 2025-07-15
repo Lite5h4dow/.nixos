@@ -22,7 +22,7 @@ in {
     services = {
       # depending on wether steam works this may not be needed 👀
       monado = {
-        enable = true;
+        enable = false;
         defaultRuntime = true;
         # environment = {
         #   STEAMVR_LH_ENABLE = "1";
