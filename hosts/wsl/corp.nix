@@ -1,6 +1,10 @@
-{config, lib, ...}: let
+{config, lib, inputs, ...}: let
   inherit (config) values;
 in {
+  import = [
+    inputs.vscode-server.default
+  ];
+
   custom = {
     corporate.enable = true;
     boot.enable = false;
@@ -17,15 +21,8 @@ in {
     "dotnet-sdk-6.0.428"
   ];
 
-  home-manager.users.${values.mainUser} = {
-    programs = {
-      vscode = {
-        enable = true;
-      };
-    };
-  };
-
   services = {
+    services.vscode-server.enable = true;
     tailscale = {
       enable = true;
     };
