@@ -12,7 +12,7 @@ in{
       role = "server";
       clusterInit = true;
       extraFlags = [
-        "--disable traefik"
+        "--tls-san 192.168.10.1"
       ];
     };
   };
