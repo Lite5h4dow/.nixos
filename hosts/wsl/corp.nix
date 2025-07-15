@@ -1,7 +1,7 @@
 {config, lib, inputs, ...}: let
   inherit (config) values;
 in {
-  import = [
+  imports = [
     inputs.vscode-server.nixosModules.default
   ];
 
