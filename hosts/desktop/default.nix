@@ -57,6 +57,10 @@ in {
     openrgb-with-all-plugins
   ];
 
+  networking={
+    hostName = "odin";
+  };
+
   home-manager.users.${values.mainUser} = {
     programs = {
       mpv.config.ao = "pulse";
