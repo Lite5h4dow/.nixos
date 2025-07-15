@@ -17,5 +17,19 @@ in {
     "dotnet-sdk-6.0.428"
   ];
 
+  home-manager.users.${values.mainUser} = {
+    programs = {
+      vscode = {
+        enable = true;
+      };
+    };
+  };
+
+  services = {
+    tailscale = {
+      enable = true;
+    };
+  };
+
   system.stateVersion = "25.05";
 }
