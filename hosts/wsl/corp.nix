@@ -22,7 +22,7 @@ in {
   ];
 
   services = {
-    services.vscode-server.enable = true;
+    # services.vscode-server.enable = true;
     tailscale = {
       enable = true;
     };
