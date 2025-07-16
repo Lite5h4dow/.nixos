@@ -3,19 +3,15 @@
   inherit (lib) mkForce;
   inherit (pkgs.stdenv) mkDerivation;
   
-  rke2-traefik-config = ''
-    ingress-controller: traefik
-  '';
-  
-  rke2-traefik = mkDerivation {
-    name = "rke2-use-traefik";
-    dontUnpack = true;
-    buildCommand = "echo ${rke2-traefik-config} > $out";
-    installPhase = ''
-    mkdir -p /etc/rancher/rke2/config.yaml.d
-    cp $out /etc/rancher/rke2/config.yaml.d/00-use-traefik.yaml
+
+  rke2-traefik-config = pkgs.writeTextFile {
+    name = "00-use-traefik.yaml";
+    text = ''
+      ingress-controller: traefik
     '';
+    destination = "/etc/rancher/rke2/config.yaml.d/00-use-traefik.yaml";
   };
+  
 in {
   zramSwap.enable = true;
 
@@ -35,6 +31,11 @@ in {
     };
   };
 
-  environment.systemPackages = [ rke2-traefik ];
+  environment.systemPackages = [
+    (pkgs.symlinkJoin{
+      name = "rke2-use-traefik";
+      paths = [ rke2-traefik-config ];
+    })
+  ];
 
 }
