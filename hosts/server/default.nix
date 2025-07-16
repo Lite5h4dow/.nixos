@@ -7,7 +7,7 @@
   '';
   
   rke2-traefik = derivation {
-    name = "rke2 use traefik";
+    name = "rke2-use-traefik";
     system = system;
     builder = "${pkgs.bash}/bin/bash";
     args = ["-c" "echo" "${rke2-traefik-config} > $out/etc/rancher/rke2/config.yaml.d/00-use-traefik.yaml"];
