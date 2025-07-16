@@ -8,6 +8,7 @@
     name = "00-use-traefik.yaml";
     text = ''
       ingress-controller: traefik
+      enable-servicelb: true
     '';
   };
   
