@@ -10,9 +10,9 @@ in{
     k3s ={
       enable = true;
       role = "server";
-      clusterInit = true;
+      # clusterInit = true;
       extraFlags = [
-        "--tls-san 192.168.10.1"
+        "--disable=traefik"
       ];
     };
   };
