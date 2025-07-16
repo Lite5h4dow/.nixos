@@ -18,7 +18,6 @@ in{
   };
 
   networking ={
-    enableIPv6 = mkForce false;
     firewall = {
       enable = true;
       allowedTCPPorts = [
@@ -30,7 +29,6 @@ in{
         2379
         2380
         6443
-        8080
         8888
         9000
         10250

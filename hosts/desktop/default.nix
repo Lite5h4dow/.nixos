@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }: let
   inherit (config) values;
+  inherit (lib) mkForce;
 in {
   imports = [./hardware.nix];
   time.timeZone = "Europe/London";
@@ -58,13 +59,13 @@ in {
   ];
 
   networking={
-    hostName = "odin";
+    hostName = mkForce "odin";
   };
 
   home-manager.users.${values.mainUser} = {
     programs = {
       mpv.config.ao = "pulse";
-      jerry.config.player_arguments = lib.mkForce "";
+      jerry.config.player_arguments = mkForce "";
     };
 
     wayland.windowManager.hyprland.settings = {
