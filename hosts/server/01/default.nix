@@ -7,13 +7,10 @@ in{
   ];
 
   services ={
-    rke2 ={
+    k3s ={
       enable = true;
       role = "server";
-      # clusterInit = true;
-      extraFlags = [
-        "--enable-servicelb"
-      ];
+      clusterInit = true;
     };
   };
 
