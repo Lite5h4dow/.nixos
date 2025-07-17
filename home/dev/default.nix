@@ -27,6 +27,7 @@ in{
     ]
     ++ optionals (!minimal) [
       zig
+      k9s
       ruby
       gcloud
       tinygo
