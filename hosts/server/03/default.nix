@@ -7,7 +7,7 @@
   services = {
     k3s = {
       enable = true;
-      role = "server";
+      role = "agent";
       serverAddr = "https://192.168.10.1:6443";
       tokenFile = /var/k3s-token;
     };
