@@ -4,13 +4,13 @@
   inherit (pkgs.stdenv) mkDerivation;
   
 
-  rke2-traefik-config = pkgs.writeTextFile {
-    name = "00-use-traefik.yaml";
-    text = ''
-      ingress-controller: traefik
-      enable-servicelb: true
-    '';
-  };
+  # rke2-traefik-config = pkgs.writeTextFile {
+  #   name = "00-use-traefik.yaml";
+  #   text = ''
+  #     ingress-controller: traefik
+  #     enable-servicelb: true
+  #   '';
+  # };
   
 in {
   zramSwap.enable = true;
@@ -31,8 +31,8 @@ in {
     };
   };
 
-  environment.etc.rke2-use-traefik ={
-    source = rke2-traefik-config;
-    target = "rancher/rke2/config.yaml.d/00-use-traefik.yaml";
-  };
+  # environment.etc.rke2-use-traefik ={
+  #   source = rke2-traefik-config;
+  #   target = "rancher/rke2/config.yaml.d/00-use-traefik.yaml";
+  # };
 }
