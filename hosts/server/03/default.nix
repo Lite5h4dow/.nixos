@@ -1,7 +1,7 @@
 {...}:{
   imports = [
     ../default.nix
-    /etc/nixos/hardware-configuration.nix
+    ./hardware.nix
   ];
 
   services = {
