@@ -21,6 +21,7 @@ in {
           consoleMode = "auto";
           editor = false;
           configurationLimit = 5;
+          graceful = true;
         };
       };
 
