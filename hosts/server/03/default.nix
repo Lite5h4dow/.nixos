@@ -39,7 +39,7 @@
     nameservers = ["1.1.1.1"];
     hostName = "03-server";
     interfaces = {
-      eno1.ipv4.addresses = [{
+      enp2s0.ipv4.addresses = [{
         address = "192.168.10.3";
         prefixLength = 16;
       }];
