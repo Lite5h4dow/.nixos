@@ -9,7 +9,7 @@
       enable = true;
       role = "agent";
       serverAddr = "https://192.168.10.1:6443";
-      tokenFile = /var/k3s-token;
+      # tokenFile = /var/k3s-token;
     };
   };
 
