@@ -13,7 +13,7 @@
     };
     klipper = {
       enable = true;
-      settings = /var/lib/klipper;
+      configDir = /var/lib/klipper;
     };
     # fluidd = {
     #   enable = true;
