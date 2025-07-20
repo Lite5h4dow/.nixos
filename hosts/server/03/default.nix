@@ -13,10 +13,11 @@
     };
     klipper = {
       enable = true;
+      settings = /var/lib/klipper;
     };
-    fluidd = {
-      enable = true;
-    };
+    # fluidd = {
+    #   enable = true;
+    # };
   };
 
   networking = {
