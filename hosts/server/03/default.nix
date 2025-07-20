@@ -11,13 +11,6 @@
       serverAddr = "https://192.168.10.1:6443";
       tokenFile = /var/k3s-token;
     };
-    klipper = {
-      enable = true;
-      configDir = /var/lib/klipper;
-    };
-    # fluidd = {
-    #   enable = true;
-    # };
   };
 
   networking = {
