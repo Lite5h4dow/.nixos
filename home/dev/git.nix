@@ -1,6 +1,8 @@
-{
+{pkgs, ...}:{
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
+    config.credential.helper = "libsecret";
 
     userName = "litelotus";
     userEmail = "lite5h4dow+dev@gmail.com";
