@@ -7,7 +7,7 @@
 
     extraConfig = {
       credential = {
-        helper = "${pkgs.gnome-keyring}/usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring";
+        helper = "${pkgs.gnome-keyring}/bin/gnome-keyring";
         "https://git.litelot.us".username = "litelotus";
       };
       init.defaultBranch = "main";
