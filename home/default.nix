@@ -14,4 +14,10 @@ in{
     ./video
     ./photo
   ];
+
+  services= {
+    gnome-keyring = {
+      enable = true;
+    };
+  };
 }

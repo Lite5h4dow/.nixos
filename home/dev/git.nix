@@ -1,13 +1,15 @@
 {pkgs, ...}:{
   programs.git = {
     enable = true;
-    package = pkgs.gitFull;
-    config.credential.helper = "libsecret";
 
     userName = "litelotus";
     userEmail = "lite5h4dow+dev@gmail.com";
 
     extraConfig = {
+      credential = {
+        helper = "${pkgs.gnome-gnome-keyring}/usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring";
+        "https://git.litelot.us".username = "litelotus";
+      };
       init.defaultBranch = "main";
 
       push = {
