@@ -26,6 +26,17 @@
 
   swapDevices = [ ];
 
+  boot.swraid = {
+    enable = true;
+    mdadmConf = (builtins.readFile ./mdadm.conf);
+  };
+
+  fileSystems."/mnt/store" = {
+    device = "/dev/disk/by-uuid/73c726c4-1976-4e00-826e-bb7fb160a4b8";
+    fsType = "ext4";
+    options = ["nofail"];
+  };
+
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
