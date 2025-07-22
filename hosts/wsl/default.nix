@@ -1,4 +1,4 @@
-{config, lib, ...}: let
+{config, lib, pkgs, ...}: let
   inherit (config) values;
 in {
   custom = {
@@ -16,6 +16,9 @@ in {
       };
     };
   };
+  environment.systemPackages = [
+    pkgs.icu
+  ];
 
   users.groups.docker = {};
   nixpkgs.config.permittedInsecurePackages = [
