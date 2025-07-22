@@ -8,6 +8,7 @@ in {
 
   environment.systemPackages = [
     pkgs.openiscsi
+    pkgs.mdadm
   ];
 
   services.openiscsi ={
