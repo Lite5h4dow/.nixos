@@ -31,6 +31,8 @@ in {
     };
   };
 
+  time.timeZone = "Europe/London";
+
   # environment.etc.rke2-use-traefik ={
   #   source = rke2-traefik-config;
   #   target = "rancher/rke2/config.yaml.d/00-use-traefik.yaml";
