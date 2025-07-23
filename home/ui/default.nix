@@ -39,6 +39,7 @@
     libreoffice-fresh
     grayjay
     ferdium
+    nautilus
 
     # (orca-slicer.overrideAttrs(oldAttrs: {
     #   cmakeFlags = oldAttrs.cmakeFlags ++ [
