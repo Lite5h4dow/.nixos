@@ -56,6 +56,7 @@ in {
     heroic
     bazecor
     openrgb-with-all-plugins
+    freenect
   ];
 
   networking={

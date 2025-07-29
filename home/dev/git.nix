@@ -7,7 +7,7 @@
 
     extraConfig = {
       credential = {
-        helper = "${pkgs.git-credential-oauth}/bin/git-credential-oauth";
+        # helper = "${pkgs.git-credential-oauth}/bin/git-credential-oauth";
         credentialStore = "secretservice";
         "https://git.litelot.us".username = "litelotus";
       };

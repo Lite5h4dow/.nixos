@@ -21,11 +21,15 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-25.05";
+      url = "nixpkgs/nixos-25.05";
     };
 
     stable-pkgs = {
       url = "nixpkgs/nixos-24.11";
+    };
+
+    unstable-pkgs = {
+      url = "nixpkgs/nixos-unstable";
     };
 
     nixos-wsl = {
