@@ -41,11 +41,11 @@
     ferdium
     nautilus
 
-    # (orca-slicer.overrideAttrs(oldAttrs: {
-    #   cmakeFlags = oldAttrs.cmakeFlags ++ [
-    #     (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
-    #   ];
-    # }))
+    (orca-slicer.overrideAttrs(oldAttrs: {
+      cmakeFlags = oldAttrs.cmakeFlags ++ [
+        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
+      ];
+    }))
     # super-slicer
 
     (pkgs.symlinkJoin {
