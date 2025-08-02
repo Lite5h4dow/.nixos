@@ -40,6 +40,7 @@
     grayjay
     ferdium
     nautilus
+    mullvad-vpn
 
     (orca-slicer.overrideAttrs(oldAttrs: {
       cmakeFlags = oldAttrs.cmakeFlags ++ [

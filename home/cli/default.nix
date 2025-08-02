@@ -38,6 +38,7 @@ in{
       csvtool
       ffmpeg
       yt-dlp
+      mullvad
       # inputs.atuin.packages.${system}.atuin
     ];
 
