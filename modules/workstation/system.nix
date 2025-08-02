@@ -8,6 +8,9 @@
     geoclue2 = {
       enable = true;
     };
+    mullvad-vpn = {
+      enable = true;
+    };
   };
 
   # services.xserver.desktopManager.gnome.enable = true;
