@@ -1,6 +1,5 @@
 {
   inputs,
-  lib,
   lib',
 }: let
   nix-lib = inputs.nixpkgs.lib;
