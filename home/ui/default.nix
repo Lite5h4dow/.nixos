@@ -22,55 +22,36 @@
     taxi
     lens
     mqttx
+    kicad
     vscode
     (pkgs.bottles.override{removeWarningPopup = true;})
     neovide
     remmina
+    grayjay
+    ferdium
     fractal
+    nautilus
+    qFlipper
     filezilla
+    mullvad-vpn
+    super-slicer
+    freecad-wayland
+    gimp-with-plugins
+    libreoffice-fresh
     inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.polymc.packages.${system}.default
-    # postman
-    qFlipper
-    freecad-wayland
-    # orca-slicer
-    gimp-with-plugins
-    libreoffice-fresh
-    grayjay
-    ferdium
-    nautilus
-    mullvad-vpn
 
-    # (orca-slicer.overrideAttrs(oldAttrs: {
-    #   cmakeFlags = oldAttrs.cmakeFlags ++ [
-    #     (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
-    #   ];
-    # }))
-    super-slicer
-
-    (pkgs.symlinkJoin {
-      name = "KiCAD";
-      paths = [ pkgs.kicad ];
-      buildInputs = [ pkgs.makeWrapper ];
-      postBuild = ''
-          wrapProgram $out/bin/kicad \
-          --set __GLX_VENDOR_LIBRARY_NAME mesa \
-          --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
-      '';
-      meta.mainProgram = "KiCAD";
-    })
-
-    (pkgs.symlinkJoin {
-      name = "OrcaSlicer";
-      paths = [ pkgs.orca-slicer ];
-      buildInputs = [ pkgs.makeWrapper];
-      postBuild = ''
-          wrapProgram $out/bin/kicad \
-          --set __GLX_VENDOR_LIBRARY_NAME mesa \
-          --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
-      '';
-      meta.mainProgram = "OrcaSlicer";
-    })
+    # (pkgs.symlinkJoin {
+    #   name = "KiCAD";
+    #   paths = [ pkgs.kicad ];
+    #   buildInputs = [ pkgs.makeWrapper ];
+    #   postBuild = ''
+    #       wrapProgram $out/bin/kicad \
+    #       --set __GLX_VENDOR_LIBRARY_NAME mesa \
+    #       --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
+    #   '';
+    #   meta.mainProgram = "KiCAD";
+    # })
   ];
 }
