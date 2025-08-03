@@ -14,7 +14,6 @@ in{
         input-overlay
       ];
     };
-
     home.packages = with pkgs;[
       davinci-resolve
     ];

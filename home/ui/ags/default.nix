@@ -13,7 +13,8 @@ in{
     configDir = inputs.ags-config;
     extraPackages = with pkgs; [
       gtksourceview
-      webkitgtk
+      # webkitgtk
+      webkitgtk_6_0
       accountsservice
     ]
     ++attrValues (

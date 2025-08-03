@@ -7,7 +7,7 @@ in {
     home-manager = {
       verbose = true;
       useGlobalPkgs = true;
-      useUserPackages = true;
+      # useUserPackages = true;
       backupFileExtension = "old";
       extraSpecialArgs = {
         inherit inputs system flakePkgs customPkgs lib';

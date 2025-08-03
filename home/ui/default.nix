@@ -40,14 +40,14 @@
     grayjay
     ferdium
     nautilus
-    # mullvad-vpn
+    mullvad-vpn
 
-    (orca-slicer.overrideAttrs(oldAttrs: {
-      cmakeFlags = oldAttrs.cmakeFlags ++ [
-        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
-      ];
-    }))
-    # super-slicer
+    # (orca-slicer.overrideAttrs(oldAttrs: {
+    #   cmakeFlags = oldAttrs.cmakeFlags ++ [
+    #     (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${cudaPackages.cudatoolkit}")
+    #   ];
+    # }))
+    super-slicer
 
     (pkgs.symlinkJoin {
       name = "KiCAD";
@@ -56,21 +56,21 @@
       postBuild = ''
           wrapProgram $out/bin/kicad \
           --set __GLX_VENDOR_LIBRARY_NAME mesa \
-          --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa.drivers}/share/glvnd/egl_vendor.d/50_mesa.json
+          --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
       '';
       meta.mainProgram = "KiCAD";
     })
 
-    # (pkgs.symlinkJoin {
-    #   name = "OrcaSlicer";
-    #   paths = [ pkgs.orca-slicer ];
-    #   buildInputs = [ pkgs.makeWrapper];
-    #   postBuild = ''
-    #       wrapProgram $out/bin/kicad \
-    #       --set __GLX_VENDOR_LIBRARY_NAME mesa \
-    #       --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa.drivers}/share/glvnd/egl_vendor.d/50_mesa.json
-    #   '';
-    #   meta.mainProgram = "OrcaSlicer";
-    # })
+    (pkgs.symlinkJoin {
+      name = "OrcaSlicer";
+      paths = [ pkgs.orca-slicer ];
+      buildInputs = [ pkgs.makeWrapper];
+      postBuild = ''
+          wrapProgram $out/bin/kicad \
+          --set __GLX_VENDOR_LIBRARY_NAME mesa \
+          --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
+      '';
+      meta.mainProgram = "OrcaSlicer";
+    })
   ];
 }

@@ -37,9 +37,12 @@ in {
       hostName = cfg.hostName;
       enableIPv6 = cfg.useIPv6;
       networkmanager = {
-        enable = true;
+        # enable = true;
       };
+      resolvconf.enable = false;
     };
+
+    services.resolved.enable = true;
 
 
     users.users.${mainUser}.extraGroups = [ "networkmanager" ];

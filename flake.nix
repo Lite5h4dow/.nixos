@@ -21,7 +21,8 @@
 
   inputs = {
     nixpkgs = {
-      url = "nixpkgs/nixos-25.05";
+      # url = "nixpkgs/nixos-25.05";
+      url = "nixpkgs/nixos-unstable";
     };
 
     stable-pkgs = {
@@ -68,7 +69,6 @@
 
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     flake-utils = {
@@ -91,9 +91,9 @@
       url = "github:hyprwm/Hyprland";
     };
 
-    hyprswitch = {
-      url = "github:h3rmt/hyprswitch/release";
-    };
+    # hyprswitch = {
+    #   url = "github:h3rmt/hyprshell";
+    # };
 
     hyprwm-contrib = {
       url = "github:hyprwm/contrib";
@@ -140,12 +140,12 @@
 
     stylix = {
       url = "github:danth/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-        flake-compat.follows = "flake-compat";
-        flake-utils.follows = "flake-utils";
-      };
+      # inputs = {
+      #   nixpkgs.follows = "nixpkgs";
+      #   home-manager.follows = "home-manager";
+      #   flake-compat.follows = "flake-compat";
+      #   flake-utils.follows = "flake-utils";
+      # };
     };
 
     zen-browser = {

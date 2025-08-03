@@ -16,7 +16,7 @@
     # note-to-self: use this in 25.11, they are moving gdm to its own option, not burried in xserver
     # displayManager.gdm.enable = true;
     
-    xserver.displayManager.gdm = {
+    displayManager.gdm = {
       enable = true;
       wayland = true;
       autoSuspend = false;

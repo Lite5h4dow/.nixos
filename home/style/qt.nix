@@ -14,11 +14,11 @@ in {
     # };
 
     xdg.configFile = {
+        # icon_theme=${cfg.icons.name}
       "qt5ct/qt5ct.conf".text = ''
         [Appearance]
         custom_palette=true
         color_scheme_path=${config.xdg.configHome}/qt5ct/colors/default.conf
-        icon_theme=${cfg.icons.name}
         style=kvantum
 
         [Fonts]
