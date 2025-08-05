@@ -1,4 +1,4 @@
-{config, lib, inputs, ...}: let
+{config, lib, inputs, pkgs, ...}: let
   inherit (config) values;
 in {
   imports = [
@@ -21,9 +21,17 @@ in {
     "dotnet-sdk-6.0.428"
   ];
 
+  programs.nix-ld.enable=true;
+
   services = {
     vscode-server={
       enable = true;
+      enableFHS = true;
+      extraRuntimeDependencies = with pkgs; [
+        curl
+        icu
+        wget
+      ];
     };
     tailscale = {
       enable = true;
