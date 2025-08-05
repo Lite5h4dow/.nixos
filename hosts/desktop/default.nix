@@ -57,6 +57,7 @@ in {
     bazecor
     openrgb-with-all-plugins
     freenect
+    teams-for-linux
   ];
 
   networking={

@@ -16,8 +16,14 @@ in {
     name = "${config.networking.hostName}-initiatorhost";
   };
 
-  systemd.services.iscsid.serviceConfig = {
-    PrivateMounts="yes";
-    BindPaths = "/run/current-system/sw/bin:/bin";
+  systemd = {
+    services.iscsid.serviceConfig = {
+      PrivateMounts="yes";
+      BindPaths = "/run/current-system/sw/bin:/bin";
+    };
+
+    tmpfiles.rules =[
+      "L /usr/bin/monut - - - - /run/current-system/sw/bin/mount"
+    ];
   };
 }
