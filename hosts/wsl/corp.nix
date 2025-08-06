@@ -10,6 +10,7 @@ in {
     boot.enable = false;
     fish.enable = true;
     atuin.enable = true;
+    podman.enable = true;
     networking = {
       enable = false;
     };
