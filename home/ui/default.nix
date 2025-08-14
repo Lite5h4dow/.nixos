@@ -34,7 +34,7 @@
     qFlipper
     filezilla
     mullvad-vpn
-    super-slicer
+    prusa-slicer
     freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
@@ -42,6 +42,7 @@
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.polymc.packages.${system}.default
 
+    
     # (pkgs.symlinkJoin {
     #   name = "KiCAD";
     #   paths = [ pkgs.kicad ];

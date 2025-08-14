@@ -34,6 +34,7 @@ in{
       tinygo
       fractal
       kubectl
+      teleport
       popsicle
       pico-sdk
       opentofu
