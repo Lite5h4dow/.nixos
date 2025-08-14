@@ -11,9 +11,15 @@ in {
     pkgs.mdadm
   ];
 
-  services.openiscsi ={
-    enable = true;
-    name = "${config.networking.hostName}-initiatorhost";
+  services={
+    openiscsi ={
+      enable = true;
+      name = "${config.networking.hostName}-initiatorhost";
+    };
+
+    teleport = {
+      enable = true;
+    };
   };
 
   systemd = {

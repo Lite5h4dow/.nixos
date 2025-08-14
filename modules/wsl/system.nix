@@ -8,6 +8,12 @@ in {
     extraGroups = ["wheel"];
   };
 
+  services = {
+    teleport = {
+      enable = true;
+    };
+  };
+
   wsl.enable = true;
   wsl.defaultUser = mainUser;
   wsl.docker-desktop.enable = true;
