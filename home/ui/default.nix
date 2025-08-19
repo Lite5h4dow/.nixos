@@ -23,6 +23,7 @@
     lens
     mqttx
     kicad
+    dune3d
     vscode
     (pkgs.bottles.override{removeWarningPopup = true;})
     neovide

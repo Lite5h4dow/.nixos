@@ -2,20 +2,21 @@
   # imports = [
   #   "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/raspberry-pi/3"
   # ];
-   # boot.kernelPackages = pkgs.linuxPackages_rpi02w;
-   boot.kernelPackages = pkgs.linuxPackages_6_6;
+   boot.kernelPackages = pkgs.linuxPackages_rpi02w;
+   # boot.kernelPackages = pkgs.linuxPackages_6_6;
    hardware.deviceTree = {
      enable = true;
-     filter = "*rpi-zero-2-w*.dtb";
+     filter = "*-rpi-3*.dtb";
      overlays = [
-       # { name = "enable-spi";
-       #   dtsText = ''
-       #     /dts-v1/;
-       #     /plugin/;
-       #     / { compatible = "broadcom,bcm2385"; };
-       #     &spi { status = "okay"; };
-       #   '';
-       # }
-     ];
+       {
+         name = "spi0-1cs";
+         dtboFile= "${pkgs.device-tree_rpi.overlays}/spi0-1cs.dtbo";
+       }
+       {
+         name = "i2c";
+         dtboFile= "${pkgs.device-tree_rpi.overlays}/i2c-bcm2708.dtbo";
+       }
+     ]
+     ;
    };
 }
