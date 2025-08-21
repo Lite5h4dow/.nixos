@@ -10,6 +10,7 @@
 
     systemPackages = with pkgs; [
       nss
+      go-mtpfs
       obsidian
       steam-run
       wl-clipboard
