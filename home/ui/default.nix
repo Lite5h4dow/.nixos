@@ -17,6 +17,8 @@
     ./thunderbird.nix
   ];
 
+  programs.thunar.enable = true;
+
   home.packages = with pkgs; [
     nss
     taxi

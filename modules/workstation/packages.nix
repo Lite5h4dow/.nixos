@@ -10,6 +10,7 @@
 
     systemPackages = with pkgs; [
       nss
+      rclone
       go-mtpfs
       obsidian
       steam-run
