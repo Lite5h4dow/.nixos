@@ -39,6 +39,7 @@
     freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
+    gnome-system-monitor
     inputs.zen-browser.packages.${system}.default
     inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.polymc.packages.${system}.default

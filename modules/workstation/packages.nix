@@ -14,6 +14,7 @@
       obsidian
       steam-run
       wl-clipboard
+      resilio-sync
       bitwarden-desktop
       ungoogled-chromium
       inputs.lobster.packages.${pkgs.system}.lobster
