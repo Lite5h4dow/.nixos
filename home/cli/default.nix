@@ -26,10 +26,11 @@ in{
       aria2
     ]
     ++ optionals (!minimal)[
-      du-dust
       dua
       ripgrep
+      du-dust
       ripgrep-all
+      nix-search-cli
     ]
     ++ optionals (!minimal && !corp) [
       neovim
