@@ -9,4 +9,10 @@
     # user home config
     ./user.nix
   ];
+  home = {
+    services.wayvnc = {
+      enable = true;
+      autoStart = true;
+    };
+  };
 }
