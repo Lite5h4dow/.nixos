@@ -9,10 +9,12 @@
     # user home config
     ./user.nix
   ];
-  home = {
-    services.wayvnc = {
-      enable = true;
-      autoStart = true;
+  services.wayvnc = {
+    enable = true;
+    autoStart = true;
+    settings = {
+      address = "0.0.0.0";
+      port = 5901;
     };
   };
 }
