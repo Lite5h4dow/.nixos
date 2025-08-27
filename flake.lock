@@ -486,6 +486,22 @@
         "type": "github"
       }
     },
+    "freecad-patch": {
+      "locked": {
+        "lastModified": 1755336758,
+        "narHash": "sha256-asqEN5ydXUnccNlAJzEa8XUy8hPQl52sSWmjV/7wwVc=",
+        "ref": "refs/heads/master",
+        "rev": "bb51f7e3340a98931e88999615f80031a383ec76",
+        "revCount": 845408,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      },
+      "original": {
+        "rev": "bb51f7e3340a98931e88999615f80031a383ec76",
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -1418,6 +1434,7 @@
         "flake-compat": "flake-compat_2",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils_2",
+        "freecad-patch": "freecad-patch",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprwm-contrib": "hyprwm-contrib",

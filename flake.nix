@@ -25,6 +25,10 @@
       url = "nixpkgs/nixos-unstable";
     };
 
+    freecad-patch = {
+      url = "git+https://github.com/NixOS/nixpkgs?rev=bb51f7e3340a98931e88999615f80031a383ec76";
+    };
+
     stable-pkgs = {
       url = "nixpkgs/nixos-24.11";
     };
