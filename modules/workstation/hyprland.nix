@@ -9,11 +9,9 @@
     hyprshot
   ];
 
-  services.logind.extraConfig = ''
-    # Disable powerbutton short press so hyprland can handle it
-    # don’t shutdown when power button is short-pressed
-    HandlePowerKey=ignore
-  '';
+  services.logind.settings.Login={
+    handlePowerKey = "ignore";
+  };
   
   programs.hyprland.enable = true;
   xdg.portal ={

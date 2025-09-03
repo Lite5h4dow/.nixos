@@ -5,7 +5,7 @@
   };
 
   kvantumPackage = pkgs.catppuccin-kvantum.override {
-    accent = "blue";
+    accent = "teal";
     variant = "macchiato";
   };
 in {
@@ -19,10 +19,10 @@ in {
 
   stylix.targets.qt = {
     colors = "${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Macchiato.conf";
-    kdeglobals = "${kdePackage}/share/color-schemes/CatppuccinMacchiatoBlue.colors";
+    kdeglobals = "${kdePackage}/share/color-schemes/CatppuccinMacchiatoTeal.colors";
     kvantum = {
-      config = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.kvconfig";
-      svg = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-blue/catppuccin-macchiato-blue.svg";
+      config = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-teal/catppuccin-macchiato-teal.kvconfig";
+      svg = "${kvantumPackage}/share/Kvantum/catppuccin-macchiato-teal/catppuccin-macchiato-teal.svg";
     };
   };
 }
