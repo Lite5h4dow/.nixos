@@ -7,7 +7,7 @@
     ./qt.nix
     ./cursor.nix
     ./fonts.nix
-    ./icons.nix
+    # ./icons.nix
   ];
 
   config = {
