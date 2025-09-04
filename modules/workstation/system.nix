@@ -13,6 +13,8 @@
     };
   };
 
+  programs.thunar.enable = true;
+
   # services.xserver.desktopManager.gnome.enable = true;
   services.gnome.core-apps.enable = false;
 

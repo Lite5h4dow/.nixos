@@ -1,7 +1,7 @@
 {lib', inputs}: let
   inherit (inputs) nixpkgs;
   inherit (lib') mkNixosSystem;
-  inherit (nixpkgs.lib) optional;
+  inherit (nixpkgs.lib) optional optionals;
 
   modulePath = ../modules;
   hostPath = ../hosts;
@@ -9,13 +9,13 @@
   shared = modulePath + /shared;
   workstation = modulePath + /workstation;
   server = modulePath + /server;
-  raspberry-pi = modulePath + /raspberry-pi;
+  raspberry-pi-module = modulePath + /raspberry-pi;
   raspberry-pi-host = hostPath + /raspberry-pi;
 
   pi-modules = os: [
     "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
     raspberry-pi-host
-    raspberry-pi
+    raspberry-pi-module
     shared
   ]
   ++ optional (os == "rpi0") (raspberry-pi-host + /rpi0.nix)
@@ -38,8 +38,18 @@
     modules = pi-modules "rpi3";
   };
 
+  "prodpod" = mkNixosSystem {
+    system = "aarch64-linux";
+    modules = [
+      
+    ]
+    ++ pi-modules "rpi02w"
+    ;
+  };
+
 in {
   rpi02w = rpi02w.config.system.build.sdImage;
   rpi0 = rpi0.config.system.build.sdImage;
   rpi3 = rpi3.config.system.build.sdImage;
-  }
+  prodpod = prodpod.config.system.build.sdImage;
+}

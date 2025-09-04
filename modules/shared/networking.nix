@@ -39,11 +39,11 @@ in {
       networkmanager = {
         # enable = true;
       };
+      firewall.allowedTCPPorts = [ 5901 ];
       resolvconf.enable = false;
     };
 
     services.resolved.enable = true;
-
 
     users.users.${mainUser}.extraGroups = [ "networkmanager" ];
   };
