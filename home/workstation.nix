@@ -5,6 +5,7 @@
     ./dev
     ./style
     ./video
+    ./gamesdev
 
     # user home config
     ./user.nix
