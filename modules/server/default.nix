@@ -2,7 +2,7 @@
   imports = [
     ./values.nix
     ./system.nix
-    # ./k3s.nix
+    ./k3s.nix
     # ./kubernetes.nix
     ./home-manager.nix
   ];
