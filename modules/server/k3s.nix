@@ -34,7 +34,7 @@ in{
       tokenFile = mkIf (!k3s.masterNode) "/var/k3s-token";
       serverAddr = mkIf (!k3s.masterNode) "https://${k3sMasterIP}:6443";
       extraFlags = toString [
-        "--disable traefik"
+        "--disable=traefik"
       ];
     };
   };
