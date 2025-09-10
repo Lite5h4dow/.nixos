@@ -1,7 +1,7 @@
 {config, pkgs, lib, ...}:let
   k3sMasterIP = "192.168.10.1";
 
-  inherit (lib) types mkOption mkEnableOption mkIf;
+  inherit (lib) types mkOption mkEnableOption mkIf optional;
   inherit (config.custom.server) k3s;
 in{
   options = {
@@ -17,10 +17,22 @@ in{
         type = types.bool;
         default = false;
       };
+
+      role = mkOption{
+        description = "server or agent";
+        type = types.enum ["server" "agent"];
+        default = "agent";
+      };
     };
   };
 
   config = mkIf k3s.enable {
-    enable = true;
+    services.k3s = {
+      enable = true;
+      role = k3s.role;
+      clusterInit = if k3s.masterNode then "server" else k3s.role;
+      tokenFile = optional (!k3s.masterNode) "/var/k3s-token";
+      serverAddr = optional (!k3s.masterNode) "https://${k3sMasterIP}:6443";
+    };
   };
 }

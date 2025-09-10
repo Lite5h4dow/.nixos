@@ -1,17 +1,23 @@
-{lib, ...}:let
-  inherit (lib) mkForce;
-in{
+{...}:{
   imports = [
     ./hardware.nix
     ../default.nix
   ];
 
-  services = {
-    k3s = {
-      enable = true;
-      role = "server";
-      serverAddr = "https://192.168.10.1:6443";
-      tokenFile = /var/k3s-token;
+  # services = {
+  #   k3s = {
+  #     enable = true;
+  #     role = "server";
+  #     serverAddr = "https://192.168.10.1:6443";
+  #     tokenFile = "/var/k3s-token";
+  #   };
+  # };
+
+  custom = {
+    server = {
+      k3s = {
+        role="server";
+      };
     };
   };
 
@@ -30,29 +36,6 @@ in{
   # ];
 
   networking = {
-    enableIPv6 = mkForce false;
-    firewall = {
-      enable = true;
-      allowedTCPPorts = [
-        21
-        22
-        80
-        443
-        2202
-        2379
-        2380
-        8080
-        8888
-        10250
-        25565
-      ];
-      allowedUDPPorts =[
-        25565
-        8472
-      ];
-    };
-    defaultGateway= "192.168.1.1";
-    nameservers = ["1.1.1.1"];
     hostName = "02-server";
     interfaces = {
       eno1.ipv4.addresses = [{

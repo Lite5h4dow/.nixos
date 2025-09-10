@@ -4,39 +4,24 @@
     ./hardware.nix
   ];
 
-  services = {
-    k3s = {
-      enable = true;
-      role = "agent";
-      serverAddr = "https://192.168.10.1:6443";
-      tokenFile = /var/k3s-token;
+  # services = {
+  #   k3s = {
+  #     enable = true;
+  #     role = "agent";
+  #     serverAddr = "https://192.168.10.1:6443";
+  #     tokenFile = "/var/k3s-token";
+  #   };
+  # };
+
+  custom = {
+    server = {
+      k3s = {
+        role="agent";
+      };
     };
   };
 
   networking = {
-    firewall = {
-      enable = true;
-      allowedTCPPorts = [
-        21
-        22
-        80
-        443
-        2202
-        2379
-        2380
-        6443
-        8888
-        9000
-        10250
-        25565
-      ];
-      allowedUDPPorts =[
-        25565
-        8472
-      ];
-    };
-    defaultGateway= "192.168.1.1";
-    nameservers = ["1.1.1.1"];
     hostName = "03-server";
     interfaces = {
       enp2s0.ipv4.addresses = [{

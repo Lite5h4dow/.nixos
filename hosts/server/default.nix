@@ -29,9 +29,42 @@ in {
         enable = true;
       };
     };
+
+    server = {
+      k3s = {
+        enabled=true;
+      };
+    };
   };
 
   time.timeZone = "Europe/London";
+
+  networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        21
+        22
+        80
+        443
+        2202
+        2379
+        2380
+        6443
+        8080
+        8888
+        9000
+        10250
+        25565
+      ];
+      allowedUDPPorts =[
+        25565
+        8472
+      ];
+    };
+    defaultGateway= "192.168.1.1";
+    nameservers = ["1.1.1.1"];
+  };
 
   # environment.etc.rke2-use-traefik ={
   #   source = rke2-traefik-config;
