@@ -33,12 +33,12 @@ in{
       clusterInit = k3s.masterNode;
       tokenFile = mkIf (!k3s.masterNode) "/var/k3s-token";
       serverAddr = mkIf (!k3s.masterNode) "https://${k3sMasterIP}:6443";
-      extraFlags = toString [
-      ]++ optionals (config.services.k3s.role == "server") [
-        "--disable=traefik"
-        
+      extraFlags = toString ([
       ]
-      ;
+        ++optionals (config.services.k3s.role == "server") [
+        "--disable=traefik"
+      ]
+      );
     };
   };
 }
