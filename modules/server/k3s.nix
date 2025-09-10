@@ -1,7 +1,7 @@
 {config, pkgs, lib, ...}:let
   k3sMasterIP = "192.168.10.1";
 
-  inherit (lib) types mkOption mkEnableOption mkIf optional;
+  inherit (lib) types mkOption mkEnableOption mkIf optionals;
   inherit (config.custom.server) k3s;
 in{
   options = {
@@ -34,8 +34,11 @@ in{
       tokenFile = mkIf (!k3s.masterNode) "/var/k3s-token";
       serverAddr = mkIf (!k3s.masterNode) "https://${k3sMasterIP}:6443";
       extraFlags = toString [
+      ]++ optionals (config.services.k3s.role == "server") [
         "--disable=traefik"
-      ];
+        
+      ]
+      ;
     };
   };
 }
