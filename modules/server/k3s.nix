@@ -29,8 +29,8 @@ in{
   config = mkIf k3s.enable {
     services.k3s = {
       enable = true;
-      role = k3s.role;
-      clusterInit = if k3s.masterNode then "server" else k3s.role;
+      role = if k3s.masterNode then "server" else k3s.role;
+      clusterInit = k3s.masterNode;
       tokenFile = optional (!k3s.masterNode) "/var/k3s-token";
       serverAddr = optional (!k3s.masterNode) "https://${k3sMasterIP}:6443";
     };
