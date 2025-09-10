@@ -31,8 +31,8 @@ in{
       enable = true;
       role = if k3s.masterNode then "server" else k3s.role;
       clusterInit = k3s.masterNode;
-      tokenFile = optional (!k3s.masterNode) "/var/k3s-token";
-      serverAddr = optional (!k3s.masterNode) "https://${k3sMasterIP}:6443";
+      tokenFile = mkIf (!k3s.masterNode) "/var/k3s-token";
+      serverAddr = mkIf (!k3s.masterNode) "https://${k3sMasterIP}:6443";
     };
   };
 }
