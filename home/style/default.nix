@@ -8,7 +8,10 @@
   config = {
     stylix = {
       # inherit (osConfig.stylix) icons;
-      targets.qt = osConfig.stylix.targets.qt;
+      targets = {
+        yazi.enable = true;
+        qt = osConfig.stylix.targets.qt;
+      };
     };
   };
 }

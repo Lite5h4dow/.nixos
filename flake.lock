@@ -1364,22 +1364,6 @@
         "type": "github"
       }
     },
-    "ouch.yazi": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1752401966,
-        "narHash": "sha256-C0wG8NQ+zjAMfd+J39Uvs3K4U6e3Qpo1yLPm2xcsAaI=",
-        "owner": "ndtoan96",
-        "repo": "ouch.yazi",
-        "rev": "0742fffea5229271164016bf96fb599d861972db",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ndtoan96",
-        "repo": "ouch.yazi",
-        "type": "github"
-      }
-    },
     "polymc": {
       "inputs": {
         "flake-compat": "flake-compat_6",
@@ -1445,7 +1429,6 @@
         "nixcord": "nixcord",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_7",
-        "ouch.yazi": "ouch.yazi",
         "polymc": "polymc",
         "stable-pkgs": "stable-pkgs",
         "stylix": "stylix",

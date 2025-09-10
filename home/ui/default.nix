@@ -31,6 +31,7 @@
     grayjay
     ferdium
     fractal
+    pureref
     nautilus
     qFlipper
     filezilla

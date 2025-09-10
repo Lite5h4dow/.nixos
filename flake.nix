@@ -172,11 +172,6 @@
       flake = false;
     };
 
-    "ouch.yazi" = {
-      flake = false;
-      url = "github:ndtoan96/ouch.yazi";
-    };
-
     vscode-server= {
       url = "github:nix-community/nixos-vscode-server";
     };
