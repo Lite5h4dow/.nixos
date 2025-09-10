@@ -32,7 +32,7 @@ in {
 
     server = {
       k3s = {
-        enabled=true;
+        enable=true;
       };
     };
   };
