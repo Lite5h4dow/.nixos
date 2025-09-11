@@ -41,8 +41,8 @@
     gimp-with-plugins
     libreoffice-fresh
     gnome-system-monitor
+    blender-with-packages
     inputs.zen-browser.packages.${system}.default
-    inputs.stable-pkgs.legacyPackages.${system}.blender-hip
     inputs.polymc.packages.${system}.default
     # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland
 
