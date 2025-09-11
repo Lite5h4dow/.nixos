@@ -27,6 +27,7 @@
     vscode
     (pkgs.bottles.override{removeWarningPopup = true;})
     neovide
+    blender
     remmina
     grayjay
     ferdium
@@ -41,7 +42,6 @@
     gimp-with-plugins
     libreoffice-fresh
     gnome-system-monitor
-    blender-with-packages
     inputs.zen-browser.packages.${system}.default
     inputs.polymc.packages.${system}.default
     # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland
