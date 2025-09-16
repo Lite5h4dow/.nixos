@@ -6,9 +6,11 @@ in {
     extraGroups = [ "wheel" ];
   };
 
-  environment.systemPackages = [
-    pkgs.openiscsi
-    pkgs.mdadm
+  environment.systemPackages = with pkgs; [
+    openiscsi
+    mdadm
+    libnfs
+    nfs-utils
   ];
 
   services={

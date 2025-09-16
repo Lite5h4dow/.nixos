@@ -27,7 +27,7 @@
     vscode
     (pkgs.bottles.override{removeWarningPopup = true;})
     neovide
-    blender
+    blender-hip
     remmina
     grayjay
     ferdium
