@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+/ {
+	compatible = "raspberrypi";
+};
+&{/soc} {
+	spi {
+		compatible = "spi1-1cs";
+		status = "okay";
+	};
+};
