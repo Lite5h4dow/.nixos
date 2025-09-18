@@ -18,7 +18,7 @@
     docker.enable = false;
     bluetooth.enable = true;
     networking = {
-      hostName = "glacier-pi";
+      # hostName = "glacier-pi";
       useDHCP = true;
       wireless.enable = true;
     };

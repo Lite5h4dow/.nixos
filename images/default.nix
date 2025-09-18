@@ -21,6 +21,7 @@
   ++ optional (os == "rpi0") (raspberry-pi-host + /rpi0.nix)
   ++ optional (os == "rpi02w") (raspberry-pi-host + /rpi02w.nix)
   ++ optional (os == "rpi3") (raspberry-pi-host + /rpi3.nix)
+  ++ optional (os == "prodpod") (raspberry-pi-host + /prodpod.nix)
   ;
 
   "rpi02w" = mkNixosSystem {
@@ -40,11 +41,7 @@
 
   "prodpod" = mkNixosSystem {
     system = "aarch64-linux";
-    modules = [
-      
-    ]
-    ++ pi-modules "rpi02w"
-    ;
+    modules = pi-modules "prodpod";
   };
 
 in {
