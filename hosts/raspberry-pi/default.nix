@@ -17,11 +17,11 @@
     };
     docker.enable = false;
     bluetooth.enable = true;
-    networking = {
-      # hostName = "glacier-pi";
-      useDHCP = true;
-      wireless.enable = true;
-    };
+    # networking = {
+    #   # hostName = "glacier-pi";
+    #   useDHCP = true;
+    #   wireless.enable = true;
+    # };
     tailscale.enable = true;
   };
 }
