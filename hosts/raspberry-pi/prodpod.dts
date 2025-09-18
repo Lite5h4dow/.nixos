@@ -1,16 +1,24 @@
 /dts-v1/;
 /plugin/;
 / {
-	compatible = "raspberrypi";
-	fragment@0 {
-		target = <&uart0_pins>;
+	compatible = "brcm,bcm2835";
+	// fragment@0 {
+	// 	target = <&uart0_pins>;
+	// 	__overlay__ {
+	// 		brcm,pins = <30 31 32 33>;
+	// 		brcm,pull = <2 0 0 2>;
+	// 	};
+	// };
+	fragment@1 {
+		target = <&spi0>;
 		__overlay__ {
-			brcm,pins = <30 31 32 33>;
-			brcm,pull = <2 0 0 2>;
-		};
-	};
-	spi = "on";
-};
-&{/soc} {
-	i2c = "on";
+			status = "okay";
+		}
+	}
+	fragment@2 {
+		target = <&i2s>;
+		__overlay__ {
+			status = "okay";
+		}
+	}
 };
