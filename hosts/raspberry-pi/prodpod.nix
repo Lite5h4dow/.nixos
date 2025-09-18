@@ -12,7 +12,24 @@
     ;
   };
 
+  environment.systemPackages = with pkgs;[
+    git
+
+    
+    (python3.withPackages(python-pkgs: with python-pkgs;[
+      pip
+      gpiozero
+      numpy
+      spidev
+    ]))
+
+    libgpiod
+    lgpio
+    
+  ];
+
   networking= {
+    hostName = "prodpod";
     dhcpcd.enable = true;
     wireless = {
       iwd = {
@@ -20,7 +37,7 @@
         settings = {
           IPv6.Enabled = false;
           # General.EnableNetworkConfiguration = true;
-          Settings.AutoConnect = false;
+          Settings.AutoConnect = true;
         };
       };
       interfaces = [ "wlan0" ];

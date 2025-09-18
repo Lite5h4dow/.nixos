@@ -52,7 +52,7 @@ in {
     modules = [
       "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
       ./raspberry-pi
-      ./raspberry-pi/rpi02w.nix
+      ./raspberry-pi/prodpod.nix
       raspberry-pi
       shared
     ];
@@ -61,6 +61,7 @@ in {
   raspberry-pi = mkNixosSystem {
     system = "aarch64-linux";
     modules = [
+      "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
       ./raspberry-pi
       raspberry-pi
       shared
