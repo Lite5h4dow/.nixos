@@ -28,6 +28,19 @@
     
   ];
 
+  hardware = {
+    bluetooth = {
+      powerOnBoot = true;
+      enable = true;
+    };
+  };
+
+  services = {
+    blueman = {
+      enable = true;
+    };
+  };
+
   networking= {
     hostName = "prodpod";
     dhcpcd.enable = true;
