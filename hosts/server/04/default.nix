@@ -1,7 +1,7 @@
 {...}:{
   imports = [
     ../default.nix
-    ./hardware.nix
+    # ./hardware.nix
   ];
 
   custom = {
@@ -13,13 +13,12 @@
   };
 
   networking = {
-    hostName = "03-server";
+    hostName = "04-server";
     interfaces = {
       enp2s0.ipv4.addresses = [{
-        address = "192.168.10.3";
+        address = "192.168.10.4";
         prefixLength = 16;
       }];
     };
   };
 }
-

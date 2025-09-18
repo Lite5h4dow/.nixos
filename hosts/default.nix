@@ -94,4 +94,12 @@ in {
     ];
   };
 
+  server-04 = mkNixosSystem {
+    system = "x86_64-linux";
+    modules = [
+      ./server/04
+      server
+      shared
+    ];
+  };
 }
