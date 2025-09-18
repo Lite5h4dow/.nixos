@@ -14,16 +14,12 @@
 
   networking= {
     dhcpcd.enable = true;
-    networkmanager = {
-      enable = true;
-    };
     wireless = {
-      enable = true;
       iwd = {
         enable = true;
         settings = {
           IPv6.Enabled = false;
-          General.EnableNetworkConfiguration = true;
+          # General.EnableNetworkConfiguration = true;
           Settings.AutoConnect = false;
         };
       };
