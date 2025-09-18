@@ -2,8 +2,15 @@
 /plugin/;
 / {
 	compatible = "raspberrypi";
+	fragment@0 {
+		target = <&uart0_pins>;
+		__overlay__ {
+			brcm,pins = <30 31 32 33>;
+			brcm,pull = <2 0 0 2>;
+		};
+	};
+	spi = "on";
 };
 &{/soc} {
-	spi = "on";
 	i2c = "on";
 };
