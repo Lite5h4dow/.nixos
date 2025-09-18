@@ -4,8 +4,6 @@
 	compatible = "raspberrypi";
 };
 &{/soc} {
-	spi {
-		compatible = "spi1-1cs";
-		status = "okay";
-	};
+	spi = "on";
+	i2c = "on";
 };
