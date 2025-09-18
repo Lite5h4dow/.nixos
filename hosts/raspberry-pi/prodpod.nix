@@ -1,5 +1,15 @@
-{pkgs, ...}:{
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+{pkgs, lib, config, ...}:{
+  boot={
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelModules = [ "hci_uart" ];
+    kernelParams = lib.mkForce [
+      "console=ttyAMA0,115200n8"
+      "console=tty0"
+      "nohibernate"
+      "loglevel=7"
+      "lsm=landlock,yama,bpf"
+    ];
+  };
 
   hardware.deviceTree = {
     enable = true;
