@@ -1,4 +1,4 @@
-{...}:{
+{pkgs, ...}:{
   custom = {
     minimal = true;
     mobile.enable = false;
@@ -24,4 +24,8 @@
     # };
     tailscale.enable = true;
   };
+
+  environment.systemPackages = with pkgs;[
+    raspberrypi-eeprom
+  ];
 }

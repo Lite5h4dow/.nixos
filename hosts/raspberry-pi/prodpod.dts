@@ -8,6 +8,8 @@
 			brcm,pull = <2 0 0 2>;
 		};
 	};
+};
+/soc {
 	fragment@1 {
 		target = <&spi>;
 		__overlay__ {
