@@ -9,15 +9,15 @@
 	// 	};
 	// };
 	fragment@1 {
-		target = <&spi0>;
+		target = <&spi>;
 		__overlay__ {
 			status = "okay";
 		};
 	};
-	fragment@2 {
-		target = <&i2s>;
-		__overlay__ {
-			status = "okay";
-		};
-	};
+	// fragment@2 {
+	// 	target = <&i2s>;
+	// 	__overlay__ {
+	// 		status = "okay";
+	// 	};
+	// };
 };
