@@ -13,13 +13,13 @@
 
   hardware.deviceTree = {
     enable = true;
-    overlays = [
-    {
-      name = "prodpod-device";
-      dtsFile = ./prodpod.dts;
-    }
-    ]
-    ;
+    # overlays = [
+    # {
+      # name = "prodpod-device";
+      # dtsFile = ./prodpod.dts;
+    # }
+    # ]
+    # ;
   };
 
   environment.systemPackages = with pkgs;[

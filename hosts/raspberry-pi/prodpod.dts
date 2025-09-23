@@ -1,25 +1,7 @@
 /dts-v1/;
 /plugin/;
 / {
-	fragment@0 {
-		target = <&uart0_pins>;
-		__overlay__ {
-			brcm,pins = <30 31 32 33>;
-			brcm,pull = <2 0 0 2>;
-		};
-	};
+	compatible = "raspberrypi";
 };
-/soc {
-	fragment@1 {
-		target = <&spi>;
-		__overlay__ {
-			status = "okay";
-		};
-	};
-	// fragment@2 {
-	// 	target = <&i2s>;
-	// 	__overlay__ {
-	// 		status = "okay";
-	// 	};
-	// };
+&amp;{/soc} {
 };

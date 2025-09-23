@@ -1,4 +1,4 @@
-{config, lib, ...}: let
+{config, pkgs, lib, ...}: let
   inherit (config.values) mainUser;
   inherit (config.custom) graphics docker podman;
   inherit (graphics) nvidia;
@@ -31,6 +31,10 @@ in {
 
       oci-containers.backend = "podman";
     };
+
+    environment.systemPackages = with pkgs;[
+      podman-compose
+    ];
 
     users.users.${mainUser}.extraGroups = ["podman"];
 
