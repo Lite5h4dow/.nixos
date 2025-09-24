@@ -28,9 +28,6 @@ in {
       hostName = "glacier-flake";
       useDHCP = true;
     };
-    wireshark = {
-      enable= true;
-    };
     virtualisation ={
       qemu ={
         enable = true;
@@ -65,6 +62,8 @@ in {
   networking={
     hostName = mkForce "odin";
   };
+
+  programs.wireshark.enable = true;
 
   home-manager.users.${values.mainUser} = {
     programs = {
