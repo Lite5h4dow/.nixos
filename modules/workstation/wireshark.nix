@@ -13,7 +13,7 @@ in{
     programs.wireshark = {
       enable = true;
       dumpcap.enable = true;
-      usbmon.enabl = true;
+      usbmon.enable = true;
     };
   };
 }
