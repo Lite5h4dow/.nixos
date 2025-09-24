@@ -3,7 +3,7 @@
   inherit (lib) mkIf mkEnableOption types;
 in{
   options = {
-    custom.wireshark = mkEnableOption {
+    custom.wireshark.enable = mkEnableOption {
       description = "Enable wireshark";
       type = types.bool;
       default = true;
