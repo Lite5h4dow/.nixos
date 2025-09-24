@@ -11,7 +11,11 @@ in{
     ./git.nix
     ./nodejs.nix
     ./lsp-ai.nix
-  ];
+  ]
+  ++optionals (!minimal) [
+    ./wireshark.nix
+  ]
+  ;
 
   programs = {
     go = {
