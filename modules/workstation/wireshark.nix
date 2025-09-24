@@ -1,4 +1,5 @@
-{ config, lib, pkgs, lib',... }:let
+{osConfig, config, lib, pkgs, lib',... }:let
+  username = osConfig.values.mainUser;
   cfg = config.custom.wireshark;
   inherit (lib) mkIf mkEnableOption types;
 in{
@@ -13,10 +14,14 @@ in{
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs;[
+      wireshark
+    ];
     programs.wireshark = {
       enable = true;
       dumpcap.enable = true;
       usbmon.enable = true;
     };
+    users.users.${username}.extraGroups=["wireshark"];
   };
 }

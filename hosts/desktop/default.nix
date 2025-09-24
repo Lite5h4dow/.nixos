@@ -58,7 +58,6 @@ in {
     openrgb-with-all-plugins
     freenect
     teams-for-linux
-    wireshark
   ];
 
   networking={
