@@ -28,6 +28,7 @@ in {
       hostName = "glacier-flake";
       useDHCP = true;
     };
+    wireshark.enable = true;
     virtualisation ={
       qemu ={
         enable = true;
@@ -57,6 +58,7 @@ in {
     openrgb-with-all-plugins
     freenect
     teams-for-linux
+    wireshark
   ];
 
   networking={
