@@ -13,7 +13,7 @@ in{
     ./lsp-ai.nix
   ]
   ++optionals (!minimal) [
-    ./wireshark.nix
+    # ./wireshark.nix
   ]
   ;
 

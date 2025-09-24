@@ -28,7 +28,9 @@ in {
       hostName = "glacier-flake";
       useDHCP = true;
     };
-
+    wireshark = {
+      enable= true;
+    };
     virtualisation ={
       qemu ={
         enable = true;
