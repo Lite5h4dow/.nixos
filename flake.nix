@@ -65,10 +65,13 @@
     };
 
     ags-config = {
-      flake = false;
+      # flake = false;
       # url = "git:litelotus/.ags";
-      # url = "git+https://git.litelot.us/litelotus/.ags";
-      url = "git+file:///home/lotus/.ags";
+      url = "git+https://git.litelot.us/litelotus/.ags";
+      # url = "git+file:///home/lotus/.ags";
+      # url = "git+https://github.com/d7omdev/ags";
+      # url = "git+https://github.com/gitmeED331/agsv2";
+      # url = "github:PierreBorine/ags-config";
     };
 
     wrapper-manager = {

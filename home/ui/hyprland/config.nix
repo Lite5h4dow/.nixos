@@ -81,10 +81,10 @@ in {
       ];
     };
 
-    gestures = {
-      workspace_swipe = true;
-      workspace_swipe_cancel_ratio = 0.15;
-    };
+    # gestures = {
+    #   workspace_swipe = true;
+    #   workspace_swipe_cancel_ratio = 0.15;
+    # };
 
     binds = {
       allow_workspace_cycles = true;

@@ -1,5 +1,5 @@
-{osConfig, config, lib, pkgs, lib',... }:let
-  username = osConfig.values.mainUser;
+{ config, lib, pkgs, lib',... }:let
+  username = config.values.mainUser;
   cfg = config.custom.wireshark;
   inherit (lib) mkIf mkEnableOption types;
 in{

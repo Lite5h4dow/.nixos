@@ -4,7 +4,7 @@
   ...
 }:{
   home.packages = with pkgs; [
-    rofi-wayland-unwrapped  
+    rofi-unwrapped  
 
     # extensions
     # rofi-emoji
