@@ -98,9 +98,9 @@
       url = "github:hyprwm/Hyprland";
     };
 
-    # hyprswitch = {
-    #   url = "github:h3rmt/hyprshell";
-    # };
+    hyprshell = {
+      url = "github:h3rmt/hyprshell";
+    };
 
     hyprwm-contrib = {
       url = "github:hyprwm/contrib";
