@@ -86,7 +86,7 @@ in {
       ];
     };
 
-    gestures = [
+    gesture = [
       "3, horizontal, workspace"
       "4, pinchin, float"
       "4, pinchout, fullscreen"
