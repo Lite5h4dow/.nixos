@@ -40,7 +40,7 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nixrb" = update-command osConfig.config.rebuildName;
+    "nixrb" = update-command osConfig.custom.rebuildName;
 
     #pulumi
     p = "pulumi";
