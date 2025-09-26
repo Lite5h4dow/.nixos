@@ -6,10 +6,11 @@
   wayland.windowManager.hyprland.settings = {
     exec-once =
       [
+        "swww-daemon"
         "ags run &"
-        "[workspace 1] zen"
+        # "[workspace 1] zen"
         "iwgtk -i &"
-        "trayscale --hide-window &"
+        # "trayscale --hide-window &"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &"
         "wayvnc &"
       ]
