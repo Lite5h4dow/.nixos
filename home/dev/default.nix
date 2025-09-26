@@ -24,7 +24,7 @@ in{
   };
  home={
   packages = with pkgs; [
-    libgcc
+    # libgcc
     gnumake
     python3
     usbutils
