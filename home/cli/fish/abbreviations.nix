@@ -6,7 +6,7 @@
 
   nixUpdateCommand = "sudo nixos-rebuild switch --option build-dir /var/tmp/nix-daemon";
   nixGenerationCleanupCommand  = "sudo nix-collect-garbage -d";
-  update-command =  a: "${nixUpdateCommand} ${a}";
+  update-command =  a:"${nixUpdateCommand} ~/.nixos#${a}";
 in {
   programs.fish.shellAbbrs = {
     hash = "sha256sum";
@@ -17,7 +17,6 @@ in {
     open = "xdg-open";
     size = "du -sh";
     "-" = "cd -";
-    # anime = "mpv --profile=anime";
     cht = "cht.sh";
 
     sc = "systemctl";
@@ -29,7 +28,7 @@ in {
     # nix
     n = "nix";
     ne = "cd ~/.nixos";
-    clean = "nh clean all --keep ${toString osConfig.boot.loader.systemd-boot.configurationLimit}";
+    clean = "nh clean all --keep 2";
     shell = "nix shell";
     dev = "nix develop --command fish";
     run = "nix run";
@@ -41,14 +40,16 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nr#desktop" = update-command "--flake ~/.nixos#desktop";
-    "nr#laptop" = update-command "--flake ~/.nixos#laptop";
-    "nr#wsl" = update-command "--flake ~/.nixos#wsl";
-    "nr#nod" = update-command "--flake ~/.nixos#nix-on-droid";
+    "nixrb" = update-command osConfig.config.rebuildName;
+
+    #pulumi
+    p = "pulumi";
+    pu = "pulumi up";
+    pd = "pulumi dn";
+    pn = "pulumi new";
 
     # git
     g = "git";
-    lg = "lazygit";
     gc = "git commit";
     gp = "git push";
     gl = "git pull";
