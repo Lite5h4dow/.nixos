@@ -27,11 +27,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1758902067,
-        "narHash": "sha256-fRZ37OYrRuT2Q83veglrkwCHr2wGmue5Qxp9AGyNBec=",
+        "lastModified": 1758905149,
+        "narHash": "sha256-eoNrp2WhQHAz2qAPdLSFecLmbsSo7ZwTkjGd5r8Uof8=",
         "ref": "refs/heads/main",
-        "rev": "a25148b4c621025e91b3c0235b4555ade1c06af7",
-        "revCount": 49,
+        "rev": "83d4f375eeb311ee676c573ce91dba57a87b7a46",
+        "revCount": 58,
         "type": "git",
         "url": "https://git.litelot.us/litelotus/.ags"
       },
