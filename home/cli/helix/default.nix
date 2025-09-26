@@ -31,10 +31,10 @@ in {
     yaml-language-server
     bash-language-server
     svelte-language-server
+    dockerfile-language-server
     typescript-language-server
     vscode-langservers-extracted
     docker-compose-language-service
-    dockerfile-language-server-nodejs
 
     # debuggers
     lldb
