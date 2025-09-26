@@ -24,7 +24,6 @@ in {
       "${mod}, q, killactive"
 
       # menus
-      ", ${mod}, exec, rofi -show drun -show-icons"
       "${mod}${shift}, semicolon, exec, rofimoji"
       ", XF86PowerOff, exec, rofi -show p -modi p:'rofi-power-menu'"
       "${mod}${secondary}, b, exec, rofi-bluetooth"
@@ -125,6 +124,10 @@ in {
     bindm = [
       "${mod}, mouse:272, movewindow"
       "${mod}, mouse:273, resizewindow"
+    ];
+
+    bindr = [
+      "${mod}, , exec, rofi -show drun -show-icons"
     ];
   };
 }
