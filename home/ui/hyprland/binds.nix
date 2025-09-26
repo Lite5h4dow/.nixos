@@ -31,8 +31,8 @@ in {
       "${mod}${secondary}, Space, exec, ~/.config/ags/shared/scripts/sidebar.sh toggle-applauncher"
 
       #window switcher
-      "${mod}, tab, exec, hyprshell gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch"
-      "${mod}${shift}, tab, exec, hyprshell gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch -r"
+      # "${mod}, tab, exec, hyprshell gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch"
+      # "${mod}${shift}, tab, exec, hyprshell gui --mod-key super --key tab --close mod-key-release --reverse-key=mod=shift && hyprswitch dispatch -r"
 
       # utils
       "${mod} ${shift}, p, pin"
