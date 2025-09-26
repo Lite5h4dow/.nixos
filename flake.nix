@@ -107,6 +107,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    swww.url = "github:LGFae/swww";
+
     astal = {
       url = "github:aylur/astal";
       inputs.nixpkgs.follows = "nixpkgs";

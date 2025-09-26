@@ -1,5 +1,6 @@
 {
   flakePkgs,
+  inputs,
   pkgs,
   ...
 }: {
@@ -15,6 +16,7 @@
     cliphist
     hyprpicker # https://github.com/hyprwm/hyprpicker
     flakePkgs.hyprwm-contrib.grimblast # https://github.com/hyprwm/contrib/blob/main/grimblast/grimblast.1.scd
+    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   # programs.dconf.enable = true;
