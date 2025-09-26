@@ -11,7 +11,7 @@
         "iwgtk -i &"
         # "trayscale --hide-window &"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &"
-        "wayvnc &"
+        # "wayvnc &"
       ]
       ++ lib.optional (osConfig.values.terminal.firstInstance != null) "[workspace special:terminal silent] ${osConfig.values.terminal.firstInstance}";
   };
