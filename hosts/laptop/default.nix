@@ -33,7 +33,7 @@ in {
       useDHCP = true;
       wireless.enable = true;
     };
-
+    wireshark.enable= true;
     virtualisation ={
       qemu ={
         enable = true;
