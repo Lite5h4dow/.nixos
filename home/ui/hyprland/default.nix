@@ -33,12 +33,26 @@ in {
       provider = "geoclue2";
     };
   };
-  systemd.user.services.swww = {
+
+  systemd.user.sockets.swww = {
     Unit = {
       Description = "starting swww-daemon as a service";
     };
+    Socket = {
+      ListenStream= "%t/wayland-0";
+    };
+  };
+
+  systemd.user.services.swww = {
+    Unit = {
+      Description = "starting swww-daemon as a service";
+
+      Requires = "swww.socket";
+      After = "swww.socket";
+      Before = "graphical-session.target";
+    };
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = [ "graphical-session.target" ];
     };
     Service = {
       ExecStart = "${swww}/bin/swww-daemon";
