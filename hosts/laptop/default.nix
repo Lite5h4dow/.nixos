@@ -48,6 +48,8 @@ in {
       enable = true;
       # xr.enable = true;
     };
+
+    rebuildName = "laptop";
   };
 
   environment.systemPackages = with pkgs; [

@@ -43,6 +43,8 @@ in {
       enable = true;
       xr.enable = true;
     };
+
+    rebuildName = "desktop";
   };
 
   services = {
