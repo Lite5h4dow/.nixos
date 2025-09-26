@@ -6,7 +6,6 @@
   wayland.windowManager.hyprland.settings = {
     exec-once =
       [
-        "swww-daemon &"
         "ags run &"
         # "[workspace 1] zen"
         "iwgtk -i &"

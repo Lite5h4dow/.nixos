@@ -53,11 +53,11 @@ in {
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"      
 
       # special workspaces
-      "${mod}${secondary}, Return, togglespecialworkspace, terminal_zen" 
+      "${mod}${shift}, Return, togglespecialworkspace, terminal_zen" 
       "${mod}, e, togglespecialworkspace, file_manager_tui"
-      "${mod}${secondary}, e, togglespecialworkspace, file_manager_gui"
-      "${mod}, r, togglespecialworkspace, remote_desktop_gui"
-      "${mod}${secondary}, r, togglespecialworkspace, remote_desktop_glacier"
+      "${mod}${shift}, e, togglespecialworkspace, file_manager_gui"
+      # "${mod}, r, togglespecialworkspace, remote_desktop_gui"
+      # "${mod}${secondary}, r, togglespecialworkspace, remote_desktop_glacier"
 
       # move focus
       "${mod}, h, movefocus, l"

@@ -1,9 +1,6 @@
-{
-  flakePkgs,
-  inputs,
-  pkgs,
-  ...
-}: {
+{ flakePkgs, inputs, pkgs, ... }:let
+    inherit(inputs.swww.packages.${pkgs.system}) swww;
+in {
   imports = [
     ./config.nix
     ./binds.nix
@@ -13,10 +10,10 @@
   ];
 
   home.packages = with pkgs; [
+    swww
     cliphist
     hyprpicker # https://github.com/hyprwm/hyprpicker
     flakePkgs.hyprwm-contrib.grimblast # https://github.com/hyprwm/contrib/blob/main/grimblast/grimblast.1.scd
-    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   # programs.dconf.enable = true;
@@ -34,6 +31,17 @@
     gammastep ={
       enable = true;
       provider = "geoclue2";
+    };
+  };
+  systemd.user.services.swww = {
+    Unit = {
+      Description = "starting swww-daemon as a service";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+    Service = {
+      ExecStart = "${swww}/bin/swww-daemon";
     };
   };
 }
