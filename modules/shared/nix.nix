@@ -13,7 +13,7 @@ in {
   options={
     custom.rebuildName = mkOption{
       description = "flake rebuild name";
-      type = types.string;
+      type = types.str;
       default = null;
     };
   };

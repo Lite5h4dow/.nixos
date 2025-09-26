@@ -6,7 +6,7 @@
 
   nixUpdateCommand = "sudo nixos-rebuild switch --option build-dir /var/tmp/nix-daemon";
   nixGenerationCleanupCommand  = "sudo nix-collect-garbage -d";
-  update-command =  a:"${nixUpdateCommand} ~/.nixos#${a}";
+  update-command =  a:"${nixUpdateCommand} --flake ~/.nixos#${a}";
 in {
   programs.fish.shellAbbrs = {
     hash = "sha256sum";
@@ -40,7 +40,7 @@ in {
     unfree = cursor "NIXPKGS_ALLOW_UNFREE=1 % --impure";
     insecure = cursor "NIXPKGS_ALLOW_INSECURE=1 % --impure";
     broken = cursor "NIXPKGS_ALLOW_BROKEN=1 % --impure";
-    "nixrb" = update-command osConfig.custom.rebuildName;
+    nixrb = update-command osConfig.custom.rebuildName;
 
     #pulumi
     p = "pulumi";
