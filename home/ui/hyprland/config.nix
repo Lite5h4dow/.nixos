@@ -86,10 +86,11 @@ in {
       ];
     };
 
-    # gestures = {
-    #   workspace_swipe = true;
-    #   workspace_swipe_cancel_ratio = 0.15;
-    # };
+    gestures = [
+      "3, horizontal, workspace"
+      "4, pinchin, float"
+      "4, pinchout, fullscreen"
+    ];
 
     binds = {
       allow_workspace_cycles = true;
