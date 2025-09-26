@@ -55,7 +55,7 @@ in {
       WantedBy = [ "graphical-session.target" ];
     };
     Service = {
-      ExecStart = "${swww}/bin/swww-daemon";
+      ExecStart = "sleep 5 && ${swww}/bin/swww-daemon";
     };
   };
 }
