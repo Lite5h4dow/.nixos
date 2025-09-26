@@ -127,7 +127,7 @@ in {
     ];
 
     bindr = [
-      "${mod}, , exec, rofi -show drun -show-icons"
+      "${mod}, ${mod}_L, exec, pkill rofi || rofi -show drun -show-icons"
     ];
   };
 }
