@@ -7,6 +7,8 @@
 
   config = {
     stylix = {
+      autoEnable = true;
+      polarity = "dark";
       # inherit (osConfig.stylix) icons;
       targets = {
         yazi.enable = true;

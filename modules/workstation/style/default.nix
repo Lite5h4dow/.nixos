@@ -16,6 +16,9 @@
       base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
       polarity = "dark";
       image = inputs.wallpapers + /NixOS.png;
+      opacity ={
+        terminal = 0.8;
+      };
     };
   };
 }

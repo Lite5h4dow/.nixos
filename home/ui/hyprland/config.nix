@@ -86,11 +86,6 @@ in {
       ];
     };
 
-    gesture = [
-      "3, horizontal, workspace"
-      "4, pinchin, float"
-      "4, pinchout, fullscreen"
-    ];
 
     binds = {
       allow_workspace_cycles = true;

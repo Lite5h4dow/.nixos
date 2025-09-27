@@ -129,5 +129,11 @@ in {
     bindr = [
       "${mod}, ${mod}_L, exec, pkill rofi || rofi -show drun -show-icons"
     ];
+
+    gesture = [
+      "3, horizontal, workspace"
+      "3, pinchin, fullscreen"
+      "3, pinchout, float"
+    ];
   };
 }
