@@ -4,10 +4,11 @@
   inherit (osConfig.custom) minimal;
 
 in {
-  home.packages = with pkgs; [
-    helix
-  ]
-  ++ optionals (!minimal) [
+  programs.helix = {
+    enable = true;
+  };
+  home.packages = with pkgs; 
+  optionals (!minimal) [
 
     # language servers
     nil
@@ -41,11 +42,11 @@ in {
     delve
   ];
 
-  home = {
-    file = {
-      ".config/helix" = {
-        source = ./config;
-      };
-    };
-  };
+  # home = {
+  #   file = {
+  #     ".config/helix" = {
+  #       source = ./config;
+  #     };
+  #   };
+  # };
 }

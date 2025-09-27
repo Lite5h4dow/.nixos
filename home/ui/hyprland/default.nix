@@ -42,7 +42,7 @@ in {
         After = "hyprland-session.target";
       };
       Install ={
-        WantedBy = ["graphical-session.target"];
+        WantedBy = ["default.target"];
       };
       Service = {
         Restart = "always";

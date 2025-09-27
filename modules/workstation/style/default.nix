@@ -17,7 +17,7 @@
       polarity = "dark";
       image = inputs.wallpapers + /NixOS.png;
       opacity ={
-        terminal = 0.8;
+        terminal = 0.9;
       };
     };
   };
