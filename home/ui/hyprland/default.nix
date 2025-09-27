@@ -34,28 +34,21 @@ in {
     };
   };
 
-  systemd.user.sockets.swww = {
-    Unit = {
-      Description = "starting swww-daemon as a service";
-    };
-    Socket = {
-      ListenStream= "%t/wayland-0";
-    };
-  };
-
-  systemd.user.services.swww = {
-    Unit = {
-      Description = "starting swww-daemon as a service";
-
-      Requires = "swww.socket";
-      After = "swww.socket";
-      Before = "graphical-session.target";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "sleep 5 && ${swww}/bin/swww-daemon";
+  systemd.user={
+    enable= true;
+    services.swww = {
+      Unit = {
+        Description = "starting swww-daemon as a service";
+        After = "hyprland-session.target";
+      };
+      Install ={
+        WantedBy = ["graphical-session.target"];
+      };
+      Service = {
+        Restart = "always";
+        RestartSec = 5;
+        ExecStart = "${swww}/bin/swww-daemon";
+      };
     };
   };
 }
