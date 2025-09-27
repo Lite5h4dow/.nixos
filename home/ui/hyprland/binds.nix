@@ -11,6 +11,8 @@
 
   hyprlandScripts = config.wayland.windowManager.hyprland.scripts;
 
+  rofi = pkgs.rofi + /bin/rofi;
+
   mod = "SUPER";
   ctrl = "CONTROL";
   alt = "ALT";
@@ -127,7 +129,7 @@ in {
     ];
 
     bindr = [
-      "${mod}, ${mod}_L, exec, pkill rofi || rofi -show drun -show-icons"
+      "${mod}, ${mod}_L, exec, pkill rofi || ${rofi} -show drun -show-icons"
     ];
 
     gesture = [

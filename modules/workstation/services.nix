@@ -57,8 +57,13 @@
     };
 
     gvfs = {
+      package = pkgs.gnome.gvfs;
       enable = true;
     };
+
+    # rdnssd = {
+    #   enable = true;
+    # };
 
     devmon ={
       enable = true;

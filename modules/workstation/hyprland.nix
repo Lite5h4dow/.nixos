@@ -1,5 +1,9 @@
 { inputs, pkgs, lib, ... }: {
-  imports = [inputs.hyprland.nixosModules.default];
+  imports = [
+    inputs.hyprland.nixosModules.default
+    ./gnome.nix
+  ];
+
 
   # Needed for XDPH
   environment.systemPackages = with pkgs; [

@@ -33,7 +33,6 @@
     ferdium
     fractal
     pureref
-    nautilus
     qFlipper
     filezilla
     mullvad-vpn
