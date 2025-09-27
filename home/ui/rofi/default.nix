@@ -3,9 +3,11 @@
   config,
   ...
 }:{
-  home.packages = with pkgs; [
-    rofi-unwrapped  
+  programs.rofi = {
+    enable = true;
+  };
 
+  home.packages = with pkgs; [
     # extensions
     # rofi-emoji
     rofimoji
@@ -15,9 +17,9 @@
     bitwarden-menu
   ];
 
-  home.file = {
-    ".config/rofi" = {
-      source =  ./config;
-    };
-  };
+  # home.file = {
+  #   ".config/rofi" = {
+  #     source =  ./config;
+  #   };
+  # };
 }
