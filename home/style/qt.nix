@@ -5,13 +5,10 @@ in {
   config = {
     stylix.targets.kde.enable = false;
 
-    # qt = {
-    #   enable = false;
-    #   platformTheme.name = "qtct";
-    #   # style = mkOverride {
-    #   #   name = "kvantum";
-    #   # };
-    # };
+    qt = {
+      platformTheme.name = "qtct";
+      # style = "kvantum";
+    };
 
     xdg.configFile = {
         # icon_theme=${cfg.icons.name}

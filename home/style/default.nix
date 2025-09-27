@@ -14,7 +14,7 @@
       base16Scheme = scheme;
       polarity = "dark";
 
-      # inherit (osConfig.stylix) icons;
+      inherit (osConfig.stylix) icons;
       targets = {
         yazi.enable = true;
         qt = osConfig.stylix.targets.qt;

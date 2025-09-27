@@ -1,5 +1,5 @@
 {config, ...}: {
-  # gtk.iconTheme = {
-  #   inherit (config.stylix.icons) package name;
-  # };
+  gtk.iconTheme = {
+    inherit (config.stylix.icons) package  name;
+  };
 }

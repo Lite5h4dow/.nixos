@@ -2,11 +2,11 @@
   inherit (lib) mkForce;
 in {
   stylix.icons = {
-    # package = mkForce pkgs.catppuccin-papirus-folders.override {
-    #   flavor = "macchiato";
-    #   accent = "teal";
-    # };
-    # name = "Papirus-Dark";
+    package = pkgs.catppuccin-papirus-folders.override {
+      flavor = "macchiato";
+      accent = "teal";
+    };
+    name = "Papirus-Dark";
   };
 
   environment.systemPackages = [
