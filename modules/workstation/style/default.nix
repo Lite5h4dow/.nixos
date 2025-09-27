@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}: {
+{ inputs, ...}: {
   imports = [
     inputs.stylix.nixosModules.stylix
 
@@ -17,7 +17,8 @@
       image = inputs.wallpapers + /NixOS.png;
       opacity ={
         terminal = 0.95;
-        overlay = 0.95;
+        popups = 0.95;
+        desktop = 0.95;
       };
     };
   };
