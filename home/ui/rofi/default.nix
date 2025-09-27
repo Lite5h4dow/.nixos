@@ -38,6 +38,21 @@ in
         expand = mkLiteral "false";
         spacing = mkLiteral "0";
       };
+
+      element = {
+        border = mkLiteral "0";
+        padding = mkLiteral "10";
+        orientation = mkLiteral "vertical";
+      };
+
+      element-icon = {
+        size = mkLiteral "6em";
+      };
+
+      "element-text, element-icon" ={
+        font = mkLiteral "inherit";
+        horizontal-align = mkLiteral "0.5";
+      };
     };
   };
   home.packages = with pkgs; [

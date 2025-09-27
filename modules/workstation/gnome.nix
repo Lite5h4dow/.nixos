@@ -12,6 +12,7 @@ in
 {
   environment = {
     systemPackages = with pkgs; [
+      gnome-control-center
       nautilus
       simple-scan
       gnome-system-monitor
@@ -33,7 +34,7 @@ in
     accounts-daemon.enable =true;
     gvfs = {
       enable = true;
-      package = pkgs.gnome-gvfs;
+      package = pkgs.gnome.gvfs;
     };
     system-config-printer.enable = true;
     gnome ={
@@ -42,7 +43,6 @@ in
       gnome-settings-daemon.enable = true;
       gnome-keyring.enable = true;
     };
-    gnome-disks.enable = true;
   };
 
   programs = {
@@ -50,5 +50,6 @@ in
       enable = true;
       terminal = "ghostty";
     };
+    gnome-disks.enable = true;
   };
 }
