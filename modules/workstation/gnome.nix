@@ -14,6 +14,9 @@ in
     systemPackages = with pkgs; [
       nautilus
       simple-scan
+      gnome-system-monitor
+      glib
+      gnome-menus
     ];
 
     pathsToLink = [
@@ -21,14 +24,31 @@ in
     ];
 
     sessionVariables = {
-      NAUTILUS_4_EXTENSION_DIR = "${config.system.path}/lib/nautilus/extensions-4";
+      # NAUTILUS_4_EXTENSION_DIR = "${config.system.path}/lib/nautilus/extensions-4";
       XDG_DATA_DIRS = [ "${mimeAppsList}/share" ];
     };
   };
-
+  xdg.mime.enable = true;
   services = {
-    gvfs.enable = true;
+    accounts-daemon.enable =true;
+    gvfs = {
+      enable = true;
+      package = pkgs.gnome-gvfs;
+    };
     system-config-printer.enable = true;
-    gnome.sushi.enable = true;
+    gnome ={
+      glib-networking.enable = true;
+      sushi.enable = true;
+      gnome-settings-daemon.enable = true;
+      gnome-keyring.enable = true;
+    };
+    gnome-disks.enable = true;
+  };
+
+  programs = {
+    nautilus-open-any-terminal={
+      enable = true;
+      terminal = "ghostty";
+    };
   };
 }

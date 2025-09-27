@@ -29,9 +29,6 @@
     resilio = {
       enable = true;
     };
-    gnome = {
-      gnome-keyring.enable = true;
-    };
     ollama = {
       enable = true;
       acceleration = lib.mkIf config.custom.graphics.nvidia.enable "cuda";
@@ -54,11 +51,6 @@
     udisks2 ={
       enable = true;
       mountOnMedia = true;
-    };
-
-    gvfs = {
-      package = pkgs.gnome.gvfs;
-      enable = true;
     };
 
     # rdnssd = {
