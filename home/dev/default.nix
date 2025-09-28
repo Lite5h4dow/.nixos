@@ -1,7 +1,6 @@
-{lib, pkgs, osConfig, inputs, ...}:let
+{lib, pkgs, osConfig, ...}:let
   inherit (osConfig.custom) podman minimal;
   inherit (lib) optionals mkIf;
-  inherit (inputs) unstable-pkgs;
 
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
     pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
@@ -61,7 +60,7 @@ in{
         helm-s3
       ];
     })
-    unstable-pkgs.legacyPackages.${system}.pulumi-bin
+    pulumi-bin
     # pulumiPackages.pulumi-go
     # pulumiPackages.pulumi-nodejs
   ]
