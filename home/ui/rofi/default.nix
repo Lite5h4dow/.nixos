@@ -14,7 +14,7 @@ in
       };
 
       mainbox = {
-        spacing = mkLiteral "0px";
+        spacing = mkLiteral "4px";
         children = mkLiteral "[inputbar,wrapper-mode-switcher,listview]";
       };
 
@@ -46,7 +46,7 @@ in
       };
 
       element-icon = {
-        size = mkLiteral "6em";
+        size = mkLiteral "5em";
       };
 
       "element-text, element-icon" ={
