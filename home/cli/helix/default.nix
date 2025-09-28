@@ -32,7 +32,9 @@ in
         whitespace = {
           render = "all";
         };
-        indent-guides = true;
+        indent-guides = {
+          render=true;
+        };
         statusline = {
           left = [
             "spinner"
