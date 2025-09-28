@@ -7,6 +7,7 @@ in {
     ./exec.nix
     ./xdph.nix
     ./hyprshell.nix
+    ./hyprlock.nix
   ];
 
   home.packages = with pkgs; [
