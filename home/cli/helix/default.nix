@@ -1,14 +1,7 @@
-{
-  osConfig,
-  lib,
-  pkgs,
-  ...
-}:
+{ osConfig, lib, pkgs, ... }:
 let
-
   inherit (lib) optionals;
   inherit (osConfig.custom) minimal;
-
 in
 {
   programs.helix = {
@@ -33,7 +26,7 @@ in
           render = "all";
         };
         indent-guides = {
-          render=true;
+          render = true;
         };
         statusline = {
           left = [
@@ -54,16 +47,16 @@ in
           ];
         };
 
-        file-picker={
+        file-picker = {
           hidden = false;
         };
 
-        inline-diagnostics={
+        inline-diagnostics = {
           cursor-line = "hint";
           other-lines = "error";
         };
         smart-tab = {
-          enable =true;
+          enable = true;
         };
       };
     };
@@ -71,7 +64,6 @@ in
   home.packages =
     with pkgs;
     optionals (!minimal) [
-
       # language servers
       nil
       zls
