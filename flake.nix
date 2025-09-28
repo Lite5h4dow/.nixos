@@ -25,25 +25,17 @@
       url = "nixpkgs/nixos-unstable";
     };
 
-    freecad-patch = {
-      url = "git+https://github.com/NixOS/nixpkgs?rev=bb51f7e3340a98931e88999615f80031a383ec76";
-    };
-
-    stable-pkgs = {
-      url = "nixpkgs/nixos-24.11";
-    };
-
-    unstable-pkgs = {
-      url = "nixpkgs/nixos-unstable";
-    };
-
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
     };
 
+    nix-on-droid-pkgs = {
+      url = "nixpkgs/nixos-24.05";
+    };
+
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nix-on-droid-pkgs";
     };
 
     home-manager = {

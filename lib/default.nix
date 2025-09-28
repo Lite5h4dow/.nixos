@@ -2,14 +2,12 @@
   inputs,
   lib',
 }: let
-  nix-lib = inputs.nixpkgs.lib;
-
   getPkgs = input: system:
     if (input.legacyPackages.${system} or {}) == {}
     then input.packages.${system}
     else input.legacyPackages.${system};
 
-  # Builders 🤷‍♂️
+  # Builders
   mkNixosSystem = args @ {system, nixpkgs ? inputs.nixpkgs, ...}:
     nixpkgs.lib.nixosSystem {
       system = null;
@@ -83,12 +81,12 @@
       paths = [package'];
 
       nativeBuildInputs = [wrapper];
-      postBuild = "wrapProgram $out/bin/${file} ${nix-lib.escapeShellArgs wrapperArgs}";
+      postBuild = "wrapProgram $out/bin/${file} ${pkgs.lib.escapeShellArgs wrapperArgs}";
     };
 
   #Helpers
   overrideError = pkg: version: value: 
-    nix-lib.throwIf(nix-lib.versionOlder version pkg.version) 
+    pkg.lib.throwIf(pkg.lib.versionOlder version pkg.version) 
     "A new version of ${pkg.pname} has been released, remove its overlay/override 🤞" 
     value;
 
