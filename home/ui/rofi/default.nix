@@ -8,7 +8,7 @@ in
     theme = {
       window = {
         padding = mkLiteral "1em";
-        border = mkLiteral "5px";
+        border = mkLiteral "1px";
         border-radius = mkLiteral "10px";
         width = mkLiteral "1024px";
       };
@@ -20,7 +20,7 @@ in
 
       "listview, inputbar, message" = {
         padding = mkLiteral "0.5em";
-        border = mkLiteral "5px";
+        border = mkLiteral "1px";
         border-radius = mkLiteral "10px";
         background-color = "black/70%";
 
