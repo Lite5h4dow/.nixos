@@ -62,7 +62,9 @@ in
           cursor-line = "hint";
           other-lines = "error";
         };
-        smart-tab = true;
+        smart-tab = {
+          enable =true;
+        };
       };
     };
   };
