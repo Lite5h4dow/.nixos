@@ -14,6 +14,7 @@ in
       };
 
       mainbox = {
+        background-color = mkLiteral "transparent";
         spacing = mkLiteral "8px";
         children = mkLiteral "[inputbar,wrapper-mode-switcher,listview]";
       };
@@ -22,7 +23,7 @@ in
         padding = mkLiteral "0.5em";
         border = mkLiteral "1px";
         border-radius = mkLiteral "10px";
-        background-color = "black/70%";
+        background-color = mkLiteral "transparent";
 
         columns = mkLiteral "4";
         lines = mkLiteral "4";
