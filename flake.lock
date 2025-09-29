@@ -1991,11 +1991,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1740003759,
-        "narHash": "sha256-C8f79HIEFOTnSm75rWOyG2K47+zsqWLY+ebbr/rIEhg=",
+        "lastModified": 1759183684,
+        "narHash": "sha256-R8G88Mb4uX/Sr7Okv19/bRAj6lFptkqPTfG1FVREZR8=",
         "ref": "refs/heads/main",
-        "rev": "527f685f49968197ec3ef5ab3091dec433add5ae",
-        "revCount": 2,
+        "rev": "d30f6a7bafaab782579581f1a0915319a7bd2365",
+        "revCount": 3,
         "type": "git",
         "url": "file:///home/lotus/.wallpapers"
       },
