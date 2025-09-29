@@ -44,6 +44,7 @@ in
         border = mkLiteral "0";
         padding = mkLiteral "10";
         orientation = mkLiteral "vertical";
+        background-color = mkLiteral "transparent";
       };
 
       element-icon = {
