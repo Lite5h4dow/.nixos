@@ -14,6 +14,9 @@ in {
     networking = {
       enable = false;
     };
+    ssh = {
+      enable = true;
+    };
   };
 
   users.groups.docker = {};
