@@ -1997,11 +1997,11 @@
         "rev": "3dba976d8c220d9f13efc39c6122a64c996d8187",
         "revCount": 4,
         "type": "git",
-        "url": "file:///home/lotus/.wallpapers"
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/lotus/.wallpapers"
+        "url": "https://git.litelot.us/litelotus/.wallpapers"
       }
     },
     "wrapper-manager": {
