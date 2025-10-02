@@ -52,6 +52,7 @@ in{
     kubectl-validate
     dotnetPackages.Nuget
     rubyPackages.solargraph
+    rkdeveloptool
     (wrapHelm kubernetes-helm {
       plugins = with pkgs.kubernetes-helmPlugins; [
         helm-secrets
