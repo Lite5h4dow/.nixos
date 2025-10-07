@@ -96,7 +96,7 @@ in
       delve
     ];
 
-    environment.variables = {
+    systemd.user.settings.Manager.DefaultEnvironment = {
       EDITOR = "hx";
       VISUAL = "hx";
     };

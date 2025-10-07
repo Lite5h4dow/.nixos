@@ -7,7 +7,7 @@ in {
     installBatSyntax = true;
     installVimSyntax = true;
   };
-  environment.variables = {
+  systemd.user.settings.Manager.DefaultEnvironment = {
     TERM = "ghostty";
   };
 }
