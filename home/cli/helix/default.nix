@@ -96,6 +96,10 @@ in
       delve
     ];
 
+    environment.variables = {
+      EDITOR = "hx";
+      VISUAL = "hx";
+    };
   # home = {
   #   file = {
   #     ".config/helix" = {

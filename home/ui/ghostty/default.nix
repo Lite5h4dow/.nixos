@@ -7,4 +7,7 @@ in {
     installBatSyntax = true;
     installVimSyntax = true;
   };
+  environment.variables = {
+    TERM = "ghostty";
+  };
 }
