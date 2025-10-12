@@ -11,12 +11,13 @@
   server = modulePath + /server;
   raspberry-pi-module = modulePath + /raspberry-pi;
   raspberry-pi-host = hostPath + /raspberry-pi;
+  radxa-module = modulePath + /radxa;
   radxa-host = hostPath + /radxa;
 
   pi-modules = os: [
     "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
-    raspberry-pi-host
     raspberry-pi-module
+    raspberry-pi-host
     shared
   ]
   ++ optional (os == "rpi0") (raspberry-pi-host + /rpi0.nix)
@@ -25,7 +26,8 @@
   ;
 
   radxa-modules = os: [
-    "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64-new-kernel.nix"
+    "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+    radxa-module
     radxa-host
     shared
   ]
