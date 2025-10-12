@@ -1,7 +1,7 @@
 {lib', inputs}: let
   inherit (inputs) nixpkgs;
   inherit (lib') mkNixosSystem;
-  inherit (nixpkgs.lib) optional optionals;
+  inherit (nixpkgs.lib) optional;
 
   modulePath = ../modules;
   hostPath = ../hosts;
@@ -11,6 +11,7 @@
   server = modulePath + /server;
   raspberry-pi-module = modulePath + /raspberry-pi;
   raspberry-pi-host = hostPath + /raspberry-pi;
+  radxa-host = hostPath + /aarch64;
 
   pi-modules = os: [
     "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
@@ -21,8 +22,16 @@
   ++ optional (os == "rpi0") (raspberry-pi-host + /rpi0.nix)
   ++ optional (os == "rpi02w") (raspberry-pi-host + /rpi02w.nix)
   ++ optional (os == "rpi3") (raspberry-pi-host + /rpi3.nix)
-  ++ optional (os == "prodpod") (raspberry-pi-host + /prodpod.nix)
   ;
+
+  radxa-modules = os: [
+    "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64-new-kernel.nix"
+    radxa-host
+    shared
+  ]
+  ++ optional (os == "prodpod") (radxa-host + /prodpod.nix)
+  ;
+
 
   "rpi02w" = mkNixosSystem {
     system = "aarch64-linux";
@@ -41,7 +50,7 @@
 
   "prodpod" = mkNixosSystem {
     system = "aarch64-linux";
-    modules = pi-modules "prodpod";
+    modules = radxa-modules "prodpod";
   };
 
 in {
