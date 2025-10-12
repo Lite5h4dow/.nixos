@@ -11,7 +11,7 @@
   server = modulePath + /server;
   raspberry-pi-module = modulePath + /raspberry-pi;
   raspberry-pi-host = hostPath + /raspberry-pi;
-  radxa-host = hostPath + /aarch64;
+  radxa-host = hostPath + /radxa;
 
   pi-modules = os: [
     "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
