@@ -1,7 +1,7 @@
 {
   imports = [
     ./home-manager.nix
-    ./packages.nix
+    # ./packages.nix
     ./system.nix
     ./values.nix
   ];

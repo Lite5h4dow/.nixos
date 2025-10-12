@@ -1,3 +1,4 @@
-{pkgs,...}:{
-  boot.kernelModules = pkgs.linuxPackages_latest;
+{inputs, pkgs,...}:{
+  custom.rebuildName = "prodpod";
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 }
