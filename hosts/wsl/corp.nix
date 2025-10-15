@@ -17,6 +17,7 @@ in {
     ssh = {
       enable = true;
     };
+    rebuildName = "corp-wsl";
   };
 
   users.groups.docker = {};
