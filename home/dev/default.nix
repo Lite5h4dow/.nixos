@@ -33,7 +33,7 @@ in{
   ++ optionals (!minimal) [
     zig
     k9s
-    ruby
+    # ruby
     gcloud
     tinygo
     fractal
@@ -51,7 +51,7 @@ in{
     gcc-arm-embedded
     kubectl-validate
     dotnetPackages.Nuget
-    rubyPackages.solargraph
+    # rubyPackages.solargraph
     rkdeveloptool
     (wrapHelm kubernetes-helm {
       plugins = with pkgs.kubernetes-helmPlugins; [
