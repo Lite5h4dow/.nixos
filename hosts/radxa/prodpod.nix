@@ -1,8 +1,11 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
 let
   cm3j-uboot = pkgs.buildUBoot {
-    src = fetchGit { url = "https://git.litelot.us/litelotus/u-boot.git"; };
-    defConfig = "radxa-cm3j-rpi-cm4-io-rk3568_defconfig";
+    src = fetchGit {
+      url = "https://git.litelot.us/litelotus/u-boot.git";
+      hash = lib.fakeHash;
+    };
+    defconfig = "radxa-cm3j-rpi-cm4-io-rk3568_defconfig";
     extraMeta.platforms = [ "aarch64-linux" ];
     filesToInstall = [
       "idbloader.img"
@@ -15,14 +18,10 @@ in
 {
   custom.rebuildName = "prodpod";
 
-  environment.systemPackages = [
-    cm3j-uboot
-  ];
-
   boot = {
     loader = {
       grub.enable = false;
-      generic-extlinux-compatible = true;
+      generic-extlinux-compatible.enable = true;
     };
   };
 
