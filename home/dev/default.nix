@@ -36,6 +36,7 @@ in{
     # ruby
     gcloud
     tinygo
+    dts-lsp
     fractal
     kubectl
     teleport

@@ -6,6 +6,9 @@ in {
     enableFishIntegration = true;
     installBatSyntax = true;
     installVimSyntax = true;
+    settings ={
+      shell-integration-features = "ssh-terminfo,ssh-env";
+    };
   };
   systemd.user.settings.Manager.DefaultEnvironment = {
     TERM = "ghostty";
