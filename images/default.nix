@@ -66,9 +66,10 @@ in {
     defconfig = "radxa-cm3j-rpi-cm4-io-rk3568_defconfig";
     extraMeta.platforms = [ "aarch64-linux" ];
     filesToInstall = [
-      "idbloader.img"
-      "u-boot.itb"
-      "u-boot-rockchip.bin"
+      # "idbloader.img"
+      # "u-boot.itb"
+      "u-boot-rockchip-spi.bin"
+      # "u-boot.img"
     ];
   };
 }

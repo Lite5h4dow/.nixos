@@ -67,7 +67,7 @@
     };
 
     custom-uboot = {
-      url = "https://git.litelot.us/litelotus/u-boot.git";
+      url = "https://git.litelot.us/litelotus/u-boot/archive/master.tar.gz";
       flake = false;
     };
 
