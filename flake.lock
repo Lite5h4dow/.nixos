@@ -282,6 +282,18 @@
         "type": "github"
       }
     },
+    "custom-uboot": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-1b1S6YJs8NiHUtpKr6mkL9xFjwdCZLgIorEzCsRVsrg=",
+        "type": "file",
+        "url": "https://git.litelot.us/litelotus/u-boot.git"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://git.litelot.us/litelotus/u-boot.git"
+      }
+    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -1604,6 +1616,7 @@
         "astal": "astal_3",
         "atuin": "atuin",
         "curd": "curd",
+        "custom-uboot": "custom-uboot",
         "flake-compat": "flake-compat_2",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils_2",

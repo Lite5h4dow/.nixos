@@ -60,4 +60,15 @@ in {
   rpi0 = rpi0.config.system.build.sdImage;
   rpi3 = rpi3.config.system.build.sdImage;
   prodpod = prodpod.config.system.build.sdImage;
+  cm3j-uboot = nixpkgs.legacyPackages.aarch64-linux.buildUBoot {
+    src = inputs.custom-uboot;
+    version = "2025.10";
+    defconfig = "radxa-cm3j-rpi-cm4-io-rk3568_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    filesToInstall = [
+      "idbloader.img"
+      "u-boot.itb"
+      "u-boot-rockchip.bin"
+    ];
+  };
 }

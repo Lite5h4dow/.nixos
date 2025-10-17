@@ -66,6 +66,11 @@
       # url = "github:PierreBorine/ags-config";
     };
 
+    custom-uboot = {
+      url = "https://git.litelot.us/litelotus/u-boot.git";
+      flake = false;
+    };
+
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
     };
