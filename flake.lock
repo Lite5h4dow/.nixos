@@ -285,11 +285,11 @@
     "custom-uboot": {
       "flake": false,
       "locked": {
-        "lastModified": 1760703871,
-        "narHash": "sha256-M1dfpkGHFhrKxOs9Zf9LBW7QcsGWU1gJOwcvkdoo4qY=",
-        "rev": "20a5c079350346fbd7ee27009d5418b70ea87bdb",
+        "lastModified": 1760715997,
+        "narHash": "sha256-autXagfJ4ijPH3W6xIkd3Ly3+Ud+i8oasaUPLPoebBc=",
+        "rev": "ab369c6ad1b749142a5cdc3edcc26d019df66233",
         "type": "tarball",
-        "url": "https://git.litelot.us/api/v1/repos/litelotus/u-boot/archive/20a5c079350346fbd7ee27009d5418b70ea87bdb.tar.gz?rev=20a5c079350346fbd7ee27009d5418b70ea87bdb"
+        "url": "https://git.litelot.us/api/v1/repos/litelotus/u-boot/archive/ab369c6ad1b749142a5cdc3edcc26d019df66233.tar.gz?rev=ab369c6ad1b749142a5cdc3edcc26d019df66233"
       },
       "original": {
         "type": "tarball",

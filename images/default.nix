@@ -63,12 +63,14 @@ in {
   cm3j-uboot = nixpkgs.legacyPackages.aarch64-linux.buildUBoot {
     src = inputs.custom-uboot;
     version = "2025.10";
+    BL31 = "${nixpkgs.legacyPackages.aarch64-linux.armTrustedFirmwareRK3568}/bl31.elf";
+    ROCKCHIP_TPL = nixpkgs.legacyPackages.aarch64-linux.rkbin.TPL_RK3568;
     defconfig = "radxa-cm3j-rpi-cm4-io-rk3568_defconfig";
     extraMeta.platforms = [ "aarch64-linux" ];
     filesToInstall = [
       # "idbloader.img"
       # "u-boot.itb"
-      "u-boot-rockchip-spi.bin"
+      "u-boot-rockchip.bin"
       # "u-boot.img"
     ];
   };
