@@ -7,7 +7,6 @@ in{
       enable = true;
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
-        obs-ndi
         obs-tuna
         droidcam-obs
         obs-websocket

@@ -37,24 +37,13 @@
     filezilla
     mullvad-vpn
     prusa-slicer
-    freecad-wayland
+    freecad
+    # freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
     inputs.zen-browser.packages.${system}.default
     inputs.polymc.packages.${system}.default
     # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland
 
-    
-    # (pkgs.symlinkJoin {
-    #   name = "KiCAD";
-    #   paths = [ pkgs.kicad ];
-    #   buildInputs = [ pkgs.makeWrapper ];
-    #   postBuild = ''
-    #       wrapProgram $out/bin/kicad \
-    #       --set __GLX_VENDOR_LIBRARY_NAME mesa \
-    #       --set __EGL_VENDOR_LIBRARY_FILENAMES ${pkgs.mesa}/share/glvnd/egl_vendor.d/50_mesa.json
-    #   '';
-    #   meta.mainProgram = "KiCAD";
-    # })
   ];
 }
