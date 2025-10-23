@@ -1,19 +1,20 @@
-{pkgs, inputs, ...}:let
-  atuin-desktop-overrided = pkgs.atuin-desktop.overrideAttrs {
-    version = "0.1.8";
-    src = pkgs.fetchFromGitHub {
-      owner = "atuinsh";
-      repo = "desktop";
-      tag = "v0.1.8";
-      # hash = lib.fakeHash;
-      hash = "sha256-FDwCdxNKiQbWfzIbd6nQc6r6yDRGK4lzKPWtw8y9L9A=";
-    };
-    cargoHash = "";
-  };
+{pkgs, inputs, lib, ...}:let
+  # atuin-desktop-overrided = pkgs.atuin-desktop.overrideAttrs {
+  #   version = "0.1.7";
+  #   src = pkgs.fetchFromGitHub {
+  #     owner = "atuinsh";
+  #     repo = "desktop";
+  #     tag = "v0.1.7";
+  #     # hash = lib.fakeHash;
+  #     hash = "sha256-FDwCdxNKiQbWfzIbd6nQc6r6yDRGK4lzKPWtw8y9L9A=";
+  #   };
+  #   cargoHash = lib.fakeSha256;
+  # };
   atuin-desktop-patched = pkgs.symlinkJoin{
     name ="atuin-desktop";
     paths = [
-      atuin-desktop-overrided
+      # atuin-desktop-overrided
+      pkgs.atuin-desktop
     ];
     nativeBuildInputs = [ pkgs.makeBinaryWrapper ];
     postBuild =''
