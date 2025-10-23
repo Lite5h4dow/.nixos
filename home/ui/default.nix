@@ -1,4 +1,27 @@
-{pkgs, inputs, ...}:{
+{pkgs, inputs, ...}:let
+  atuin-desktop-overrided = pkgs.atuin-desktop.overrideAttrs {
+    version = "0.1.8";
+    src = pkgs.fetchFromGitHub {
+      owner = "atuinsh";
+      repo = "desktop";
+      tag = "v0.1.8";
+      # hash = lib.fakeHash;
+      hash = "sha256-FDwCdxNKiQbWfzIbd6nQc6r6yDRGK4lzKPWtw8y9L9A=";
+    };
+    cargoHash = "";
+  };
+  atuin-desktop-patched = pkgs.symlinkJoin{
+    name ="atuin-desktop";
+    paths = [
+      atuin-desktop-overrided
+    ];
+    nativeBuildInputs = [ pkgs.makeBinaryWrapper ];
+    postBuild =''
+      wrapProgram $out/bin/atuin-desktop \
+      --set "WEBKIT_DISABLE_DMABUF_RENDERER" "1"
+    '';
+  };
+in{
   imports = [
     ./mpv
     ./ags
@@ -16,6 +39,7 @@
     ./zed-editor.nix
     ./thunderbird.nix
   ];
+
 
   home.packages = with pkgs; [
     nss
@@ -41,6 +65,7 @@
     # freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
+    atuin-desktop-patched
     inputs.zen-browser.packages.${system}.default
     inputs.polymc.packages.${system}.default
     # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland

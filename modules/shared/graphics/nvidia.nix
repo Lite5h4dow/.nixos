@@ -81,7 +81,10 @@ in {
       __GL_GSYNC_ALLOWED = "1";
     };
 
-    environment.systemPackages = [pkgs.nvtopPackages.nvidia];
+    environment.systemPackages = [
+      pkgs.nvtopPackages.nvidia
+      pkgs.egl-wayland
+    ];
 
     nixpkgs.config.cudaSupport = true;
 
