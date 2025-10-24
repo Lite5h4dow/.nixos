@@ -1,4 +1,4 @@
-{
+{pkgs, ...}:{
   # time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_US.UTF-8";
   # console.keymap = "us";
@@ -8,6 +8,12 @@
       EDITOR = "hx";
     };
     enableAllTerminfo = true;
+    systemPackages = with pkgs; [
+      glib
+      glibc
+      glibmm
+      glibtool
+    ];
   };
 
   programs.nh ={

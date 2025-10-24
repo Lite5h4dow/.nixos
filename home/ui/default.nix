@@ -70,6 +70,7 @@ in{
     inputs.zen-browser.packages.${system}.default
     inputs.polymc.packages.${system}.default
     # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland
+    youtube-music
 
   ];
 }
