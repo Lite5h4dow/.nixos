@@ -19,9 +19,9 @@ in{
       # image = inputs.wallpapers + /NixOS.png;
       base16Scheme = scheme;
       opacity = {
-        terminal = 0.95;
-        popups = 0.95;
-        desktop = 0.95;
+        terminal = 0.85;
+        popups = 0.85;
+        desktop = 0.85;
       };
     };
   };
