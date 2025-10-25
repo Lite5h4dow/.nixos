@@ -2007,17 +2007,16 @@
     "wallpapers": {
       "flake": false,
       "locked": {
+        "dirtyRev": "85817dfc024508b19548a6c308ef6ab6ce18be7a-dirty",
+        "dirtyShortRev": "85817df-dirty",
         "lastModified": 1759507856,
-        "narHash": "sha256-ms6iMnKoa77z7tHZaeiuDj8XS0Trwaw3mWzb5QoA084=",
-        "ref": "refs/heads/main",
-        "rev": "85817dfc024508b19548a6c308ef6ab6ce18be7a",
-        "revCount": 5,
+        "narHash": "sha256-CxvfZYQQoRSgNkqACwMajwklMCdjH0SubYOJadrJ+Jk=",
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.wallpapers"
+        "url": "file:///home/lotus/.wallpapers"
       },
       "original": {
         "type": "git",
-        "url": "https://git.litelot.us/litelotus/.wallpapers"
+        "url": "file:///home/lotus/.wallpapers"
       }
     },
     "wrapper-manager": {

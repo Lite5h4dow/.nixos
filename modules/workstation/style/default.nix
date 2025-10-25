@@ -1,4 +1,6 @@
-{ inputs, ...}: {
+{ inputs, pkgs, ...}: let
+  scheme = pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
+in{
   imports = [
     inputs.stylix.nixosModules.stylix
 
@@ -14,8 +16,9 @@
     stylix = {
       enable = true;
       polarity = "dark";
-      image = inputs.wallpapers + ./xvtwy2e79tnf1.png;
-      opacity ={
+      # image = inputs.wallpapers + /NixOS.png;
+      base16Scheme = scheme;
+      opacity = {
         terminal = 0.95;
         popups = 0.95;
         desktop = 0.95;
