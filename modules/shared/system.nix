@@ -9,6 +9,7 @@
     };
     enableAllTerminfo = true;
     systemPackages = with pkgs; [
+      gcc
       glib
       glibc
       glibmm

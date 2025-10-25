@@ -51,5 +51,6 @@ in
       terminal = "ghostty";
     };
     gnome-disks.enable = true;
+    dconf.enable = true;
   };
 }

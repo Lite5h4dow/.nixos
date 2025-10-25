@@ -1,19 +1,7 @@
-{pkgs, inputs, lib, ...}:let
-  # atuin-desktop-overrided = pkgs.atuin-desktop.overrideAttrs {
-  #   version = "0.1.7";
-  #   src = pkgs.fetchFromGitHub {
-  #     owner = "atuinsh";
-  #     repo = "desktop";
-  #     tag = "v0.1.7";
-  #     # hash = lib.fakeHash;
-  #     hash = "sha256-FDwCdxNKiQbWfzIbd6nQc6r6yDRGK4lzKPWtw8y9L9A=";
-  #   };
-  #   cargoHash = lib.fakeSha256;
-  # };
-  atuin-desktop-patched = pkgs.symlinkJoin{
+{pkgs, inputs, ...}:let
+  atuin-desktop' = pkgs.symlinkJoin{
     name ="atuin-desktop";
     paths = [
-      # atuin-desktop-overrided
       pkgs.atuin-desktop
     ];
     nativeBuildInputs = [ pkgs.makeBinaryWrapper ];
@@ -22,6 +10,9 @@
       --set "WEBKIT_DISABLE_DMABUF_RENDERER" "1"
     '';
   };
+  zen-browser' = inputs.zen-browser.packages.${pkgs.system}.default;
+  polymc' =  inputs.polymc.packages.${pkgs.system}.default;
+  bottles' = (pkgs.bottles.override{removeWarningPopup = true;});
 in{
   imports = [
     ./mpv
@@ -44,33 +35,28 @@ in{
 
   home.packages = with pkgs; [
     nss
-    taxi
     lens
     mqttx
     kicad
-    dune3d
     vscode
-    (pkgs.bottles.override{removeWarningPopup = true;})
+    polymc'
     neovide
-    blender-hip
+    bottles'
     remmina
     grayjay
     ferdium
+    freecad
     fractal
     pureref
     qFlipper
-    filezilla
+    blender-hip
     mullvad-vpn
+    zen-browser'
     prusa-slicer
-    freecad
+    youtube-music
+    atuin-desktop'
     # freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
-    atuin-desktop-patched
-    inputs.zen-browser.packages.${system}.default
-    inputs.polymc.packages.${system}.default
-    # inputs.freecad-patch.legacyPackages.${system}.freecad-wayland
-    youtube-music
-
   ];
 }

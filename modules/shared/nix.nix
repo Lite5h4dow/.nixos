@@ -92,6 +92,8 @@ in {
           libgbm
           alsa-lib
           gdk-pixbuf
+          glibc_multi
+          glib
           libxkbcommon
           xorg.libxcb
           xorg.libX11
