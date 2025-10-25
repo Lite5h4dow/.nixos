@@ -15,7 +15,7 @@
       };
       gcloud = {
         # disabled = true;
-        format ="on [$symbol$project(\($region\))]($style)";
+        format ="on [$symbol$project(\($region\))]($style) ";
       };
       azure = {
         disabled = true;
