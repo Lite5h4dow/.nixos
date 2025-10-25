@@ -8,6 +8,7 @@ in {
     ./xdph.nix
     ./hyprshell.nix
     ./hyprlock.nix
+    ./cliphist.nix
   ];
 
   home.packages = with pkgs; [
