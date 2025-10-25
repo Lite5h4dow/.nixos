@@ -10,6 +10,16 @@
         disabled = false;
         time_format = "%R";
       };
+      aws = {
+        disabled = true;
+      };
+      gcloud = {
+        # disabled = true;
+        format ="on [$symbol$project(\($region\))]($style)";
+      };
+      azure = {
+        disabled = true;
+      };
     };
   };
 }

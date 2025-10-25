@@ -10,6 +10,17 @@
       --set "WEBKIT_DISABLE_DMABUF_RENDERER" "1"
     '';
   };
+  freecad' = pkgs.symlinkJoin{
+    name = "freecad";
+    paths = [
+      pkgs.freecad
+    ];
+    nativeBuildInputs = [pkgs.makeBinaryWrapper];
+    postBuild = ''
+      wrapProgram $out/bin/freecad \
+      --set "QT_QPA_PLATFORM" "xcb"
+    '';
+  };
   zen-browser' = inputs.zen-browser.packages.${pkgs.system}.default;
   polymc' =  inputs.polymc.packages.${pkgs.system}.default;
   bottles' = (pkgs.bottles.override{removeWarningPopup = true;});
@@ -45,9 +56,9 @@ in{
     remmina
     grayjay
     ferdium
-    freecad
     fractal
     pureref
+    freecad'
     qFlipper
     blender-hip
     mullvad-vpn
@@ -55,7 +66,6 @@ in{
     prusa-slicer
     youtube-music
     atuin-desktop'
-    # freecad-wayland
     gimp-with-plugins
     libreoffice-fresh
   ];

@@ -2,10 +2,11 @@
   programs.git = {
     enable = true;
 
-    userName = "litelotus";
-    userEmail = "lite5h4dow+dev@gmail.com";
-
-    extraConfig = {
+    settings ={
+      user = {
+        name = "litelotus";
+        email = "lite5h4dow+dev@gmail.com";
+      };
       credential = {
         # helper = "${pkgs.git-credential-oauth}/bin/git-credential-oauth";
         credentialStore = "secretservice";
