@@ -14,7 +14,7 @@
     stylix = {
       enable = true;
       polarity = "dark";
-      image = inputs.wallpapers + /.selected;
+      image = inputs.wallpapers + ./xvtwy2e79tnf1.png;
       opacity ={
         terminal = 0.95;
         popups = 0.95;
