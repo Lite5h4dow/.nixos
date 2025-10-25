@@ -14,7 +14,7 @@
     stylix = {
       enable = true;
       polarity = "dark";
-      image = inputs.wallpapers + /NixOS.png;
+      image = "~/.wallpapers/.selected";
       opacity ={
         terminal = 0.95;
         popups = 0.95;
