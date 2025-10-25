@@ -45,7 +45,7 @@ in {
       rounding = 5;
       blur = {
         enabled = true;
-        size = true;
+        size = 8;
         passes = 1;
       };
     };
