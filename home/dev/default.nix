@@ -11,9 +11,6 @@ in{
     ./nodejs.nix
     ./lsp-ai.nix
   ]
-  ++optionals (!minimal) [
-    # ./wireshark.nix
-  ]
   ;
 
   programs = {

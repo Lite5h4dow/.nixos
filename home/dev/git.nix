@@ -9,6 +9,7 @@
       };
       credential = {
         # helper = "${pkgs.git-credential-oauth}/bin/git-credential-oauth";
+        helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
         credentialStore = "secretservice";
         "https://git.litelot.us".username = "litelotus";
       };
