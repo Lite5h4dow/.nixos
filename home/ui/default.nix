@@ -19,6 +19,8 @@
     postBuild = ''
       wrapProgram $out/bin/freecad \
       --set "QT_QPA_PLATFORM" "xcb"
+      wrapProgram $out/bin/FreeCAD \
+      --set "QT_QPA_PLATFORM" "xcb"
     '';
   };
   zen-browser' = inputs.zen-browser.packages.${pkgs.system}.default;
