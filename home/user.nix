@@ -31,7 +31,7 @@ in{
           user = "litelotus";
         };
         secrets = {
-          password = "/home/${username}/.filestore-pass";
+          pass = "/home/${username}/.filestore-pass";
         };
       };
     };
