@@ -17,11 +17,17 @@
     ];
   };
 
-  programs.nh ={
-    enable = true;
-    clean = {
+  programs = {
+    fuse = {
       enable = true;
-      extraArgs = "--keep-since 3d --keep 2";
+      userAllowOther = true;
+    };
+    nh ={
+      enable = true;
+      clean = {
+        enable = true;
+        extraArgs = "--keep-since 3d --keep 2";
+      };
     };
   };
 }

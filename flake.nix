@@ -124,6 +124,10 @@
       inputs.flake-parts.follows = "flake-parts";
     };
 
+    agenix = {
+      url = "github:ryantm/agenix";
+    };
+
     jerry = {
       url = "github:justchokingaround/jerry";
       inputs = {

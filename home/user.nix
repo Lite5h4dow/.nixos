@@ -9,12 +9,13 @@ in{
   };
 
   programs.rclone ={
+    enable = true;
     remotes = {
-      "fs" = {
+      "filestore" = {
         mounts = {
           "/" = {
             enable = true;
-            mountPoint = "/home/${username}/fs";
+            mountPoint = "/home/${username}/filestore";
             options = {
               dir-cache-time = "5s";
               poll-interval = "5s";
@@ -23,8 +24,16 @@ in{
             };
           };
         };
+        config = {
+          type = "webdav";
+          vendor = "owncloud";
+          url = "https://fs.litelot.us";
+          user = "litelotus";
+        };
+        secrets = {
+          password = "/home/${username}/.filestore-pass";
+        };
       };
     };
   };
-
 }
