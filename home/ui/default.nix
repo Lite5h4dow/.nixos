@@ -70,5 +70,6 @@ in{
     atuin-desktop'
     gimp-with-plugins
     libreoffice-fresh
+    deluge
   ];
 }
