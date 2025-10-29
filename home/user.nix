@@ -8,6 +8,10 @@ in{
     stateVersion = mkDefault "25.05";
   };
 
+  systemd.user.services."rclone-mount:.@filestore".Unit = {
+    Requires = ["rclone-config.service"];
+    After = ["rclone-config.service"];
+  };
   programs.rclone ={
     enable = true;
     remotes = {
