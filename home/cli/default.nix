@@ -31,6 +31,7 @@ in{
       du-dust
       ripgrep-all
       nix-search-cli
+      taskwarrior-tui
     ]
     ++ optionals (!minimal && !corp) [
       neovim
@@ -46,5 +47,9 @@ in{
     sessionVariables = {
       "KUBE_CONFIG_PATH" = "~/.kube/config";
     };
+  };
+  programs.taskwarrior = {
+    enable = true;
+    package = pkgs.taskwarrior3;
   };
 }
