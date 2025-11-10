@@ -28,7 +28,7 @@ in{
     ++ optionals (!minimal)[
       dua
       ripgrep
-      du-dust
+      dust
       ripgrep-all
       nix-search-cli
       taskwarrior-tui

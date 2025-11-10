@@ -3,6 +3,7 @@
   inherit (lib) mkForce;
   bazecor' = pkgs.symlinkJoin {
     name = "bazecor";
+    paths = [pkgs.bazecor];
     nativeBuildInputs = [pkgs.makeBinaryWrapper];
     postBuild = ''
       wrapProgram $out/bin/bazecor \
