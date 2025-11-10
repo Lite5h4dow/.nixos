@@ -1,6 +1,18 @@
 { config, lib, pkgs, ... }: let
   inherit (config) values;
   inherit (lib) mkForce;
+  bazecor' = pkgs.symlinkJoin {
+    name = "bazecor";
+    nativeBuildInputs = [pkgs.makeBinaryWrapper];
+    postBuild = ''
+      wrapProgram $out/bin/bazecor \
+      --set "UseOzonePlatform" "1"\
+      --set "ozone-platform-hint" "wayland"\
+      --set "disable-gpu" "1"\
+      --set "no-sandbox" "1"
+    '';
+
+  };
 in {
   imports = [./hardware.nix];
   time.timeZone = "Europe/London";
@@ -56,7 +68,7 @@ in {
     # razergenie
     piper
     heroic
-    bazecor
+    bazecor'
     openrgb-with-all-plugins
     freenect
     teams-for-linux
