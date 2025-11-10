@@ -52,8 +52,8 @@
 
     wallpapers = {
       flake = false;
-      # url = "git+https://git.litelot.us/litelotus/.wallpapers";
-      url = "git+file:///home/lotus/.wallpapers";
+      url = "git+https://git.litelot.us/litelotus/.wallpapers";
+      # url = "git+file:///home/lotus/.wallpapers";
     };
 
     ags-config = {
