@@ -38,12 +38,12 @@ in {
     virtualisation = {
       podman = {
         enable = true;
+        package = optional podman.wsl podman-wsl';
         dockerCompat = !docker.enable;
         dockerSocket.enable = !docker.enable;
         autoPrune.enable = true;
       };
 
-      package = optional podman.wsl podman-wsl';
 
       oci-containers.backend = "podman";
     };
