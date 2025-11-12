@@ -10,7 +10,10 @@ in {
     boot.enable = false;
     fish.enable = true;
     atuin.enable = true;
-    podman.enable = true;
+    podman = {
+      enable = true;
+      wsl = true;
+    };
     networking = {
       enable = false;
     };

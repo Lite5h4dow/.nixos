@@ -2,7 +2,7 @@
   inherit (config.values) mainUser;
   inherit (config.custom) graphics docker podman;
   inherit (graphics) nvidia;
-  inherit (lib) types mkEnableOption mkOption mkIf;
+  inherit (lib) types mkEnableOption mkOption mkIf optional;
 in {
   options = {
     custom.podman ={
@@ -10,6 +10,11 @@ in {
         description = "Enable Podman module";
         type = types.bool;
         default = false;
+      };
+
+      wsl = mkOption {
+        default = false;
+        type = types.bool;
       };
 
       nvidia = mkOption {
@@ -20,7 +25,16 @@ in {
     };
   };
 
-  config = mkIf podman.enable {
+  config = mkIf podman.enable (let
+     podman-wsl' = pkgs.symlinkJoin {
+      name = "podman";
+      paths = [pkgs.podman];
+      nativeBuildInputs = [pkgs.makeBinaryWrapper];
+      postBuild = ''
+        wrapProgram $out/bin/podman --add-flags "-r"
+      '';
+     };
+    in{
     virtualisation = {
       podman = {
         enable = true;
@@ -28,6 +42,8 @@ in {
         dockerSocket.enable = !docker.enable;
         autoPrune.enable = true;
       };
+
+      package = optional podman.wsl podman-wsl';
 
       oci-containers.backend = "podman";
     };
@@ -39,5 +55,5 @@ in {
     users.users.${mainUser}.extraGroups = ["podman"];
 
     hardware.nvidia-container-toolkit.enable = podman.nvidia;
-  };
+  });
 }
