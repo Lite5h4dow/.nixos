@@ -2,7 +2,7 @@
   inherit (config.values) mainUser;
   inherit (config.custom) graphics docker podman;
   inherit (graphics) nvidia;
-  inherit (lib) types mkEnableOption mkOption mkIf optional;
+  inherit (lib) types mkEnableOption mkOption mkIf optionalAttrs;
 in {
   options = {
     custom.podman ={
@@ -38,7 +38,7 @@ in {
     virtualisation = {
       podman = {
         enable = true;
-        package = optional podman.wsl podman-wsl';
+        package = if podman.wsl then podman-wsl' else pkgs.podman;
         dockerCompat = !docker.enable;
         dockerSocket.enable = !docker.enable;
         autoPrune.enable = true;
