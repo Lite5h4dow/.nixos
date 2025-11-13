@@ -32,6 +32,7 @@
     ollama = {
       enable = true;
       acceleration = lib.mkIf config.custom.graphics.nvidia.enable "cuda";
+      host = "0.0.0.0";
     };
     ananicy = {
       enable = true;
