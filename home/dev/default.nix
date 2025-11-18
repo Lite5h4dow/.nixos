@@ -30,6 +30,7 @@ in{
   ++ optionals (!minimal) [
     zig
     k9s
+    vault
     # ruby
     gcloud
     tinygo
