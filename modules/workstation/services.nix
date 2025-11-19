@@ -3,24 +3,25 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   systemd.user.services.polkit-authentication-agent = {
     description = "PolicyKit Authentication Agent";
     serviceConfig = {
       Type = "simple";
       ExecStart = "${pkgs.pantheon.pantheon-agent-polkit}/libexec/policykit-1-pantheon/io.elementary.desktop.agent-polkit";
     };
-    wantedBy = ["graphical-session.target"];
+    wantedBy = [ "graphical-session.target" ];
   };
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config.common.default = "gtk";
   };
 
-  environment= {
-    systemPackages = with pkgs;[
+  environment = {
+    systemPackages = with pkgs; [
       # alpaca
     ];
   };
@@ -34,22 +35,34 @@
       acceleration = lib.mkIf config.custom.graphics.nvidia.enable "cuda";
       host = "0.0.0.0";
     };
+    openbao = {
+      enable = true;
+      settings = {
+        ui = false;
+        cluster_addr = "http://127.0.0.1:8201";
+        api_addr = "https://bao.litelot.us";
+        listener.default = {
+          type = "unix";
+        };
+        storage.raft.path = "/var/lib/openbao";
+      };
+    };
     ananicy = {
       enable = true;
       package = pkgs.ananicy-cpp;
       rulesProvider =
-        if config.programs.gamemode.enable
-        then
+        if config.programs.gamemode.enable then
           pkgs.ananicy-rules-cachyos.overrideAttrs {
             preInstall = ''
               rm -r 00-default/games
             '';
           }
-        else pkgs.ananicy-rules-cachyos;
+        else
+          pkgs.ananicy-rules-cachyos;
     };
     power-profiles-daemon.enable = true;
 
-    udisks2 ={
+    udisks2 = {
       enable = true;
       mountOnMedia = true;
     };
@@ -58,7 +71,7 @@
     #   enable = true;
     # };
 
-    devmon ={
+    devmon = {
       enable = true;
     };
 
